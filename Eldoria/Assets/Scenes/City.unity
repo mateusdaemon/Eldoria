@@ -442,7 +442,13 @@ PrefabInstance:
       value: WorldMapCityTEST1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8243010461470457611, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
+    - {fileID: -7358604753108213242, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
+    - {fileID: 8276857507484934637, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
+    - {fileID: -568361140826236298, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
+    - {fileID: 1101228402023366043, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
+    - {fileID: -3251732310585626948, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d975964eb064bd4d96cca6ba76cfe06, type: 3}
