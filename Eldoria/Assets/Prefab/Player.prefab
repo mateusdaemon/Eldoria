@@ -119,6 +119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3627094705971959963}
+  - {fileID: 3078624588676275272}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!212 &4419789102490373483
@@ -236,3 +237,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
+--- !u!1 &6217865082366328055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3078624588676275272}
+  - component: {fileID: 3498544611653392583}
+  - component: {fileID: 5662250558391413410}
+  m_Layer: 0
+  m_Name: Spellbook
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3078624588676275272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217865082366328055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5658435706372703001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3498544611653392583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217865082366328055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc4729c186fde2418256cb874fff931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currSpellbook: 0
+--- !u!114 &5662250558391413410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217865082366328055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4d37da3f2efd042b29e26d2cf21bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellbook: {fileID: 3498544611653392583}
+  redBullet: {fileID: 1336959569330157692, guid: 9129c29d7dbefc84fb493fa87d55eae1,
+    type: 3}
+  greenBullet: {fileID: 1336959569330157692, guid: 6420bf1ccc97b394d961a5020f4c7d27,
+    type: 3}
+  blueBullet: {fileID: 1336959569330157692, guid: db1f79e3fc5193f418768b8c7d4fb523,
+    type: 3}
+  neutralBullet: {fileID: 1336959569330157692, guid: 26f4865a065e3944eb7b27df1e9409bd,
+    type: 3}
+  layerClick:
+    serializedVersion: 2
+    m_Bits: 8

@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 608964796}
   - component: {fileID: 608964795}
   - component: {fileID: 608964794}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,6 +549,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5662250558391413410, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: redBullet
+      value: 
+      objectReference: {fileID: 1336959569330157692, guid: 9129c29d7dbefc84fb493fa87d55eae1,
+        type: 3}
+    - target: {fileID: 5662250558391413410, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: blueBullet
+      value: 
+      objectReference: {fileID: 1336959569330157692, guid: db1f79e3fc5193f418768b8c7d4fb523,
+        type: 3}
+    - target: {fileID: 5662250558391413410, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: greenBullet
+      value: 
+      objectReference: {fileID: 1336959569330157692, guid: 6420bf1ccc97b394d961a5020f4c7d27,
+        type: 3}
+    - target: {fileID: 5662250558391413410, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: neutralBullet
+      value: 
+      objectReference: {fileID: 1336959569330157692, guid: 26f4865a065e3944eb7b27df1e9409bd,
+        type: 3}
     - target: {fileID: 5949036454881206019, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_Name

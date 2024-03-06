@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     {
         if (transform.position != target)
         {
-            this.transform.position = Vector3.MoveTowards(transform.position, this.target, 0.2f);
+            this.transform.position = Vector3.MoveTowards(transform.position, this.target, 0.5f);
         }
         else
         {
