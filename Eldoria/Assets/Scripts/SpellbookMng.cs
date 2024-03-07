@@ -6,6 +6,9 @@ public class SpellbookMng : MonoBehaviour
 {
     public enum Spellbook {None, Red, Green, Blue};
     public Spellbook currSpellbook;
+    public GameObject redActive;
+    public GameObject greenActive;
+    public GameObject blueActive;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +21,30 @@ public class SpellbookMng : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currSpellbook = Spellbook.Red;
+            currSpellbook = Spellbook.Green;
+            greenActive.SetActive(true);
+            redActive.SetActive(false);
+            blueActive.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            currSpellbook = Spellbook.Green;
+            currSpellbook = Spellbook.Red;
+            redActive.SetActive(true);
+            greenActive.SetActive(false);
+            blueActive.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currSpellbook = Spellbook.Blue;
+            blueActive.SetActive(true);
+            redActive.SetActive(false);
+            greenActive.SetActive(false);
         } else if (Input.GetKeyDown(KeyCode.Space))
         {
             currSpellbook = Spellbook.None;
+            greenActive.SetActive(false);
+            redActive.SetActive(false);
+            blueActive.SetActive(false);
         }
     }
 }
