@@ -10,7 +10,9 @@ public class Shooter : MonoBehaviour
     public Bullet blueBullet;
     public Bullet neutralBullet;
     public LayerMask layerClick;
+
     private Camera cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,8 @@ public class Shooter : MonoBehaviour
     {
         Vector3 currTarget;
         Bullet currBullet = null;
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {
             Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
@@ -55,6 +58,7 @@ public class Shooter : MonoBehaviour
 
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
+            PlayerStats.DropMana(1);
         }
     }
 }
