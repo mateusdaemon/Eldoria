@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5949036454881206019
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 8394891364154708789}
   - component: {fileID: 3765909698815385245}
   - component: {fileID: 8020463938355116434}
+  - component: {fileID: -6240286157766137634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -120,6 +121,7 @@ Transform:
   m_Children:
   - {fileID: 3627094705971959963}
   - {fileID: 3078624588676275272}
+  - {fileID: 3350118163349990247}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
 --- !u!212 &4419789102490373483
@@ -237,6 +239,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 10
+--- !u!114 &-6240286157766137634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949036454881206019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79f82f9e3db64448ae4928e13e08290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manaPotUI: {fileID: 0}
+  lifePotUI: {fileID: 0}
+  manaColdown: 4
+  lifeColdown: 20
+  lifeIncrease: 10
+  manaIncrease: 10
 --- !u!1 &6217865082366328055
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +303,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpellbook: 0
+  redActive: {fileID: 0}
+  greenActive: {fileID: 0}
+  blueActive: {fileID: 0}
 --- !u!114 &5662250558391413410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,3 +330,56 @@ MonoBehaviour:
   layerClick:
     serializedVersion: 2
     m_Bits: 8
+--- !u!1 &7205101860893021464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3350118163349990247}
+  - component: {fileID: 7565614540426263999}
+  m_Layer: 0
+  m_Name: MagicShield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3350118163349990247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205101860893021464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5658435706372703001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7565614540426263999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7205101860893021464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d27419eaba73dc48963c7de5c868200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redShield: {fileID: 4216530364152762562, guid: be47ec775e8ae5c4e830e2f549d390a3,
+    type: 3}
+  greenShield: {fileID: 3272961745497509822, guid: c1b4e2f238ed87b4aa8b79bbbd71d415,
+    type: 3}
+  blueShield: {fileID: 2825439032628321917, guid: 40310a203d3127a4d837dea4846157aa,
+    type: 3}
+  neutralShield: {fileID: 2461873975215624803, guid: 205dd3721fada3c419f6d78af57bc699,
+    type: 3}
+  spellbook: {fileID: 3498544611653392583}

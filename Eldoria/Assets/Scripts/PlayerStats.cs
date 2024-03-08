@@ -49,4 +49,14 @@ public static class PlayerStats
         life += add;
     }
 
+    public static void SetLife(int lifeTotal)
+    {
+        life = lifeTotal;
+    }
+
+    public static void SetMana(int manaTotal)
+    {
+        mana = manaTotal;
+    }
+
 }

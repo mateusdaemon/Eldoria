@@ -7,22 +7,34 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI manaLabel;
+    public TextMeshProUGUI lifeLabel;
     public GameObject manaBar;
-    private float manaMaxWidth;
+    public GameObject lifeBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        manaMaxWidth = manaBar.GetComponent<Image>().rectTransform.sizeDelta.x;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        manaLabel.text = PlayerStats.GetMana() + "/10";
+        manaLabel.text = PlayerStats.GetMana() + "/" + PlayerStats.GetMaxMana();
 
-        float singleManaWidth = manaMaxWidth / PlayerStats.GetMaxMana();
+        float maxMana = (float) PlayerStats.GetMaxMana(); 
+        float currMana = (float)PlayerStats.GetMana();
+        float percOfMana = currMana / maxMana;
 
-        manaBar.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(PlayerStats.GetMana() * singleManaWidth, manaBar.GetComponent<Image>().rectTransform.sizeDelta.y);
+        manaBar.GetComponent<Image>().fillAmount = percOfMana;
+
+        lifeLabel.text = PlayerStats.GetLife() + "/" + PlayerStats.GetMaxLife();
+
+        float maxLife = (float)PlayerStats.GetMaxLife();
+        float currLife = (float)PlayerStats.GetLife();
+        float percOfLife = currLife / maxLife;
+
+        lifeBar.GetComponent<Image>().fillAmount = percOfLife;
+
     }
 }
