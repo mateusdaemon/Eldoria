@@ -8,6 +8,9 @@ public static class PlayerStats
     private static int maxMana = 10;
     private static int life = 20;
     private static int mana = 10;
+    private static bool redCursed;
+    private static bool greenCursed;
+    private static bool blueCursed;
 
     public static int GetMaxMana()
     {
@@ -57,6 +60,35 @@ public static class PlayerStats
     public static void SetMana(int manaTotal)
     {
         mana = manaTotal;
+    }
+
+    public static bool RedCursed()
+    {
+        return redCursed;
+    }
+
+    public static bool GreenCursed()
+    {
+        return greenCursed;
+    }
+
+    public static bool BlueCursed()
+    {
+        return blueCursed;
+    }
+
+    public static void CurseRed(bool curse)
+    {
+        redCursed = curse;
+    }
+    public static void CurseGreen(bool curse)
+    {
+        greenCursed = curse;
+    }
+
+    public static void CurseBlue(bool curse)
+    {
+        blueCursed = curse;
     }
 
 }
