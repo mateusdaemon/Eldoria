@@ -36,7 +36,7 @@ public class ConsumePotions : MonoBehaviour
             }
             else
             {
-                PlayerStats.AddMana(lifeIncrease);
+                PlayerStats.AddLife(lifeIncrease);
             }
 
             canUseLife = false;

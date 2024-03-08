@@ -8,9 +8,11 @@ public static class PlayerStats
     private static int maxMana = 10;
     private static int life = 20;
     private static int mana = 10;
-    private static bool redCursed;
-    private static bool greenCursed;
-    private static bool blueCursed;
+    private static bool redCursed = false;
+    private static bool greenCursed = false;
+    private static bool blueCursed = false;
+    private static bool canShoot = true;
+    private static float playerDamage = 5;
 
     public static int GetMaxMana()
     {
@@ -89,6 +91,26 @@ public static class PlayerStats
     public static void CurseBlue(bool curse)
     {
         blueCursed = curse;
+    }
+
+    public static void SetShoot(bool shoot)
+    {
+        canShoot = shoot;
+    }
+
+    public static bool CanShoot()
+    {
+        return canShoot;
+    }
+
+    public static void SetDamage(float newDamage)
+    {
+        playerDamage = newDamage;
+    }
+
+    public static float GetDamage()
+    {
+        return playerDamage;
     }
 
 }

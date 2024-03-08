@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
+    private Enemy currEnemy;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currEnemy = GetComponent<Enemy>();
     }
 
     // Update is called once per frame
@@ -20,9 +21,10 @@ public class TakeDamage : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Destroy(this.gameObject);
             Instantiate(other.GetComponent<Bullet>().effect, other.transform.position, new Quaternion());
             Destroy(other.gameObject);
+
+            currEnemy.life -= (int)PlayerStats.GetDamage();
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3627094705971959963}
   - component: {fileID: 5949522838875502651}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 8020463938355116434}
   - component: {fileID: -6240286157766137634}
   - component: {fileID: 3916705932798982709}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -223,8 +223,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.14
-  m_Height: 5.59
+  m_Radius: 1.72
+  m_Height: 4.45
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8020463938355116434
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40435329ac8d49247aa8950d52f768b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 10
+  velocity: 9
 --- !u!114 &-6240286157766137634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4bb49943ac620489f4831e02390cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellbook: {fileID: 3498544611653392583}
+  redCurseUI: {fileID: 0}
+  greenCurseUI: {fileID: 0}
+  blueCurseUI: {fileID: 0}
 --- !u!1 &6217865082366328055
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +285,7 @@ GameObject:
   - component: {fileID: 3078624588676275272}
   - component: {fileID: 3498544611653392583}
   - component: {fileID: 5662250558391413410}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Spellbook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3350118163349990247}
   - component: {fileID: 7565614540426263999}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MagicShield
   m_TagString: Untagged
   m_Icon: {fileID: 0}

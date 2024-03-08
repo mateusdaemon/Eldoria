@@ -40,6 +40,8 @@ public class ShieldManager : MonoBehaviour
                     neutralShield = null;
                     break;
             }
+
+            PlayerStats.SetShoot(false);
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -48,6 +50,8 @@ public class ShieldManager : MonoBehaviour
             {
                 Destroy(currShield);
             }
+
+            PlayerStats.SetShoot(true);
         }
 
         if (currShield != null)
