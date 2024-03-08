@@ -48,21 +48,62 @@ public class CurseManager : MonoBehaviour
             switch (currEnemy.curse)
             {
                 case SpellbookMng.Spellbook.Red:
+                    if (PlayerStats.RedCursed())
+                        break;
+
                     PlayerStats.CurseRed(true);
                     redCurseUI.SetActive(true);
+                    Invoke("DamageByRedCurse", 0);
                     break;
+
                 case SpellbookMng.Spellbook.Green:
+                    if (PlayerStats.GreenCursed())
+                        break;
+
                     PlayerStats.CurseGreen(true);
                     greenCurseUI.SetActive(true);
+                    Invoke("DamageByGreenCurse", 0);
                     break;
+
                 case SpellbookMng.Spellbook.Blue:
+                    if (PlayerStats.BlueCursed())
+                        break;
+
                     PlayerStats.CurseBlue(true);
                     blueCurseUI.SetActive(true);
+                    Invoke("DamageByBlueCurse", 0);
                     break;
+
                 default:
                     break;
             }
+
             PlayerStats.DropLife(currEnemy.damage);
+        }
+    }
+
+    private void DamageByRedCurse()
+    {
+        if (PlayerStats.RedCursed())
+        {
+            PlayerStats.DropLife(1);
+            Invoke("DamageByRedCurse", 2);
+        }
+    }
+    private void DamageByGreenCurse()
+    {
+        if (PlayerStats.GreenCursed())
+        {
+            PlayerStats.DropLife(1);
+            Invoke("DamageByGreenCurse", 2);
+        }
+    }
+    private void DamageByBlueCurse()
+    {
+        if (PlayerStats.BlueCursed())
+        {
+            PlayerStats.DropLife(1);
+            Invoke("DamageByBlueCurse", 2);
         }
     }
 }
