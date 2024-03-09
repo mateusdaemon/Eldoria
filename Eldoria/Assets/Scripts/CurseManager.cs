@@ -9,6 +9,10 @@ public class CurseManager : MonoBehaviour
     public GameObject greenCurseUI;
     public GameObject blueCurseUI;
 
+    private bool beingRedCursed = false;
+    private bool beingGreenCursed = false;
+    private bool beingBlueCursed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,28 @@ public class CurseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        redCurseUI.SetActive(PlayerStats.RedCursed());
+        greenCurseUI.SetActive(PlayerStats.GreenCursed());
+        blueCurseUI.SetActive(PlayerStats.BlueCursed());
+
+        if (PlayerStats.RedCursed() && !beingRedCursed)
+        {
+            beingRedCursed = true;
+            Invoke("DamageByRedCurse", 0);
+        }
+
+        if (PlayerStats.GreenCursed() && !beingGreenCursed)
+        {
+            beingGreenCursed = true;
+            Invoke("DamageByGreenCurse", 0);
+        }
+
+        if (PlayerStats.BlueCursed() && !beingBlueCursed)
+        {
+            beingBlueCursed = true;
+            Invoke("DamageByBlueCurse", 0);
+        }
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             switch (spellbook.currSpellbook)
@@ -40,54 +66,15 @@ public class CurseManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Enemy currEnemy = collision.gameObject.GetComponent<Enemy>();
-            switch (currEnemy.curse)
-            {
-                case SpellbookMng.Spellbook.Red:
-                    if (PlayerStats.RedCursed())
-                        break;
-
-                    PlayerStats.CurseRed(true);
-                    redCurseUI.SetActive(true);
-                    Invoke("DamageByRedCurse", 0);
-                    break;
-
-                case SpellbookMng.Spellbook.Green:
-                    if (PlayerStats.GreenCursed())
-                        break;
-
-                    PlayerStats.CurseGreen(true);
-                    greenCurseUI.SetActive(true);
-                    Invoke("DamageByGreenCurse", 0);
-                    break;
-
-                case SpellbookMng.Spellbook.Blue:
-                    if (PlayerStats.BlueCursed())
-                        break;
-
-                    PlayerStats.CurseBlue(true);
-                    blueCurseUI.SetActive(true);
-                    Invoke("DamageByBlueCurse", 0);
-                    break;
-
-                default:
-                    break;
-            }
-
-            PlayerStats.DropLife(currEnemy.damage);
-        }
-    }
-
     private void DamageByRedCurse()
     {
         if (PlayerStats.RedCursed())
         {
             PlayerStats.DropLife(1);
             Invoke("DamageByRedCurse", 2);
+        } else
+        {
+            beingRedCursed = false;
         }
     }
     private void DamageByGreenCurse()
@@ -96,6 +83,9 @@ public class CurseManager : MonoBehaviour
         {
             PlayerStats.DropLife(1);
             Invoke("DamageByGreenCurse", 2);
+        } else
+        {
+            beingGreenCursed = false;
         }
     }
     private void DamageByBlueCurse()
@@ -104,6 +94,9 @@ public class CurseManager : MonoBehaviour
         {
             PlayerStats.DropLife(1);
             Invoke("DamageByBlueCurse", 2);
+        } else
+        {
+            beingBlueCursed = false;
         }
     }
 }

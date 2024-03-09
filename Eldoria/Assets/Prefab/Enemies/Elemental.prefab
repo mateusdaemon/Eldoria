@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 4130460058568076977}
   - component: {fileID: 5915328662403834264}
   - component: {fileID: 5692994807472795114}
+  - component: {fileID: 1433492561158000027}
   m_Layer: 8
   m_Name: Elemental
   m_TagString: Enemy
@@ -201,7 +202,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 5.44
+  m_Radius: 5.29
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5915328662403834264
 MonoBehaviour:
@@ -230,3 +231,15 @@ MonoBehaviour:
   life: 25
   damage: 2
   curse: 3
+--- !u!114 &1433492561158000027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5873583296136839874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a3586e8cb303840a99f46e9df0f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
