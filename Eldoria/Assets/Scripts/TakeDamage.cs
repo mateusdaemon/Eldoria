@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TakeDamage : MonoBehaviour
 {
     private Enemy currEnemy;
+    public GameObject lifeBarUI;
+    float maxLife;
     // Start is called before the first frame update
     void Start()
     {
         currEnemy = GetComponent<Enemy>();
+        maxLife = currEnemy.life;
     }
 
     // Update is called once per frame
@@ -25,6 +29,7 @@ public class TakeDamage : MonoBehaviour
             Destroy(other.gameObject);
 
             currEnemy.life -= (int)PlayerStats.GetDamage();
+            lifeBarUI.GetComponent<Image>().fillAmount = currEnemy.life / maxLife;
         }
     }
 }
