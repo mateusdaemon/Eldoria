@@ -484,6 +484,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: FarmMapTESTE1
       objectReference: {fileID: 0}
+    - target: {fileID: 1341056751160186723, guid: 41a7444f46c0bae4c893f0e2fb6db847,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666261585234168772, guid: 41a7444f46c0bae4c893f0e2fb6db847,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.62
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2550463727306718371, guid: 41a7444f46c0bae4c893f0e2fb6db847, type: 3}
