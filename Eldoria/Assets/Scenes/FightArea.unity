@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 608964794}
   m_Layer: 3
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1208,6 +1208,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1709230962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1344335463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344335455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03786e0808c3248a502f5baff7c992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1404495226 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1395849035374871075, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
@@ -1489,7 +1501,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5949036454881206019, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1344335463}
   m_SourcePrefab: {fileID: 100100000, guid: 0642aca200599ff4488ca701f8b095b1, type: 3}
 --- !u!1001 &1807997466
 PrefabInstance:
