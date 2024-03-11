@@ -58,7 +58,17 @@ public class ConsumePotions : MonoBehaviour
             canUseMana = false;
             manaPotUI.GetComponent<Image>().fillAmount = 0;
             Invoke("ManaColdown", manaColdown);
-        }        
+        }
+
+        // This logic makes the potions image grow little by little
+        if (!canUseMana)
+        {
+            manaPotUI.GetComponent<Image>().fillAmount += 1.0f / manaColdown * Time.deltaTime;
+        }
+        if (!canUseLife)
+        {
+            lifePotUI.GetComponent<Image>().fillAmount += 1.0f / lifeColdown * Time.deltaTime;
+        }
     }
 
     private void ManaColdown()
