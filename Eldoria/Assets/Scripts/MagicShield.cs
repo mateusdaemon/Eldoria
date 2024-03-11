@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MagicShield : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,9 @@ public class MagicShield : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.contacts[0].normal * 10, ForceMode.Impulse);
+        }
     }
 }
