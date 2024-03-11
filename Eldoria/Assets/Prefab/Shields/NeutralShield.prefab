@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6201395280144312606}
   - component: {fileID: -2642166627053633678}
   - component: {fileID: 4940270083901741195}
+  - component: {fileID: -1373008044173466558}
   m_Layer: 13
   m_Name: NeutralShield
   m_TagString: Shield
@@ -133,3 +134,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1373008044173466558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461873975215624803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545df751a567ea140b39b11a47c22114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

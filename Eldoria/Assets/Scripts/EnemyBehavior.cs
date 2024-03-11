@@ -42,7 +42,6 @@ public class EnemyBehavior : MonoBehaviour
     {
         goToPlayer = true;
         playerRef = other.gameObject;
-        Debug.Log("GotoPlayer");
     }
 
     private void OnTriggerExit(Collider other)

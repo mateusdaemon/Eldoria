@@ -255,7 +255,7 @@ MonoBehaviour:
   manaPotUI: {fileID: 0}
   lifePotUI: {fileID: 0}
   manaColdown: 4
-  lifeColdown: 20
+  lifeColdown: 15
   lifeIncrease: 10
   manaIncrease: 10
 --- !u!114 &3916705932798982709

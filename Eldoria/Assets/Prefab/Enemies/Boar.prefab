@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 5453467704104897878}
   - component: {fileID: 5083997695839130992}
   - component: {fileID: -615849911274987903}
+  - component: {fileID: -9089359951038972806}
   m_Layer: 7
   m_Name: Boar
   m_TagString: Enemy
@@ -432,6 +433,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4a3586e8cb303840a99f46e9df0f69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-9089359951038972806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381202918605271058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03786e0808c3248a502f5baff7c992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3939407930444376217
