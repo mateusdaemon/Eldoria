@@ -10,6 +10,7 @@ public class Shooter : MonoBehaviour
     public Bullet blueBullet;
     public Bullet neutralBullet;
     public LayerMask layerClick;
+    public AudioSource shootSfx;
 
     private Camera cam;
 
@@ -60,7 +61,7 @@ public class Shooter : MonoBehaviour
                 default:
                     break;
             }
-
+            shootSfx.Play();
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
             PlayerStats.DropMana(1);
