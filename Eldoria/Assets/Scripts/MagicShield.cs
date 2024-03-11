@@ -18,9 +18,6 @@ public class MagicShield : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(-collision.contacts[0].point, ForceMode.Impulse);
-        }
+
     }
 }
