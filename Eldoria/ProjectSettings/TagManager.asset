@@ -25,10 +25,10 @@ TagManager:
   - NeutralShield
   - PlayerLayer
   - DetectArea
-  - 
-  - 
-  - 
-  - 
+  - NeutralBullet
+  - RedBullet
+  - GreenBullet
+  - BlueBullet
   - 
   - 
   - 

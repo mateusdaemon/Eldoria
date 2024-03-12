@@ -21,7 +21,7 @@ public class MagicShield : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.contacts[0].normal * 10, ForceMode.Impulse);
+            //collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.contacts[0].normal * 10, ForceMode.Impulse);
         }
     }
 }

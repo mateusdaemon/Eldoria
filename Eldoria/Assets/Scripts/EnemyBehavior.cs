@@ -23,7 +23,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (goToPlayer)
         {
-            if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > 1.5f)
+            if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > 5.0f)
             {
                 moveTarget.x = playerRef.transform.position.x;
                 moveTarget.z = playerRef.transform.position.z;
