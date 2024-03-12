@@ -11158,7 +11158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420857964}
-  - component: {fileID: 1420857963}
+  - component: {fileID: 1420857965}
   m_Layer: 0
   m_Name: City_AudioManager
   m_TagString: Untagged
@@ -11166,21 +11166,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1420857963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420857962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9e36a32acf3371409bc483a36239715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 104840174}
-  sfxSource: {fileID: 689507571}
-  backgroundCity: {fileID: 8300000, guid: af41054c8a9297842b609a5c37e589f3, type: 3}
 --- !u!4 &1420857964
 Transform:
   m_ObjectHideFlags: 0
@@ -11198,6 +11183,21 @@ Transform:
   - {fileID: 689507572}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1420857965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420857962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd0681cb6ae385d4aa36fb070e24a267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 104840174}
+  sfxSource: {fileID: 689507571}
+  backgroundCity: {fileID: 8300000, guid: af41054c8a9297842b609a5c37e589f3, type: 3}
 --- !u!1 &1567756294
 GameObject:
   m_ObjectHideFlags: 0

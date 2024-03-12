@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CityAudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("----Audio Source----")]
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource sfxSource;
 
-    // Update is called once per frame
-    void Update()
+    [Header("----Audio Clip----")]
+    public AudioClip backgroundCity;
+
+
+    private void Start()
     {
-        
+        musicSource.clip = backgroundCity;
+        musicSource.Play();
+
     }
 }

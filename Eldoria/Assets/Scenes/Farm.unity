@@ -1582,7 +1582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1600683400}
-  - component: {fileID: 1600683399}
+  - component: {fileID: 1600683401}
   m_Layer: 0
   m_Name: Farm_AudioManager
   m_TagString: Untagged
@@ -1590,21 +1590,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1600683399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600683398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d979de92748c53149bbada8e2c493f83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicSource: {fileID: 40892177}
-  sfxSource: {fileID: 1872999991}
-  backgroundFarm: {fileID: 8300000, guid: 35e92e69c3b28d8438db37f574a8ac8b, type: 3}
 --- !u!4 &1600683400
 Transform:
   m_ObjectHideFlags: 0
@@ -1622,6 +1607,21 @@ Transform:
   - {fileID: 1872999992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1600683401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600683398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93a7ed7e6655ceb44b0cd5604288ea51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 40892177}
+  sfxSource: {fileID: 1872999991}
+  backgroundFarm: {fileID: 8300000, guid: 35e92e69c3b28d8438db37f574a8ac8b, type: 3}
 --- !u!1001 &1726837122
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class FarmAudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("----Audio Source----")]
+    [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource sfxSource;
 
-    // Update is called once per frame
-    void Update()
+    [Header("----Audio Clip----")]
+    public AudioClip backgroundFarm;
+
+    private void Start()
     {
-        
+        musicSource.clip = backgroundFarm;
+        musicSource.Play();
     }
 }
