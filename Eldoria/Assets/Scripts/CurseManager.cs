@@ -8,6 +8,7 @@ public class CurseManager : MonoBehaviour
     public GameObject redCurseUI;
     public GameObject greenCurseUI;
     public GameObject blueCurseUI;
+    public AudioSource breakCurseSfx;
 
     private bool beingRedCursed = false;
     private bool beingGreenCursed = false;
@@ -63,6 +64,7 @@ public class CurseManager : MonoBehaviour
                 default:
                     break;
             }
+            breakCurseSfx.Play();
         }
     }
 

@@ -10,6 +10,7 @@ public class ShieldManager : MonoBehaviour
     public GameObject neutralShield;
     public SpellbookMng spellbook;
     GameObject currShield;
+    public AudioSource shieldSfx;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class ShieldManager : MonoBehaviour
                     neutralShield = null;
                     break;
             }
-
+            shieldSfx.Play();
             PlayerStats.SetShoot(false);
         }
 
