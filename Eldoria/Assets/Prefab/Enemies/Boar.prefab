@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26baae9bd438e1e4c81f4ddc8a1b6356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distancePlayer: 5
+  distancePlayer: 4
 --- !u!135 &7201158960181331086
 SphereCollider:
   m_ObjectHideFlags: 0

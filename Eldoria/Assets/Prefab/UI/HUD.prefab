@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 7052263023368705179}
   - component: {fileID: 377889561251208787}
   m_Layer: 5
-  m_Name: Btn__1
+  m_Name: Btn__2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 5524317943149206704}
   - component: {fileID: 5447862024288408913}
   m_Layer: 5
-  m_Name: Btn_space_bg
+  m_Name: Btn_1_bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 2817417290270641744}
   - component: {fileID: 5988132341777956854}
   m_Layer: 5
-  m_Name: Btn_1_bg
+  m_Name: Btn_2_bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 4942610308777124200}
   - component: {fileID: 4374645681168339172}
   m_Layer: 5
-  m_Name: Btn__2
+  m_Name: Btn__3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +973,7 @@ GameObject:
   - component: {fileID: 7744177893829531878}
   - component: {fileID: 4037075435844879966}
   m_Layer: 5
-  m_Name: Btn__3
+  m_Name: Btn__4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1048,7 +1048,7 @@ GameObject:
   - component: {fileID: 1605171298045297117}
   - component: {fileID: 7244105040029245897}
   m_Layer: 5
-  m_Name: Btn_3_txt
+  m_Name: Btn_4_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[3]'
+  m_text: '[4]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1257,7 +1257,7 @@ GameObject:
   - component: {fileID: 1140709558611794701}
   - component: {fileID: 9101059408003814006}
   m_Layer: 5
-  m_Name: Btn_space_txt
+  m_Name: Btn_1_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[SPACE]'
+  m_text: '[1]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1675,7 +1675,7 @@ GameObject:
   - component: {fileID: 5896488034064070459}
   - component: {fileID: 8658258136680578679}
   m_Layer: 5
-  m_Name: Btn_3_bg
+  m_Name: Btn_4_bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1976,7 +1976,7 @@ GameObject:
   - component: {fileID: 6638408865313385587}
   - component: {fileID: 1012193042064921661}
   m_Layer: 5
-  m_Name: Btn__space
+  m_Name: Btn__1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2317,7 +2317,7 @@ GameObject:
   - component: {fileID: 7550635750152987743}
   - component: {fileID: 155147531195105532}
   m_Layer: 5
-  m_Name: Btn_2_txt
+  m_Name: Btn_3_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2370,7 +2370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[2]'
+  m_text: '[3]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -2473,6 +2473,9 @@ RectTransform:
   - {fileID: 5269917728686095477}
   - {fileID: 2156900577299295169}
   - {fileID: 6762294730397286414}
+  - {fileID: 8600160439479393873}
+  - {fileID: 1755449870886679964}
+  - {fileID: 5295934004496899525}
   - {fileID: 8156053525965773388}
   - {fileID: 2777093754387050342}
   - {fileID: 5576249394417944830}
@@ -2482,9 +2485,6 @@ RectTransform:
   - {fileID: 9068066933180776371}
   - {fileID: 4531234681845265602}
   - {fileID: 2352957136129363952}
-  - {fileID: 8600160439479393873}
-  - {fileID: 1755449870886679964}
-  - {fileID: 5295934004496899525}
   m_Father: {fileID: 1494755932397221484}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2504,7 +2504,7 @@ GameObject:
   - component: {fileID: 9105725869080739559}
   - component: {fileID: 6023421966006837225}
   m_Layer: 5
-  m_Name: Btn_1_txt
+  m_Name: Btn_2_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2557,7 +2557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '[1]'
+  m_text: '[2]'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
