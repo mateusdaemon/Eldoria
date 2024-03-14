@@ -25,8 +25,8 @@ public class WaterMovment : MonoBehaviour
     {
 
         currX += Time.deltaTime * speedX;
-        currY += Time.deltaTime * speedY;        
+        currY += Time.deltaTime * speedY;
 
-        GetComponent<Renderer>().material.SetTextureOffset("_MainTex", new Vector2(currX, currY));
+        GetComponent<Renderer>().material.SetTextureOffset("_Water", new Vector2(currX, currY));
     }
 }
