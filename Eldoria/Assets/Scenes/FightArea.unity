@@ -431,13 +431,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2253961108192514623}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &563578696 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8674750457078330055, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
-    type: 3}
-  m_PrefabInstance: {fileID: 2253961108192514623}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &867357037
+--- !u!1 &509726902
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -445,23 +439,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 867357040}
-  - component: {fileID: 867357039}
-  - component: {fileID: 867357038}
-  m_Layer: 3
-  m_Name: Terrain (1)
-  m_TagString: Ground
+  - component: {fileID: 509726905}
+  - component: {fileID: 509726904}
+  - component: {fileID: 509726903}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!154 &867357038
+--- !u!154 &509726903
 TerrainCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867357037}
+  m_GameObject: {fileID: 509726902}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -473,18 +467,18 @@ TerrainCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_TerrainData: {fileID: 15600000, guid: 8b9003cd84297bd4eacf227658aa66d9, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 7172446405df04341b65499a5b71c866, type: 2}
   m_EnableTreeColliders: 1
---- !u!218 &867357039
+--- !u!218 &509726904
 Terrain:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867357037}
+  m_GameObject: {fileID: 509726902}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 8b9003cd84297bd4eacf227658aa66d9, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 7172446405df04341b65499a5b71c866, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -514,21 +508,27 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!4 &867357040
+--- !u!4 &509726905
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867357037}
+  m_GameObject: {fileID: 509726902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.1, y: 0, z: -25}
+  m_LocalPosition: {x: -29.9, y: 0, z: 28.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &563578696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8674750457078330055, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2253961108192514623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887762931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1133,7 @@ PrefabInstance:
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.88
+      value: 39.1
       objectReference: {fileID: 0}
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
@@ -1143,7 +1143,7 @@ PrefabInstance:
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 213.1
+      value: 161.7
       objectReference: {fileID: 0}
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
@@ -1947,8 +1947,8 @@ SceneRoots:
   - {fileID: 2253961108192514623}
   - {fileID: 271437515}
   - {fileID: 4435223780588509147}
-  - {fileID: 867357040}
   - {fileID: 7846138545816474642}
   - {fileID: 8424226359639474041}
   - {fileID: 86479785231995086}
   - {fileID: 6421713513653926909}
+  - {fileID: 509726905}
