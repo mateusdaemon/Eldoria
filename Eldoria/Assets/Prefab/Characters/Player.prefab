@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 8020463938355116434}
   - component: {fileID: -6240286157766137634}
   - component: {fileID: 3916705932798982709}
+  - component: {fileID: 3664598879676579827}
+  - component: {fileID: 2897949226431685756}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -171,7 +173,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 20, y: 20}
+  m_Size: {x: 4.4466667, y: 6.6666665}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -239,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40435329ac8d49247aa8950d52f768b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 9
+  velocity: 6
 --- !u!114 &-6240286157766137634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +276,32 @@ MonoBehaviour:
   redCurseUI: {fileID: 0}
   greenCurseUI: {fileID: 0}
   blueCurseUI: {fileID: 0}
+  breakCurseSfx: {fileID: 0}
+--- !u!114 &3664598879676579827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949036454881206019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 751a3e92d47911648b75047e400e3b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dodgeForce: 20
+--- !u!114 &2897949226431685756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5949036454881206019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b03786e0808c3248a502f5baff7c992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6217865082366328055
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,6 +375,7 @@ MonoBehaviour:
   layerClick:
     serializedVersion: 2
     m_Bits: 8
+  shootSfx: {fileID: 0}
 --- !u!1 &7205101860893021464
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,3 +429,4 @@ MonoBehaviour:
   neutralShield: {fileID: 2461873975215624803, guid: 205dd3721fada3c419f6d78af57bc699,
     type: 3}
   spellbook: {fileID: 3498544611653392583}
+  shieldSfx: {fileID: 0}

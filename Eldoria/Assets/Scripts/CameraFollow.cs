@@ -7,6 +7,7 @@ public class CameraFollow : MonoBehaviour
     public GameObject player;
     public float zOffset = 0;
 
+    private Vector3 velocity = Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,15 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        Vector3 target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z - zOffset);
+
         // Keep camera height
-        this.transform.position = new Vector3(player.transform.position.x, 
-            this.transform.position.y, player.transform.position.z - zOffset); 
+        //this.transform.position = new Vector3(player.transform.position.x, 
+        //    this.transform.position.y, player.transform.position.z - zOffset);
+
+        //this.transform.position = Vector3.SmoothDamp(this.transform.position, target, ref velocity, 1.0f);
+        this.transform.position = Vector3.Lerp(this.transform.position, target, 0.5f);
     }
 }
