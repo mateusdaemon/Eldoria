@@ -11,6 +11,8 @@ public class EnemyBehavior : MonoBehaviour
     private Vector3 moveTarget;
     private bool originSet = false;
 
+    public float distancePlayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (goToPlayer)
         {
-            if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > 5.0f)
+            if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > distancePlayer)
             {
                 moveTarget.x = playerRef.transform.position.x;
                 moveTarget.z = playerRef.transform.position.z;

@@ -36,7 +36,7 @@ public class Shooter : MonoBehaviour
         if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {
             Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
+            if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue))
             {
                 currTarget = hit.point;
                 currTarget.y = 0.2f; // all shots are in same height
