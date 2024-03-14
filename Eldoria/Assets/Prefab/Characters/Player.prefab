@@ -290,6 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dodgeForce: 20
+  coldown: 2
 --- !u!114 &2897949226431685756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,6 +376,7 @@ MonoBehaviour:
   layerClick:
     serializedVersion: 2
     m_Bits: 8
+  shootColdown: 1.5
   shootSfx: {fileID: 0}
 --- !u!1 &7205101860893021464
 GameObject:

@@ -43,6 +43,7 @@ public class ShieldManager : MonoBehaviour
             }
             shieldSfx.Play();
             PlayerStats.SetShoot(false);
+            PlayerStats.DropMana(2);
         }
 
         if (Input.GetMouseButtonUp(1))

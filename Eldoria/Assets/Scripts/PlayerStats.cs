@@ -4,15 +4,15 @@ using UnityEngine;
 
 public static class PlayerStats
 {
-    private static int maxLife = 20;
-    private static int maxMana = 10;
-    private static int life = 20;
-    private static int mana = 10;
+    private static int maxLife = 10;
+    private static int maxMana = 20;
+    private static int life = 10;
+    private static int mana = 20;
     private static bool redCursed = false;
     private static bool greenCursed = false;
     private static bool blueCursed = false;
     private static bool canShoot = true;
-    private static float playerDamage = 5;
+    private static float playerDamage = 1;
 
     public static int GetMaxMana()
     {

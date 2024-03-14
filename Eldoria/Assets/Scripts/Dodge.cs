@@ -6,8 +6,10 @@ public class Dodge : MonoBehaviour
 {
     private Rigidbody rb;
     private float xDir, zDir;
+    private bool canDodge = true;
 
     public float dodgeForce;
+    public float coldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,16 @@ public class Dodge : MonoBehaviour
         xDir = Input.GetAxis("Horizontal");
         zDir = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canDodge)
         {
             rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
+            canDodge = false;
+            Invoke("EnableDodge", coldown);
         }
+    }
+
+    private void EnableDodge()
+    {
+        canDodge = true;
     }
 }

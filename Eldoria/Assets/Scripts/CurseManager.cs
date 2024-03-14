@@ -65,6 +65,7 @@ public class CurseManager : MonoBehaviour
                     break;
             }
             breakCurseSfx.Play();
+            PlayerStats.DropMana(2);
         }
     }
 

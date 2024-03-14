@@ -10,9 +10,11 @@ public class Shooter : MonoBehaviour
     public Bullet blueBullet;
     public Bullet neutralBullet;
     public LayerMask layerClick;
+    public float shootColdown;
     public AudioSource shootSfx;
 
     private Camera cam;
+    private bool canShoot = true;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +33,7 @@ public class Shooter : MonoBehaviour
         Vector3 currTarget;
         Bullet currBullet = null;
 
-        if (Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
+        if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {
             Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
@@ -65,6 +67,13 @@ public class Shooter : MonoBehaviour
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
             PlayerStats.DropMana(1);
+            canShoot = false;
+            Invoke("EnableShoot", shootColdown);
         }
+    }
+
+    private void EnableShoot()
+    {
+        canShoot = true;
     }
 }

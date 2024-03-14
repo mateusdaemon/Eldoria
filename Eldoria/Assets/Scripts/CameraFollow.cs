@@ -19,11 +19,6 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z - zOffset);
 
-        // Keep camera height
-        //this.transform.position = new Vector3(player.transform.position.x, 
-        //    this.transform.position.y, player.transform.position.z - zOffset);
-
-        //this.transform.position = Vector3.SmoothDamp(this.transform.position, target, ref velocity, 1.0f);
-        this.transform.position = Vector3.Lerp(this.transform.position, target, 0.5f);
+        this.transform.position = Vector3.Lerp(this.transform.position, target, 0.3f);
     }
 }
