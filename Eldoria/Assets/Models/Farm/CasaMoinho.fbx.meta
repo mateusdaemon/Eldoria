@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: 65de3a0d81c16b74da10db26ac522fd0
+guid: 0c2fd107629b47245843c25bf37b8cba
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casa Moinho
+    second: {fileID: 2100000, guid: 49468f76d2fd5c247bf2a9d818e5c3a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass Stable
+    second: {fileID: 2100000, guid: ca4749f68b4d5f24981e3d0a2a499a80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Janela CMoinho
+    second: {fileID: 2100000, guid: 63fd0557c603db54da50092d47474eb9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porta CMoinho
+    second: {fileID: 2100000, guid: fc52093140bf7db4aa373f66ae74d12e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Telhado CMoinho
+    second: {fileID: 2100000, guid: 63d490a26615282408d9b8fbaa9422c3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -31,36 +56,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Fan
-      takeName: Cylinder.003|Cylinder.003Action
-      internalID: -5793013652114006676
-      firstFrame: 0
-      lastFrame: 59
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []

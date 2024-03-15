@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65222ea9cb908634d933f6f10179be4e
+guid: d0553dd771db1524a9cde9c102d1b2a3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Caixa dagua
-    second: {fileID: 2100000, guid: f07998988435e5544a5dfe31fcc28c08, type: 2}
+      name: Estrutura Moinho
+    second: {fileID: 2100000, guid: 21f16c4d3d56446469505b93a7cbbefc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Escada 1
-    second: {fileID: 2100000, guid: a4dc0177d5e80564a82567ad1f899609, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Estrutura Caixa dagua
-    second: {fileID: 2100000, guid: 6c139c5900b46774faa40560ced77bc9, type: 2}
+      name: Moinho
+    second: {fileID: 2100000, guid: 548c7154779d7fd4c84e1e98aaf23319, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,7 +41,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Cylinder.003|Cylinder.003Action
+      takeName: Cylinder.003|Cylinder.003Action
+      internalID: -5793013652114006676
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
