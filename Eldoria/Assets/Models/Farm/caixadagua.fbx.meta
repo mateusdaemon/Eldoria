@@ -13,12 +13,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Escada 1
-    second: {fileID: 2100000, guid: da695a527b86b524ab1440fe77a9879c, type: 2}
+    second: {fileID: 2100000, guid: a4dc0177d5e80564a82567ad1f899609, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Estrutura Caixa dagua
-    second: {fileID: 2100000, guid: 6c139c5900b46774faa40560ced77bc9, type: 2}
+    second: {fileID: 2100000, guid: db7f3e8ae6920734a896c9c09ba71552, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

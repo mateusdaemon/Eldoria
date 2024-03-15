@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7defd5f51388af49ac1f0c25518f1ba
+guid: f1f74c54a0ae3dc4ea1341afb320c150
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Tree 2
-    second: {fileID: 2100000, guid: 8d3b46ebdca61334ab0ff63c84aa70d8, type: 2}
+      name: Tree 4
+    second: {fileID: 2100000, guid: cf9e7c4cebc8b9243af5c4562a463420, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Tree base
-    second: {fileID: 2100000, guid: 771d1303d64df1545a494a10e3e7c425, type: 2}
+    second: {fileID: 2100000, guid: 9713bda8eaab6ed40a7ca940222ea28c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
