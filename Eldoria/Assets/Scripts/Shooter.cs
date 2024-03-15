@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Shooter : MonoBehaviour
     public Bullet neutralBullet;
     public LayerMask layerClick;
     public float shootColdown;
+    public GameObject attackBgUI;
     public AudioSource shootSfx;
 
     private Camera cam;
@@ -32,6 +34,11 @@ public class Shooter : MonoBehaviour
 
         Vector3 currTarget;
         Bullet currBullet = null;
+
+        if (!canShoot)
+        {
+            attackBgUI.GetComponent<Image>().fillAmount += 1.0f / shootColdown * Time.deltaTime;
+        }
 
         if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {
@@ -63,11 +70,16 @@ public class Shooter : MonoBehaviour
                 default:
                     break;
             }
+
             shootSfx.Play();
+
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
+
             PlayerStats.DropMana(1);
             canShoot = false;
+
+            attackBgUI.GetComponent<Image>().fillAmount = 0;
             Invoke("EnableShoot", shootColdown);
         }
     }
@@ -75,5 +87,6 @@ public class Shooter : MonoBehaviour
     private void EnableShoot()
     {
         canShoot = true;
+        attackBgUI.GetComponent<Image>().fillAmount = 1;
     }
 }

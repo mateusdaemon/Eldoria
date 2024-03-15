@@ -442,9 +442,9 @@ GameObject:
   - component: {fileID: 509726905}
   - component: {fileID: 509726904}
   - component: {fileID: 509726903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -526,6 +526,12 @@ Transform:
 --- !u!1 &563578696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8674750457078330055, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2253961108192514623}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &674140646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2862656881532932489, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
     type: 3}
   m_PrefabInstance: {fileID: 2253961108192514623}
   m_PrefabAsset: {fileID: 0}
@@ -1185,6 +1191,11 @@ PrefabInstance:
       propertyPath: shootSfx
       value: 
       objectReference: {fileID: 1118882296}
+    - target: {fileID: 5662250558391413410, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: attackBgUI
+      value: 
+      objectReference: {fileID: 674140646}
     - target: {fileID: 5949036454881206019, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_Name
