@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 94a0c01498954484e9817aae33dbc673
+guid: 61ec00fe83bcb5749b7b0740d1a53a64
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Carro\xE7a"
-    second: {fileID: 2100000, guid: 572f23cb0129e4d46bf908ec1ac66d46, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 7c1882e0fa59c4c4d9cdd8a980553b8f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Rodas Carro\xE7a"
-    second: {fileID: 2100000, guid: 2405558c6d3dd88498c8752d7247941c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

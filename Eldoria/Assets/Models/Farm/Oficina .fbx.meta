@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 94a0c01498954484e9817aae33dbc673
+guid: af486ab3cd0ae2a41adbd8f79b31166e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,18 +7,68 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: "Carro\xE7a"
-    second: {fileID: 2100000, guid: 572f23cb0129e4d46bf908ec1ac66d46, type: 2}
+      name: Bancada
+    second: {fileID: 2100000, guid: 703bcb6988583464591cbc7f3cf1942e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 7c1882e0fa59c4c4d9cdd8a980553b8f, type: 2}
+      name: Base Serrote
+    second: {fileID: 2100000, guid: 6778fc89e167bfe44aecb8d5408c05b9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: "Rodas Carro\xE7a"
-    second: {fileID: 2100000, guid: 2405558c6d3dd88498c8752d7247941c, type: 2}
+      name: Bunda Tronco
+    second: {fileID: 2100000, guid: 70c5fbcd5d67e0947bc76d771969cb6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabo Machado
+    second: {fileID: 2100000, guid: d72014ceb751cfc48bde5475634f0a73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabo Martelo
+    second: {fileID: 2100000, guid: 5c67da0e14012ea4aa3aca7bc25c56e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamina machado
+    second: {fileID: 2100000, guid: 9d06bec5f2524194abe7042ad94187d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamina machado 2
+    second: {fileID: 2100000, guid: bae5e6d6cc07d3f4ab7f79c01c9d636a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Martelo Madeira
+    second: {fileID: 2100000, guid: 676d1fe3d715b8842a629720b79f7b90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 95bdf67ecc38aec448b114a76260932b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Saco_
+    second: {fileID: 2100000, guid: 506caa35bfb037349bc817dd2826c720, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Serra_
+    second: {fileID: 2100000, guid: a5b1a87138d3e4740a13d5dffa60581e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Suporte Serrote
+    second: {fileID: 2100000, guid: 3f8d5644f8b50874da297e99fb3867e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tronco
+    second: {fileID: 2100000, guid: 8f5686dcc9d67e84fb29a4f350f5c215, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
