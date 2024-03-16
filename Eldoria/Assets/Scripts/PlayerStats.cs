@@ -12,6 +12,7 @@ public static class PlayerStats
     private static bool greenCursed = false;
     private static bool blueCursed = false;
     private static bool canShoot = true;
+    private static bool canMove = true;
     private static float playerDamage = 1;
 
     public static int GetMaxMana()
@@ -111,6 +112,15 @@ public static class PlayerStats
     public static float GetDamage()
     {
         return playerDamage;
+    }
+    public static void SetMove(bool move)
+    {
+        canMove = move;
+    }
+
+    public static bool CanMove()
+    {
+        return canMove;
     }
 
 }

@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool originSet = false;
 
     public float distancePlayer;
+    public DamagePlayer attackArea;
 
     // Start is called before the first frame update
     void Start()

@@ -11,6 +11,7 @@ public class ShieldManager : MonoBehaviour
     public SpellbookMng spellbook;
     GameObject currShield;
     public AudioSource shieldSfx;
+    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +44,8 @@ public class ShieldManager : MonoBehaviour
             }
             shieldSfx.Play();
             PlayerStats.SetShoot(false);
+            PlayerStats.SetMove(false);
+            player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
             PlayerStats.DropMana(2);
         }
 
@@ -54,6 +57,7 @@ public class ShieldManager : MonoBehaviour
             }
 
             PlayerStats.SetShoot(true);
+            PlayerStats.SetMove(true);
         }
 
         if (currShield != null)

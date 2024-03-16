@@ -22,13 +22,18 @@ public class Dodge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xDir = Input.GetAxis("Horizontal");
-        zDir = Input.GetAxis("Vertical");
-
         if (!canDodge)
         {
             dodgeBgUI.GetComponent<Image>().fillAmount += 1.0f / coldown * Time.deltaTime;
         }
+
+        if (!PlayerStats.CanMove())
+        {
+            return;
+        }
+
+        xDir = Input.GetAxis("Horizontal");
+        zDir = Input.GetAxis("Vertical");
 
         if (Input.GetKeyDown(KeyCode.Space) && canDodge)
         {

@@ -1480,6 +1480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7565614540426263999, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1344335455}
+    - target: {fileID: 7565614540426263999, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
       propertyPath: shieldSfx
       value: 
       objectReference: {fileID: 1378549314}
