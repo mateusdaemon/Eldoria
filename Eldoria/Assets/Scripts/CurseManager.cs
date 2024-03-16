@@ -9,6 +9,7 @@ public class CurseManager : MonoBehaviour
     public GameObject greenCurseUI;
     public GameObject blueCurseUI;
     public AudioSource breakCurseSfx;
+    public AudioSource errorCurseSfx;
 
     private bool beingRedCursed = false;
     private bool beingGreenCursed = false;
@@ -87,7 +88,7 @@ public class CurseManager : MonoBehaviour
 
             if (mistake)
             {
-                // som de erro
+                errorCurseSfx.Play();
             } else
             {
                 breakCurseSfx.Play();
