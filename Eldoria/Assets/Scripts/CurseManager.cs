@@ -47,24 +47,52 @@ public class CurseManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            bool mistake = false;
+
             switch (spellbook.currSpellbook)
             {
                 case SpellbookMng.Spellbook.Red:
-                    PlayerStats.CurseRed(false);
-                    redCurseUI.SetActive(false);
+                    if (!PlayerStats.RedCursed())
+                    {
+                        mistake = true;
+                    } else
+                    {
+                        PlayerStats.CurseRed(false);
+                        redCurseUI.SetActive(false);
+                    }
                     break;
                 case SpellbookMng.Spellbook.Green:
-                    PlayerStats.CurseGreen(false);
-                    greenCurseUI.SetActive(false);
+                    if (!PlayerStats.GreenCursed())
+                    {
+                        mistake = true;
+                    } else
+                    {
+                        PlayerStats.CurseGreen(false);
+                        greenCurseUI.SetActive(false);
+                    }
                     break;
                 case SpellbookMng.Spellbook.Blue:
-                    PlayerStats.CurseBlue(false);
-                    blueCurseUI.SetActive(false);
+                    if (!PlayerStats.BlueCursed())
+                    {
+                        mistake = true;
+                    } else
+                    {
+                        PlayerStats.CurseBlue(false);
+                        blueCurseUI.SetActive(false);
+                    }
                     break;
                 default:
                     break;
             }
-            breakCurseSfx.Play();
+
+            if (mistake)
+            {
+                // som de erro
+            } else
+            {
+                breakCurseSfx.Play();
+            }
+
             PlayerStats.DropMana(2);
         }
     }
