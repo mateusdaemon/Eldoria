@@ -83,6 +83,7 @@ public class CurseManager : MonoBehaviour
                     }
                     break;
                 default:
+                    mistake = true;
                     break;
             }
 
