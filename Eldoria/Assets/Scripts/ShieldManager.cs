@@ -8,6 +8,7 @@ public class ShieldManager : MonoBehaviour
     public GameObject greenShield;
     public GameObject blueShield;
     public GameObject neutralShield;
+    public int manaCost;
     public SpellbookMng spellbook;
     public AudioSource shieldSfx;
     public GameObject player;
@@ -25,7 +26,7 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (PlayerStats.GetMana() >= manaCost && Input.GetMouseButtonDown(1))
         {
             switch (spellbook.currSpellbook)
             {
@@ -59,7 +60,7 @@ public class ShieldManager : MonoBehaviour
             PlayerStats.SetShoot(false);
             PlayerStats.SetMove(false);
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
-            PlayerStats.DropMana(2);
+            PlayerStats.DropMana(manaCost);
         }
 
         if (Input.GetMouseButtonUp(1))

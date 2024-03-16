@@ -2042,10 +2042,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 990714866416611975, guid: f4908fc7d7e780847bc062f78fc5a804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2393191530652736251, guid: f4908fc7d7e780847bc062f78fc5a804,
         type: 3}
       propertyPath: m_Name
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972664479173488858, guid: f4908fc7d7e780847bc062f78fc5a804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533107396698951217, guid: f4908fc7d7e780847bc062f78fc5a804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5347076724872687355, guid: f4908fc7d7e780847bc062f78fc5a804,
         type: 3}
@@ -2096,6 +2111,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449841482357540156, guid: f4908fc7d7e780847bc062f78fc5a804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011578504615990547, guid: f4908fc7d7e780847bc062f78fc5a804,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
