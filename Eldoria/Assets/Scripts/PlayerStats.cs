@@ -4,16 +4,25 @@ using UnityEngine;
 
 public static class PlayerStats
 {
+    // Player stats
     private static int maxLife = 10;
     private static int maxMana = 20;
     private static int life = 10;
     private static int mana = 20;
+    private static float playerDamage = 1;
+
+    // Player states
     private static bool redCursed = false;
     private static bool greenCursed = false;
     private static bool blueCursed = false;
     private static bool canShoot = true;
     private static bool canMove = true;
-    private static float playerDamage = 1;
+
+    // Shield states
+    private static bool neutralShielded = false;
+    private static bool redShielded = false;
+    private static bool greenShielded = false;
+    private static bool blueShielded = false;
 
     public static int GetMaxMana()
     {
@@ -121,6 +130,46 @@ public static class PlayerStats
     public static bool CanMove()
     {
         return canMove;
+    }
+
+    public static bool IsNeutralShielded()
+    {
+        return neutralShielded;
+    }
+
+    public static void SetNeutralShielded(bool shield)
+    {
+        neutralShielded = shield;
+    }
+
+    public static bool IsRedShielded()
+    {
+        return redShielded;
+    }
+
+    public static void SetRedShielded(bool shield)
+    {
+        redShielded = shield;
+    }
+
+    public static bool IsGreenShielded()
+    {
+        return greenShielded;
+    }
+
+    public static void SetGreenShielded(bool shield)
+    {
+        greenShielded = shield;
+    }
+
+    public static bool IsBlueShielded()
+    {
+        return blueShielded;
+    }
+
+    public static void SetBlueShielded(bool shield)
+    {
+        blueShielded = shield;
     }
 
 }

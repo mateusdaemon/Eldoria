@@ -9,9 +9,12 @@ public class ShieldManager : MonoBehaviour
     public GameObject blueShield;
     public GameObject neutralShield;
     public SpellbookMng spellbook;
-    GameObject currShield;
     public AudioSource shieldSfx;
     public GameObject player;
+
+    private GameObject currShield;
+    private SpellbookMng.Spellbook shieldCurse;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,21 +31,31 @@ public class ShieldManager : MonoBehaviour
             {
                 case SpellbookMng.Spellbook.Red:
                     currShield = Instantiate(redShield, this.transform.position, new Quaternion());
+                    shieldCurse = SpellbookMng.Spellbook.Red;
+                    PlayerStats.SetRedShielded(true);
                     break;
                 case SpellbookMng.Spellbook.Green:
                     currShield = Instantiate(greenShield, this.transform.position, new Quaternion());
+                    shieldCurse = SpellbookMng.Spellbook.Green;
+                    PlayerStats.SetGreenShielded(true);
                     break;
                 case SpellbookMng.Spellbook.Blue:
                     currShield = Instantiate(blueShield, this.transform.position, new Quaternion());
+                    shieldCurse = SpellbookMng.Spellbook.Blue;
+                    PlayerStats.SetBlueShielded(true);
                     break;
                 case SpellbookMng.Spellbook.None:
-                    currShield = Instantiate(neutralShield, this.transform.position, new Quaternion()); ;
+                    currShield = Instantiate(neutralShield, this.transform.position, new Quaternion());
+                    shieldCurse = SpellbookMng.Spellbook.None;
+                    PlayerStats.SetNeutralShielded(true);
                     break;
                 default:
                     neutralShield = null;
                     break;
             }
             shieldSfx.Play();
+            // Shield height correction
+            currShield.transform.position = new Vector3(currShield.transform.position.x, currShield.transform.position.y + 0.2f, currShield.transform.position.z);
             PlayerStats.SetShoot(false);
             PlayerStats.SetMove(false);
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
@@ -54,18 +67,27 @@ public class ShieldManager : MonoBehaviour
             if (currShield != null)
             {
                 Destroy(currShield);
+                switch (shieldCurse)
+                {
+                    case SpellbookMng.Spellbook.None:
+                        PlayerStats.SetNeutralShielded(false);
+                        break;
+                    case SpellbookMng.Spellbook.Red:
+                        PlayerStats.SetRedShielded(false);
+                        break;
+                    case SpellbookMng.Spellbook.Green:
+                        PlayerStats.SetGreenShielded(false);
+                        break;
+                    case SpellbookMng.Spellbook.Blue:
+                        PlayerStats.SetBlueShielded(false);
+                        break;
+                    default:
+                        break;
+                }
             }
 
             PlayerStats.SetShoot(true);
             PlayerStats.SetMove(true);
         }
-
-        if (currShield != null)
-        {
-            Vector3 pos = transform.position;
-            pos.y += 0.3f;
-            currShield.transform.position = pos;
-        }
-
     }
 }

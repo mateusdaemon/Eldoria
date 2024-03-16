@@ -4,49 +4,70 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool hitPlayer;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            Enemy currEnemy = GetComponent<Enemy>();
-            switch (currEnemy.curse)
-            {
-                case SpellbookMng.Spellbook.Red:
-                    if (PlayerStats.RedCursed())
-                        break;
+            hitPlayer = true;
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            hitPlayer = false;
+        }
+    }
+
+    public void AttackPlayer(Enemy currEnemy)
+    {
+        bool hit = true;
+        switch (currEnemy.curse)
+        {
+            case SpellbookMng.Spellbook.None:
+                if (PlayerStats.IsNeutralShielded())
+                {
+                    hit = false;
+                }
+                break;
+            case SpellbookMng.Spellbook.Red:
+                if (PlayerStats.IsRedShielded())
+                {
+                    hit = false;
+                } else
+                {
                     PlayerStats.CurseRed(true);
-                    break;
-
-                case SpellbookMng.Spellbook.Green:
-                    if (PlayerStats.GreenCursed())
-                        break;
-
+                }
+                break;
+            case SpellbookMng.Spellbook.Green:
+                if (PlayerStats.IsGreenShielded())
+                {
+                    hit = false;
+                }
+                else
+                {
                     PlayerStats.CurseGreen(true);
-                    break;
-
-                case SpellbookMng.Spellbook.Blue:
-                    if (PlayerStats.BlueCursed())
-                        break;
-
+                }
+                break;
+            case SpellbookMng.Spellbook.Blue:
+                if (PlayerStats.IsBlueShielded())
+                {
+                    hit = false;
+                }
+                else
+                {
                     PlayerStats.CurseBlue(true);
-                    break;
+                }
+                break;
+            default:
+                break;
+        }
 
-                default:
-                    break;
-            }
-
+        if (hit)
+        {
             PlayerStats.DropLife(currEnemy.damage);
         }
     }

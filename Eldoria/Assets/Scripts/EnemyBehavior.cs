@@ -10,6 +10,7 @@ public class EnemyBehavior : MonoBehaviour
     private GameObject parent;
     private Vector3 moveTarget;
     private bool originSet = false;
+    private bool isAttaking = false;
 
     public float distancePlayer;
     public DamagePlayer attackArea;
@@ -31,6 +32,13 @@ public class EnemyBehavior : MonoBehaviour
                 moveTarget.x = playerRef.transform.position.x;
                 moveTarget.z = playerRef.transform.position.z;
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
+            } else
+            {
+                if (!isAttaking)
+                {
+                    isAttaking = true;
+                    Invoke("AttackPlayer", 1.0f);
+                }
             }
         } else
         {
@@ -58,6 +66,18 @@ public class EnemyBehavior : MonoBehaviour
         origin = transform.position;
         moveTarget = new Vector3(0, origin.y, 0);
         originSet = true;
+    }
+
+    private void AttackPlayer()
+    {
+        if (attackArea.hitPlayer)
+        {
+            attackArea.AttackPlayer(parent.GetComponent<Enemy>());
+            Invoke("AttackPlayer", 1.0f);
+        } else
+        {
+            isAttaking = false;
+        }
     }
 
 }
