@@ -1388,6 +1388,11 @@ PrefabInstance:
       propertyPath: greenActive
       value: 
       objectReference: {fileID: 394237203}
+    - target: {fileID: 3664598879676579827, guid: 0642aca200599ff4488ca701f8b095b1,
+        type: 3}
+      propertyPath: dodgeBgUI
+      value: 
+      objectReference: {fileID: 2253961108192514624}
     - target: {fileID: 3916705932798982709, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: redCurseUI
@@ -2063,6 +2068,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77, type: 3}
+--- !u!1 &2253961108192514624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6146725039214445555, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2253961108192514623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4435223780588509147
 PrefabInstance:
   m_ObjectHideFlags: 0
