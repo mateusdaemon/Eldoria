@@ -14,6 +14,8 @@ public class EnemyBehavior : MonoBehaviour
 
     public float distancePlayer;
     public DamagePlayer attackArea;
+    public GameObject warnSign;
+    public GameObject dangerSign;
 
     // Start is called before the first frame update
     void Start()
@@ -51,13 +53,17 @@ public class EnemyBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        goToPlayer = true;
+        warnSign.SetActive(true);
+        Invoke("SpotPlayer", 2);
         playerRef = other.gameObject;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        CancelInvoke();
         goToPlayer = false;
+        warnSign.SetActive(false);
+        dangerSign.SetActive(false);
         playerRef = null;
     }
 
@@ -80,4 +86,13 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
+    private void SpotPlayer()
+    {
+        if (playerRef != null)
+        {
+            warnSign.SetActive(false);
+            dangerSign.SetActive(true);
+            goToPlayer = true;
+        }
+    }
 }
