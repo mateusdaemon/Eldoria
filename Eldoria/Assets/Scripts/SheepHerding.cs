@@ -24,25 +24,30 @@ public class SheepHerding : MonoBehaviour
             float dist = Vector3.Distance(this.transform.position, other.gameObject.transform.position);
             float posX = transform.position.x;
             float posZ = transform.position.z;
+            Vector3 playerPos = other.transform.position;
+            Vector3 sheepPos = this.transform.position;
 
-            if (other.gameObject.transform.position.x > posX)
+            if (playerPos.x > sheepPos.x && playerPos.z > sheepPos.z)
             {
                 posX -= dist;
-            } else
+                posZ -= dist;
+            } else if (playerPos.x > sheepPos.x && playerPos.z < sheepPos.z)
+            {
+                posX -= dist;
+                posZ += dist;
+            } else if (playerPos.x < sheepPos.x && playerPos.z > sheepPos.z)
             {
                 posX += dist;
-            }
-
-            if (other.gameObject.transform.position.z > posX)
-            {
                 posZ -= dist;
-            }
-            else
+            } else if (playerPos.x < sheepPos.x && playerPos.z < sheepPos.z)
             {
+                posX += dist;
                 posZ += dist;
             }
 
             Vector3 target = new Vector3(posX, 0, posZ);
+
+            
             parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.5f);
         }
     }
