@@ -26,6 +26,7 @@ public class Move : MonoBehaviour
         xDir = Input.GetAxis("Horizontal");
         zDir = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector3(xDir, 0, zDir) * velocity;
+        //rb.velocity = new Vector3(xDir, 0, zDir) * velocity;
+        rb.AddForce(new Vector3(xDir, 0, zDir) * velocity);
     }
 }
