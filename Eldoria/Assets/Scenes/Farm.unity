@@ -493,7 +493,7 @@ Transform:
   m_GameObject: {fileID: 93903941}
   serializedVersion: 2
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: -18.07, y: 18, z: -3.73}
+  m_LocalPosition: {x: 12.6, y: 18, z: -22.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39084,7 +39084,7 @@ PrefabInstance:
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.52
+      value: -18.23
       objectReference: {fileID: 0}
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
@@ -39094,7 +39094,7 @@ PrefabInstance:
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.66
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5658435706372703001, guid: 0642aca200599ff4488ca701f8b095b1,
         type: 3}
@@ -73999,7 +73999,7 @@ PrefabInstance:
     - target: {fileID: 3431574587946181675, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.57
+      value: 16.68
       objectReference: {fileID: 0}
     - target: {fileID: 3431574587946181675, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
@@ -74009,7 +74009,7 @@ PrefabInstance:
     - target: {fileID: 3431574587946181675, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.3
+      value: -13.55
       objectReference: {fileID: 0}
     - target: {fileID: 3431574587946181675, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
@@ -89012,6 +89012,11 @@ PrefabInstance:
     - target: {fileID: 3431574587946181675, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6003974342387157894, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,

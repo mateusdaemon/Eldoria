@@ -24,6 +24,9 @@ public static class PlayerStats
     private static bool greenShielded = false;
     private static bool blueShielded = false;
 
+    // Global utilities
+    public enum Direction {Right, Left, Front, Back };
+
     public static int GetMaxMana()
     {
         return maxMana;

@@ -7,11 +7,16 @@ public class SheepHerding : MonoBehaviour
     private GameObject parent;
     private GameObject playerRef;
     private bool runAway = false;
+    private PlayerStats.Direction runAwayDir;
+    private Animator parentAnim;
+    private SpriteRenderer parentSr;
 
     // Start is called before the first frame update
     void Start()
     {
         parent = transform.parent.gameObject;
+        parentAnim = parent.GetComponent<Animator>();
+        parentSr = parent.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -20,7 +25,12 @@ public class SheepHerding : MonoBehaviour
         if (runAway)
         {
             RunAwaySheep();            
-        }        
+        } else
+        {
+            parentAnim.SetBool("frontWalk", false);
+            parentAnim.SetBool("backWalk", false);
+            parentAnim.SetBool("sideWalk", false);
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -56,17 +66,18 @@ public class SheepHerding : MonoBehaviour
         float posZ = transform.position.z;
         Vector3 playerPos = playerRef.transform.position;
         Vector3 sheepPos = this.transform.position;
-        Debug.Log(dist);
 
         if (playerPos.x >= sheepPos.x - 1 && playerPos.x <= sheepPos.x + 1)
         {
             if (playerPos.z > sheepPos.z)
             {
                 posZ -= dist;
+                runAwayDir = PlayerStats.Direction.Front;
             }
             else
             {
                 posZ += dist;
+                runAwayDir = PlayerStats.Direction.Back;
             }
         }
         else if (playerPos.z >= sheepPos.z - 1 && playerPos.z <= sheepPos.z + 1)
@@ -74,12 +85,15 @@ public class SheepHerding : MonoBehaviour
             if (playerPos.x > sheepPos.x)
             {
                 posX -= dist;
+                runAwayDir = PlayerStats.Direction.Left;
             }
             else
             {
                 posX += dist;
+                runAwayDir = PlayerStats.Direction.Right;
             }
-        } else if (playerPos.x > sheepPos.x)
+        } 
+        else if (playerPos.x > sheepPos.x)
         {
             if (playerPos.z > sheepPos.z)
             {
@@ -105,28 +119,42 @@ public class SheepHerding : MonoBehaviour
                 posZ += dist;
             }
         }
-        //else if (playerPos.x == sheepPos.x)
-        //{
-        //    if (playerPos.z > sheepPos.z)
-        //    {
-        //        posZ -= dist;
-        //    } else
-        //    {
-        //        posZ += dist;
-        //    }
-        //} else if (playerPos.z == sheepPos.z)
-        //{
-        //    if (playerPos.x > sheepPos.x)
-        //    {
-        //        posX -= dist;
-        //    }
-        //    else
-        //    {
-        //        posX += dist;
-        //    }
-        //}
 
         Vector3 target = new Vector3(posX, 0, posZ);
+
+        OrientSheepSprite();
+
         parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
+    }
+
+    private void OrientSheepSprite()
+    {
+        switch (runAwayDir)
+        {
+            case PlayerStats.Direction.Right:
+                parentAnim.SetBool("frontWalk", false);
+                parentAnim.SetBool("backWalk", false);
+                parentAnim.SetBool("sideWalk", true);
+                parentSr.flipX = true;
+                break;
+            case PlayerStats.Direction.Left:
+                parentAnim.SetBool("frontWalk", false);
+                parentAnim.SetBool("backWalk", false);
+                parentAnim.SetBool("sideWalk", true);
+                parentSr.flipX = false;
+                break;
+            case PlayerStats.Direction.Front:
+                parentAnim.SetBool("frontWalk", true);
+                parentAnim.SetBool("backWalk", false);
+                parentAnim.SetBool("sideWalk", false);
+                break;
+            case PlayerStats.Direction.Back:
+                parentAnim.SetBool("frontWalk", false);
+                parentAnim.SetBool("backWalk", true);
+                parentAnim.SetBool("sideWalk", false);
+                break;
+            default:
+                break;
+        }
     }
 }
