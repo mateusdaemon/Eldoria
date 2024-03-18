@@ -46,7 +46,7 @@ public class SheepHerding : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerRef = other.gameObject;
-            runAway = true;
+            runAway = true;            
         }
     }
 
