@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 4794218204834473178}
   m_Layer: 14
   m_Name: DamageArea
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 1406278368849766571}
   m_Layer: 14
   m_Name: Player_v3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,6 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellbook: {fileID: 7964820225507872425}
+  manaCost: 2
   redCurseUI: {fileID: 0}
   greenCurseUI: {fileID: 0}
   blueCurseUI: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CurseManager : MonoBehaviour
 {
     public SpellbookMng spellbook;
+    public int manaCost;
     public GameObject redCurseUI;
     public GameObject greenCurseUI;
     public GameObject blueCurseUI;
@@ -50,41 +51,49 @@ public class CurseManager : MonoBehaviour
         {
             bool mistake = false;
 
-            switch (spellbook.currSpellbook)
+            if (manaCost <= PlayerStats.GetMana())
             {
-                case SpellbookMng.Spellbook.Red:
-                    if (!PlayerStats.RedCursed())
-                    {
+                switch (spellbook.currSpellbook)
+                {
+                    case SpellbookMng.Spellbook.Red:
+                        if (!PlayerStats.RedCursed())
+                        {
+                            mistake = true;
+                        } else
+                        {
+                            PlayerStats.CurseRed(false);
+                            redCurseUI.SetActive(false);
+                        }
+                        break;
+                    case SpellbookMng.Spellbook.Green:
+                        if (!PlayerStats.GreenCursed())
+                        {
+                            mistake = true;
+                        } else
+                        {
+                            PlayerStats.CurseGreen(false);
+                            greenCurseUI.SetActive(false);
+                        }
+                        break;
+                    case SpellbookMng.Spellbook.Blue:
+                        if (!PlayerStats.BlueCursed())
+                        {
+                            mistake = true;
+                        } else
+                        {
+                            PlayerStats.CurseBlue(false);
+                            blueCurseUI.SetActive(false);
+                        }
+                        break;
+                    default:
                         mistake = true;
-                    } else
-                    {
-                        PlayerStats.CurseRed(false);
-                        redCurseUI.SetActive(false);
-                    }
-                    break;
-                case SpellbookMng.Spellbook.Green:
-                    if (!PlayerStats.GreenCursed())
-                    {
-                        mistake = true;
-                    } else
-                    {
-                        PlayerStats.CurseGreen(false);
-                        greenCurseUI.SetActive(false);
-                    }
-                    break;
-                case SpellbookMng.Spellbook.Blue:
-                    if (!PlayerStats.BlueCursed())
-                    {
-                        mistake = true;
-                    } else
-                    {
-                        PlayerStats.CurseBlue(false);
-                        blueCurseUI.SetActive(false);
-                    }
-                    break;
-                default:
-                    mistake = true;
-                    break;
+                        break;
+                }
+
+                PlayerStats.DropMana(manaCost);
+            } else
+            {
+                mistake = true;
             }
 
             if (mistake)
@@ -94,8 +103,6 @@ public class CurseManager : MonoBehaviour
             {
                 breakCurseSfx.Play();
             }
-
-            PlayerStats.DropMana(2);
         }
     }
 
