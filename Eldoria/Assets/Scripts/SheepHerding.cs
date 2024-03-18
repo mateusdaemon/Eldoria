@@ -27,28 +27,53 @@ public class SheepHerding : MonoBehaviour
             Vector3 playerPos = other.transform.position;
             Vector3 sheepPos = this.transform.position;
 
-            if (playerPos.x > sheepPos.x && playerPos.z > sheepPos.z)
+            if (playerPos.x > sheepPos.x)
             {
-                posX -= dist;
-                posZ -= dist;
-            } else if (playerPos.x > sheepPos.x && playerPos.z < sheepPos.z)
+                if (playerPos.z > sheepPos.z)
+                {
+                    posX -= dist;
+                    posZ -= dist;
+                } else if (playerPos.z < sheepPos.z)
+                {
+                    posX -= dist;
+                    posZ += dist;
+                }
+            } else if (playerPos.x < sheepPos.x)
             {
-                posX -= dist;
-                posZ += dist;
-            } else if (playerPos.x < sheepPos.x && playerPos.z > sheepPos.z)
-            {
-                posX += dist;
-                posZ -= dist;
-            } else if (playerPos.x < sheepPos.x && playerPos.z < sheepPos.z)
-            {
-                posX += dist;
-                posZ += dist;
-            }
+                if (playerPos.z > sheepPos.z)
+                {
+                    posX += dist;
+                    posZ -= dist;
+                }
+                else if (playerPos.z < sheepPos.z)
+                {
+                    posX += dist;
+                    posZ += dist;
+                }
+            } 
+            //else if (playerPos.x == sheepPos.x)
+            //{
+            //    if (playerPos.z > sheepPos.z)
+            //    {
+            //        posZ -= dist;
+            //    } else
+            //    {
+            //        posZ += dist;
+            //    }
+            //} else if (playerPos.z == sheepPos.z)
+            //{
+            //    if (playerPos.x > sheepPos.x)
+            //    {
+            //        posX -= dist;
+            //    }
+            //    else
+            //    {
+            //        posX += dist;
+            //    }
+            //}
 
-            Vector3 target = new Vector3(posX, 0, posZ);
-
-            
-            parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.5f);
+            Vector3 target = new Vector3(posX, 0, posZ);            
+            parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
         }
     }
 }
