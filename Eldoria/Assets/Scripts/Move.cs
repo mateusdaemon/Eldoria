@@ -10,13 +10,14 @@ public class Move : MonoBehaviour
     private SpriteRenderer sr;
 
     public float velocity;
+    public GameObject playerSpriteObj;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
-        sr = this.GetComponent<SpriteRenderer>();
+        anim = playerSpriteObj.GetComponent<Animator>();
+        sr = playerSpriteObj.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
