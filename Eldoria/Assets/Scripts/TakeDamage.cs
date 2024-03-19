@@ -7,7 +7,8 @@ public class TakeDamage : MonoBehaviour
 {
     private Enemy currEnemy;
     public GameObject lifeBarUI;
-    float maxLife;
+    public AudioSource sfxHurt;
+    private float maxLife;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class TakeDamage : MonoBehaviour
             Destroy(other.gameObject);
 
             currEnemy.life -= (int)PlayerStats.GetDamage();
+            sfxHurt.Play();
             lifeBarUI.GetComponent<Image>().fillAmount = currEnemy.life / maxLife;
         }
     }
