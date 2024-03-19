@@ -46,7 +46,7 @@ public class EnemyBehavior : MonoBehaviour
                 }
                 moveTarget.x = playerRef.transform.position.x;
                 moveTarget.z = playerRef.transform.position.z;
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
+                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.15f);
             } else
             {
                 anim.SetBool("walk", false);
@@ -61,7 +61,7 @@ public class EnemyBehavior : MonoBehaviour
             if (originSet && parent.transform.position != origin)
             {
                 anim.SetBool("walk", true);
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.1f);
+                parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
             } else
             {
                 anim.SetBool("walk", false);
@@ -72,7 +72,7 @@ public class EnemyBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         warnSign.SetActive(true);
-        Invoke("SpotPlayer", 2);
+        Invoke("SpotPlayer", 1.5f);
         playerRef = other.gameObject;
     }
 

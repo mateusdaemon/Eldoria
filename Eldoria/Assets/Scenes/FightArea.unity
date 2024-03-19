@@ -573,11 +573,6 @@ PrefabInstance:
       propertyPath: dodgeBgUI
       value: 
       objectReference: {fileID: 2253961108192514624}
-    - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: dodgeForce
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5054131556247001451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: m_Name
@@ -2012,6 +2007,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wolf_anim
       objectReference: {fileID: 0}
+    - target: {fileID: 8475517119270558051, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: life
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2029,6 +2029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395849035374871075, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_text
+      value: 10/10
       objectReference: {fileID: 0}
     - target: {fileID: 1844442471931621889, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
         type: 3}
@@ -2134,6 +2139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6.800049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586458666379605644, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_text
+      value: 20/20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,6 +13,9 @@ public class ConsumePotions : MonoBehaviour
     private bool canUseLife = true;
     public int lifeIncrease;
     public int manaIncrease;
+    public AudioSource drinkLife;
+    public AudioSource drinkMana;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +42,8 @@ public class ConsumePotions : MonoBehaviour
                 PlayerStats.AddLife(lifeIncrease);
             }
 
+            Debug.Log("Drinkkkkk");
+            drinkLife.Play();
             canUseLife = false;
             lifePotUI.GetComponent<Image>().fillAmount = 0;
             Invoke("LifeColdown", lifeColdown);
@@ -55,6 +60,8 @@ public class ConsumePotions : MonoBehaviour
                 PlayerStats.AddMana(manaIncrease);
             }
 
+            Debug.Log("Drinkkkkk");
+            drinkMana.Play();
             canUseMana = false;
             manaPotUI.GetComponent<Image>().fillAmount = 0;
             Invoke("ManaColdown", manaColdown);
