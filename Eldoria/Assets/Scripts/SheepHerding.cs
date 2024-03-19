@@ -11,6 +11,8 @@ public class SheepHerding : MonoBehaviour
     private Animator parentAnim;
     private SpriteRenderer parentSr;
 
+    public AudioSource sheepBea;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,10 @@ public class SheepHerding : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (!sheepBea.isPlaying)
+            {
+                sheepBea.Play();
+            }
             playerRef = other.gameObject;
             runAway = true;            
         }
