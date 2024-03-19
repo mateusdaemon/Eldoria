@@ -434,6 +434,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 2974517021343456613, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: sprite
@@ -568,11 +573,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 988743208241786645, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e862ea02aa98744e8eec760a599fb8a, type: 3}
     - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: dodgeBgUI
       value: 
       objectReference: {fileID: 2253961108192514624}
+    - target: {fileID: 3028321217630674826, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea315719b4a31274293c6336a4d15a50, type: 3}
     - target: {fileID: 5054131556247001451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: m_Name
@@ -766,6 +781,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 2974517021343456613, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: sprite
@@ -972,6 +992,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 2974517021343456613, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: sprite
@@ -1056,6 +1081,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 2974517021343456613, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: sprite
@@ -1694,6 +1724,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 2974517021343456613, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: sprite
@@ -2036,6 +2071,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 879021921273111452, guid: 520c1b008faa9f64bbbe76e17c1fa700,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f0ae216cb5597794d8f562d934a3b178, type: 3}
     - target: {fileID: 3284776330666292511, guid: 520c1b008faa9f64bbbe76e17c1fa700,
         type: 3}
       propertyPath: m_LocalPosition.x
