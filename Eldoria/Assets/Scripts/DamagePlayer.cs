@@ -5,6 +5,14 @@ using UnityEngine;
 public class DamagePlayer : MonoBehaviour
 {
     public bool hitPlayer;
+    public GameObject spriteEnemy;
+
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = spriteEnemy.GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,6 +33,8 @@ public class DamagePlayer : MonoBehaviour
     public void AttackPlayer(Enemy currEnemy)
     {
         bool hit = true;
+        anim.SetBool("attack", true);
+        Invoke("DisableAttack", anim.GetCurrentAnimatorClipInfo(0).Length);
         switch (currEnemy.curse)
         {
             case SpellbookMng.Spellbook.None:
@@ -70,5 +80,10 @@ public class DamagePlayer : MonoBehaviour
         {
             PlayerStats.DropLife(currEnemy.damage);
         }
+    }
+
+    private void DisableAttack()
+    {
+        anim.SetBool("attack", false);
     }
 }
