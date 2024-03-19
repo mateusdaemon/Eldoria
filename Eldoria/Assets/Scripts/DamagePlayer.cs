@@ -6,6 +6,7 @@ public class DamagePlayer : MonoBehaviour
 {
     public bool hitPlayer;
     public GameObject spriteEnemy;
+    public AudioSource sfxBark;
 
     private Animator anim;
 
@@ -35,6 +36,8 @@ public class DamagePlayer : MonoBehaviour
         bool hit = true;
         anim.SetBool("attack", true);
         Invoke("DisableAttack", anim.GetCurrentAnimatorClipInfo(0).Length);
+        sfxBark.Play();
+
         switch (currEnemy.curse)
         {
             case SpellbookMng.Spellbook.None:

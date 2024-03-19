@@ -34,7 +34,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (goToPlayer)
         {
-            if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > distancePlayer)
+            if (!isAttaking && Vector3.Distance(parent.transform.position, playerRef.transform.position) > distancePlayer)
             {
                 anim.SetBool("walk", true);
                 if (playerRef.transform.position.x > transform.position.x)
@@ -72,7 +72,7 @@ public class EnemyBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         warnSign.SetActive(true);
-        Invoke("SpotPlayer", 1.5f);
+        Invoke("SpotPlayer", 1.0f);
         playerRef = other.gameObject;
     }
 
