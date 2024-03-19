@@ -42,7 +42,6 @@ public class ConsumePotions : MonoBehaviour
                 PlayerStats.AddLife(lifeIncrease);
             }
 
-            Debug.Log("Drinkkkkk");
             drinkLife.Play();
             canUseLife = false;
             lifePotUI.GetComponent<Image>().fillAmount = 0;

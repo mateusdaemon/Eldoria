@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c76bad4543d5d4bb60c5e50e905ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 4
+  life: 5
   damage: 2
   curse: 0
 --- !u!114 &7588998591697722339

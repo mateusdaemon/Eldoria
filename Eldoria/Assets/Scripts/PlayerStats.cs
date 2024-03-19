@@ -9,7 +9,7 @@ public static class PlayerStats
     private static int maxMana = 20;
     private static int life = 10;
     private static int mana = 20;
-    private static float playerDamage = 1;
+    private static float playerDamage = 2;
 
     // Player states
     private static bool redCursed = false;
