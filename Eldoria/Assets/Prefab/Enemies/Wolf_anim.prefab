@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distancePlayer: 4
   attackArea: {fileID: 7232196050928442062}
+  sprite: {fileID: 16263886066547009}
   warnSign: {fileID: 3951336138075384575}
   dangerSign: {fileID: 2711185911616151894}
 --- !u!135 &7648746916302490615

@@ -12,6 +12,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool originSet = false;
     private bool isAttaking = false;
     private SpriteRenderer sr;
+    private Animator anim;
 
     public float distancePlayer;
     public DamagePlayer attackArea;
@@ -24,6 +25,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         parent = this.transform.parent.gameObject;
         sr = sprite.GetComponent<SpriteRenderer>();
+        anim = sprite.GetComponent<Animator>();
         Invoke("SetOrigin", 1);
     }
 
@@ -34,6 +36,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (Vector3.Distance(parent.transform.position, playerRef.transform.position) > distancePlayer)
             {
+                anim.SetBool("walk", true);
                 if (playerRef.transform.position.x > transform.position.x)
                 {
                     sr.flipX = true;
@@ -46,6 +49,7 @@ public class EnemyBehavior : MonoBehaviour
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
             } else
             {
+                anim.SetBool("walk", false);
                 if (!isAttaking)
                 {
                     isAttaking = true;
@@ -56,7 +60,11 @@ public class EnemyBehavior : MonoBehaviour
         {
             if (originSet && parent.transform.position != origin)
             {
+                anim.SetBool("walk", true);
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.1f);
+            } else
+            {
+                anim.SetBool("walk", false);
             }
         }
     }
