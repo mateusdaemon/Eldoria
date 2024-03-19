@@ -18,6 +18,10 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 target = new Vector3(player.transform.position.x, this.transform.position.y, player.transform.position.z - zOffset);
+        float mouseScroll = Input.mouseScrollDelta.y;
+
+        target.y -= mouseScroll;
+        zOffset -= mouseScroll;
 
         this.transform.position = Vector3.Lerp(this.transform.position, target, 0.3f);
     }
