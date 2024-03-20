@@ -27,6 +27,11 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canShoot)
+        {
+            attackBgUI.GetComponent<Image>().fillAmount += 1.0f / shootColdown * Time.deltaTime;
+        }
+
         if (!PlayerStats.CanShoot())
         {
             return;
@@ -35,10 +40,6 @@ public class Shooter : MonoBehaviour
         Vector3 currTarget;
         Bullet currBullet = null;
 
-        if (!canShoot)
-        {
-            attackBgUI.GetComponent<Image>().fillAmount += 1.0f / shootColdown * Time.deltaTime;
-        }
 
         if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {

@@ -759,6 +759,11 @@ PrefabInstance:
       propertyPath: manaPotUI
       value: 
       objectReference: {fileID: 157672202}
+    - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: drinkError
+      value: 
+      objectReference: {fileID: 867893911}
     - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: redActive
@@ -1060,7 +1065,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9fca1494094952c4390703a34079fab0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
