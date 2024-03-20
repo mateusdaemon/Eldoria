@@ -3,7 +3,52 @@ guid: ec89293e898a3364bb4f2948c8999c8a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chamine
+    second: {fileID: 2100000, guid: 92df0a11991f8bc4893411faf6506dde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: 25027a7ff881553418f2eb1c4aa42bc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door.002
+    second: {fileID: 2100000, guid: 29e0176725f37bf43b7a5fb15f38a051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House Forest
+    second: {fileID: 2100000, guid: fe843cfce8fb6c84ea35cec8c9137973, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Janela 1
+    second: {fileID: 2100000, guid: e02ca0b0780cdaa42936a7809d492880, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.007
+    second: {fileID: 2100000, guid: dffb00a7631b6564e9d1fae20a91f8fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Telhado
+    second: {fileID: 2100000, guid: f1a856a9051a94f45b65ff33b328af48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Telhado Houuse Forest
+    second: {fileID: 2100000, guid: 2dca462f7536c4f458dac2e58e3528b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tree base.001
+    second: {fileID: 2100000, guid: 3ffe30e5527c21f4294a6698cf02047b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
