@@ -10,11 +10,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI lifeLabel;
     public GameObject manaBar;
     public GameObject lifeBar;
+    public int maxFPS;
 
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = maxFPS;
     }
 
     // Update is called once per frame
