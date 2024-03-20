@@ -46503,7 +46503,7 @@ PrefabInstance:
     - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
         type: 3}
       propertyPath: maxFPS
-      value: 30
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
         type: 3}
@@ -47617,6 +47617,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1273931789479127439, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1844442471931621889, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
         type: 3}
       propertyPath: m_Pivot.x
@@ -47717,10 +47722,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3946219228356685058, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5408393561864228903, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5805974629089782755, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6421115512827522194, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 6.800049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849573978842180583, guid: 02b9d18e8ed0f904f8067ba0d2ae6b77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -106844,6 +106869,16 @@ PrefabInstance:
       propertyPath: dodgeBgUI
       value: 
       objectReference: {fileID: 493563434}
+    - target: {fileID: 1713895025022117159, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070175148183334451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5054131556247001451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: m_Name
@@ -106853,6 +106888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5073907797615219488, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6943220556466695934, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
@@ -106866,9 +106906,19 @@ PrefabInstance:
       objectReference: {fileID: 267134523}
     - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
       propertyPath: manaPotUI
       value: 
       objectReference: {fileID: 1320133908}
+    - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: redActive
@@ -106884,6 +106934,11 @@ PrefabInstance:
       propertyPath: greenActive
       value: 
       objectReference: {fileID: 158153994}
+    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: redCurseUI
@@ -106914,6 +106969,11 @@ PrefabInstance:
       propertyPath: shootSfx
       value: 
       objectReference: {fileID: 798774057}
+    - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: attackBgUI
