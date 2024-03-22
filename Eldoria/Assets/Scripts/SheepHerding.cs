@@ -73,6 +73,7 @@ public class SheepHerding : MonoBehaviour
         Vector3 playerPos = playerRef.transform.position;
         Vector3 sheepPos = this.transform.position;
 
+        // Very difficult logic to get where sheep should go
         if (playerPos.x >= sheepPos.x - 1 && playerPos.x <= sheepPos.x + 1)
         {
             if (playerPos.z > sheepPos.z)
