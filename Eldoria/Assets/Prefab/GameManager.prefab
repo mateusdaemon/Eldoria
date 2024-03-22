@@ -44,7 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8348e7c10de605b4290ee7fb5c406083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaLabel: {fileID: 0}
-  lifeLabel: {fileID: 0}
-  manaBar: {fileID: 0}
-  lifeBar: {fileID: 0}
+  hudManager: {fileID: 0}
+  maxFPS: 120

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehavior : MonoBehaviour
+public class WolfCrocBehavior : MonoBehaviour
 {
     private Vector3 origin;
     private bool goToPlayer = false;
@@ -15,7 +15,7 @@ public class EnemyBehavior : MonoBehaviour
     private Animator anim;
 
     public float distancePlayer;
-    public DamagePlayer attackArea;
+    public WolfCrocodileAttack attackArea;
     public GameObject sprite;
     public GameObject warnSign;
     public GameObject dangerSign;
@@ -40,14 +40,16 @@ public class EnemyBehavior : MonoBehaviour
                 if (playerRef.transform.position.x > transform.position.x)
                 {
                     sr.flipX = true;
-                } else
+                }
+                else
                 {
                     sr.flipX = false;
                 }
                 moveTarget.x = playerRef.transform.position.x;
                 moveTarget.z = playerRef.transform.position.z;
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.15f);
-            } else
+            }
+            else
             {
                 anim.SetBool("walk", false);
                 if (!isAttaking)
@@ -56,13 +58,15 @@ public class EnemyBehavior : MonoBehaviour
                     Invoke("AttackPlayer", 0);
                 }
             }
-        } else
+        }
+        else
         {
             if (originSet && parent.transform.position != origin)
             {
                 anim.SetBool("walk", true);
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
-            } else
+            }
+            else
             {
                 anim.SetBool("walk", false);
             }
@@ -98,7 +102,8 @@ public class EnemyBehavior : MonoBehaviour
         {
             attackArea.AttackPlayer(parent.GetComponent<Enemy>());
             Invoke("AttackPlayer", 2.0f);
-        } else
+        }
+        else
         {
             isAttaking = false;
         }

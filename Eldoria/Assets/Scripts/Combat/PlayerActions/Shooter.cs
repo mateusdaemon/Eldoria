@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
+    public GameManager gm;
     public SpellbookMng spellbook;
     public Bullet redBullet;
     public Bullet greenBullet;
@@ -12,7 +13,6 @@ public class Shooter : MonoBehaviour
     public Bullet neutralBullet;
     public LayerMask layerClick;
     public float shootColdown;
-    public GameObject attackBgUI;
     public AudioSource shootSfx;
 
     private Camera cam;
@@ -27,10 +27,6 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!canShoot)
-        {
-            attackBgUI.GetComponent<Image>().fillAmount += 1.0f / shootColdown * Time.deltaTime;
-        }
 
         if (!PlayerStats.CanShoot())
         {
@@ -72,15 +68,11 @@ public class Shooter : MonoBehaviour
                     break;
             }
 
+            gm.PlayerShoot();
             shootSfx.Play();
-
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
-
-            PlayerStats.DropMana(1);
             canShoot = false;
-
-            attackBgUI.GetComponent<Image>().fillAmount = 0;
             Invoke("EnableShoot", shootColdown);
         }
     }
@@ -88,6 +80,5 @@ public class Shooter : MonoBehaviour
     private void EnableShoot()
     {
         canShoot = true;
-        attackBgUI.GetComponent<Image>().fillAmount = 1;
     }
 }

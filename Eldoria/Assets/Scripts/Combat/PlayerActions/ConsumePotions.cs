@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class ConsumePotions : MonoBehaviour
 {
-    public GameObject manaPotUI;
-    public GameObject lifePotUI;
+    public GameManager gm;
     public float manaColdown;
     public float lifeColdown;
     private bool canUseMana = true;
     private bool canUseLife = true;
-    public int lifeIncrease;
-    public int manaIncrease;
+    public float lifeIncrease;
+    public float manaIncrease;
     public AudioSource drinkLife;
     public AudioSource drinkMana;
     public AudioSource drinkError;
@@ -26,28 +25,25 @@ public class ConsumePotions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int currMana = PlayerStats.GetMana();
-        int currLife = PlayerStats.GetLife();
-        int maxMana = PlayerStats.GetMaxMana();
-        int maxLife = PlayerStats.GetMaxLife();
+        float currMana = PlayerStats.GetMana();
+        float currLife = PlayerStats.GetLife();
+        float maxMana = PlayerStats.GetMaxMana();
+        float maxLife = PlayerStats.GetMaxLife();
 
         // Life pot logic
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (canUseLife && currLife != maxLife)
             {
+                float lifeToAdd = lifeIncrease;
                 if (currLife + lifeIncrease >= maxLife)
                 {
-                    PlayerStats.SetLife(maxLife);
-                }
-                else
-                {
-                    PlayerStats.AddLife(lifeIncrease);
+                    lifeToAdd = maxLife - currLife;
                 }
 
+                gm.DrinkLifePot(lifeToAdd);
                 drinkLife.Play();
                 canUseLife = false;
-                lifePotUI.GetComponent<Image>().fillAmount = 0;
                 Invoke("LifeColdown", lifeColdown);
             } else
             {
@@ -60,48 +56,33 @@ public class ConsumePotions : MonoBehaviour
         {
             if (canUseMana && currMana != maxMana)
             {
+                float manaToAdd = manaIncrease;
                 if (currMana + manaIncrease >= maxMana)
                 {
-                    PlayerStats.SetMana(maxMana);
-                } else
-                {
-                    PlayerStats.AddMana(manaIncrease);
+                    manaToAdd = maxMana - currMana;
                 }
 
-                Debug.Log("Drinkkkkk");
+                gm.DrinkManaPot(manaToAdd);
                 drinkMana.Play();
                 canUseMana = false;
-                manaPotUI.GetComponent<Image>().fillAmount = 0;
                 Invoke("ManaColdown", manaColdown);
             } else
             {
                 drinkError.Play();
             }
-
-        }
-
-        // This logic makes the potions image grow little by little
-        if (!canUseMana)
-        {
-            manaPotUI.GetComponent<Image>().fillAmount += 1.0f / manaColdown * Time.deltaTime;
-        }
-        if (!canUseLife)
-        {
-            lifePotUI.GetComponent<Image>().fillAmount += 1.0f / lifeColdown * Time.deltaTime;
         }
     }
 
     private void ManaColdown()
     {
         canUseMana = true;
-        manaPotUI.GetComponent<Image>().fillAmount = 1;
+        gm.EnableManaPot();
     }
-
 
     private void LifeColdown()
     {
         canUseLife = true;
-        lifePotUI.GetComponent<Image>().fillAmount = 1;
+        gm.EnableLifePot();
     }
 
 }

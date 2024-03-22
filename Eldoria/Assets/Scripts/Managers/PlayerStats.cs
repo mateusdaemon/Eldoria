@@ -5,10 +5,10 @@ using UnityEngine;
 public static class PlayerStats
 {
     // Player stats
-    private static int maxLife = 10;
-    private static int maxMana = 20;
-    private static int life = 10;
-    private static int mana = 20;
+    private static float maxLife = 10;
+    private static float maxMana = 20;
+    private static float life = 10;
+    private static float mana = 20;
     private static float playerDamage = 2;
 
     // Player states
@@ -27,52 +27,52 @@ public static class PlayerStats
     // Global utilities
     public enum Direction {Right, Left, Front, Back };
 
-    public static int GetMaxMana()
+    public static float GetMaxMana()
     {
         return maxMana;
     }
 
-    public static int GetMaxLife()
+    public static float GetMaxLife()
     {
         return maxLife;
     }
 
-    public static int GetMana()
+    public static float GetMana()
     {
         return mana;
     }
 
-    public static int GetLife()
+    public static float GetLife()
     {
         return life;
     }
 
-    public static void DropMana(int drop)
+    public static void DropMana(float drop)
     {
         mana -= drop;
     }
 
-    public static void AddMana(int add)
+    public static void AddMana(float add)
     {
         mana += add;
     }
 
-    public static void DropLife(int drop)
+    public static void DropLife(float drop)
     {
         life -= drop;
     }
 
-    public static void AddLife(int add)
+    public static void AddLife(float add)
     {
         life += add;
     }
 
-    public static void SetLife(int lifeTotal)
+    public static void SetLife(float lifeTotal)
     {
         life = lifeTotal;
     }
 
-    public static void SetMana(int manaTotal)
+    public static void SetMana(float manaTotal)
     {
         mana = manaTotal;
     }

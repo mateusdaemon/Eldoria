@@ -1076,7 +1076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6973238485804376176
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2053,6 +2053,7 @@ GameObject:
   - component: {fileID: 7414023226339283514}
   - component: {fileID: 6536253704489249207}
   - component: {fileID: 6973015897714383907}
+  - component: {fileID: 4998785292397457570}
   m_Layer: 5
   m_Name: HUD_v1
   m_TagString: Untagged
@@ -2148,6 +2149,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4998785292397457570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7782087936559818164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9659c515ad6c58f4abcb4afdb71ad1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeBar: {fileID: 6837689468392540997}
+  manaBar: {fileID: 4449634961720746337}
+  lifePot: {fileID: 9022449465164693144}
+  lifePotShine: {fileID: 6841788676352443816}
+  manaPot: {fileID: 6489417671750703480}
+  manaPotShine: {fileID: 4844742922244923979}
+  neutralSelect: {fileID: 769107290916878916}
 --- !u!1 &8331256637515855952
 GameObject:
   m_ObjectHideFlags: 0

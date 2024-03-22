@@ -11,7 +11,6 @@ public class Dodge : MonoBehaviour
 
     public float dodgeForce;
     public float coldown;
-    public GameObject dodgeBgUI;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +21,6 @@ public class Dodge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!canDodge)
-        {
-            dodgeBgUI.GetComponent<Image>().fillAmount += 1.0f / coldown * Time.deltaTime;
-        }
-
         if (!PlayerStats.CanMove())
         {
             return;
@@ -39,7 +33,6 @@ public class Dodge : MonoBehaviour
         {
             rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
             canDodge = false;
-            dodgeBgUI.GetComponent<Image>().fillAmount = 0;
             Invoke("EnableDodge", coldown);
         }
     }
@@ -47,6 +40,5 @@ public class Dodge : MonoBehaviour
     private void EnableDodge()
     {
         canDodge = true;
-        dodgeBgUI.GetComponent<Image>().fillAmount = 1;
     }
 }

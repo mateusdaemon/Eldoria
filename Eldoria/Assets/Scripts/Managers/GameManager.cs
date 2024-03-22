@@ -6,11 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI manaLabel;
-    public TextMeshProUGUI lifeLabel;
-    public GameObject manaBar;
-    public GameObject lifeBar;
+    public HudManager hudManager;
     public int maxFPS;
+
+    private float shootManaCost = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -18,23 +17,44 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = maxFPS;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetShootCost(float cost)
     {
-        manaLabel.text = PlayerStats.GetMana() + "/" + PlayerStats.GetMaxMana();
+        shootManaCost = cost;
+    }
 
-        float maxMana = (float) PlayerStats.GetMaxMana(); 
-        float currMana = (float)PlayerStats.GetMana();
-        float percOfMana = currMana / maxMana;
+    public void PlayerShoot()
+    {
+        PlayerStats.DropMana(shootManaCost);
+        hudManager.SetManaAmount(PlayerStats.GetMana()/PlayerStats.GetMaxMana());
+    }
 
-        manaBar.GetComponent<Image>().fillAmount = percOfMana;
+    public void DrinkLifePot(float life)
+    {
+        hudManager.UseLifePot();
+        PlayerStats.AddLife(life);
+        hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
+    }
 
-        lifeLabel.text = PlayerStats.GetLife() + "/" + PlayerStats.GetMaxLife();
+    public void DrinkManaPot(float mana)
+    {
+        hudManager.UseManaPot();
+        PlayerStats.AddMana(mana);
+        hudManager.SetManaAmount(PlayerStats.GetMana() / PlayerStats.GetMaxMana());
+    }
 
-        float maxLife = (float)PlayerStats.GetMaxLife();
-        float currLife = (float)PlayerStats.GetLife();
-        float percOfLife = currLife / maxLife;
+    public void EnableLifePot()
+    {
+        hudManager.ActivateLifePot();
+    }
 
-        lifeBar.GetComponent<Image>().fillAmount = percOfLife;
+    public void EnableManaPot()
+    {
+        hudManager.ActivateManaPot();
+    }
+
+    public void AttackPlayer(float damage)
+    {
+        PlayerStats.DropLife(damage);
+        hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
     }
 }
