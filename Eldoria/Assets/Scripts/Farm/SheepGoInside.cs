@@ -14,6 +14,7 @@ public class SheepGoInside : MonoBehaviour
     private bool goPos1 = false, goPos2 = false, fitArea = false;
     private Animator anim;
     private SpriteRenderer sr;
+    private bool sheepCounted = false;
 
     // Start is called before the first frame update
     void Start()
@@ -73,11 +74,12 @@ public class SheepGoInside : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("SheepTrigger"))
+        if (other.CompareTag("SheepTrigger") && !sheepCounted)
         {
             questRef.SumSheep();
+            sheepCounted = true;
             goPos1 = true;
         }
     }
