@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
 
     private float shootManaCost = 1;
 
+    // Quest indicators
+    // SHEEP QUEST
+    private bool sheepActive = false;
+    private bool sheepQuestDone = false;
+    private string sheepQuestText = "-> Procure as ovelhas e leve-as para dentro da fazenda.";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,5 +62,26 @@ public class GameManager : MonoBehaviour
     {
         PlayerStats.DropLife(damage);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
+    }
+
+    public void ActiveSheepQuest()
+    {
+        sheepActive = true;
+        hudManager.SetQuestText(sheepQuestText);
+    }
+
+    public bool GetSheepActive()
+    {
+        return sheepActive;
+    }
+
+    public bool SheepQuestDone()
+    {
+        return sheepQuestDone;
+    }
+
+    public void SetSheepQuestDone(bool done)
+    {
+        sheepQuestDone = done;
     }
 }

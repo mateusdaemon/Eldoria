@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,8 +16,12 @@ public class HudManager : MonoBehaviour
     public Image manaPot;
     public Image manaPotShine;
 
+    [Header("Quests")]
+    public TextMeshProUGUI questText;
+
     [Header("Books")]
     public Image neutralSelect;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,5 +67,10 @@ public class HudManager : MonoBehaviour
     {
         manaPot.fillAmount = 0;
         manaPotShine.enabled = false;
+    }
+
+    public void SetQuestText(string text)
+    {
+        questText.text = text;
     }
 }
