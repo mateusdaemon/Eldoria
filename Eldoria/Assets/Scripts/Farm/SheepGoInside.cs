@@ -7,12 +7,14 @@ public class SheepGoInside : MonoBehaviour
     public GameObject point1;
     public GameObject point2;
     public GameObject area;
+    public QuestSheep questRef;
 
     private Vector3 pos1, pos2, fitPos;
     private float xBoundArea, zBoundArea;
     private bool goPos1 = false, goPos2 = false, fitArea = false;
     private Animator anim;
     private SpriteRenderer sr;
+    private int sheepCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +78,7 @@ public class SheepGoInside : MonoBehaviour
     {
         if (other.CompareTag("SheepTrigger"))
         {
+            questRef.SumSheep();
             goPos1 = true;
         }
     }

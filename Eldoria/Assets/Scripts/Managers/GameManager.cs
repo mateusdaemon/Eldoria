@@ -12,10 +12,16 @@ public class GameManager : MonoBehaviour
     private float shootManaCost = 1;
 
     // Quest indicators
+
     // SHEEP QUEST
     private bool sheepActive = false;
     private bool sheepQuestDone = false;
     private string sheepQuestText = "-> Procure as ovelhas e leve-as para dentro da fazenda.";
+
+    //CORN QUEST
+    private bool cornActive = false;
+    private bool cornQuestDone = false;
+    private string cornQuestText = "-> Colha todos os milhos na plantação e leve até a carroça.";
 
     // Start is called before the first frame update
     void Start()
@@ -80,8 +86,29 @@ public class GameManager : MonoBehaviour
         return sheepQuestDone;
     }
 
+    public void ActiveCornQuest()
+    {
+        cornActive = true;
+        hudManager.SetQuestText(cornQuestText);
+    }
+
     public void SetSheepQuestDone(bool done)
     {
         sheepQuestDone = done;
+    }
+
+    public bool GetCornActive()
+    {
+        return cornActive;
+    }
+
+    public bool CornQuestDone()
+    {
+        return cornQuestDone;
+    }
+
+    public void SetCornQuestDone(bool done)
+    {
+        cornQuestDone = done;
     }
 }

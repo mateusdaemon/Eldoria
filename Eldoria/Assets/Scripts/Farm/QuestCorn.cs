@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestSheep : MonoBehaviour
+public class QuestCorn : MonoBehaviour
 {
     public GameManager gm;
     public GameObject questInteract;
     private bool canStartQuest = false;
-    private int sheepInside = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,23 +17,19 @@ public class QuestSheep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canStartQuest && !gm.GetSheepActive() && Input.GetKeyUp(KeyCode.F))
+        if (canStartQuest && gm.SheepQuestDone() && !gm.GetCornActive() && Input.GetKeyDown(KeyCode.F))
         {
-            gm.ActiveSheepQuest();
+            gm.ActiveCornQuest();
             questInteract.SetActive(false);
         }
-
-        if (sheepInside == 5)
-        {
-            gm.SetSheepQuestDone(true);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetSheepActive())
+            if (!gm.GetCornActive() && gm.SheepQuestDone())
             {
                 questInteract.SetActive(true);
                 canStartQuest = true;
@@ -46,16 +41,11 @@ public class QuestSheep : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetSheepActive())
+            if (!gm.GetCornActive())
             {
                 questInteract.SetActive(false);
                 canStartQuest = false;
             }
         }
-    }
-
-    public void SumSheep()
-    {
-        sheepInside++;
     }
 }
