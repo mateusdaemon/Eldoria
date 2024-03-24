@@ -14,7 +14,6 @@ public class SheepGoInside : MonoBehaviour
     private bool goPos1 = false, goPos2 = false, fitArea = false;
     private Animator anim;
     private SpriteRenderer sr;
-    private int sheepCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +73,7 @@ public class SheepGoInside : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("SheepTrigger"))
         {

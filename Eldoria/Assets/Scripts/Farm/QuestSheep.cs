@@ -57,5 +57,6 @@ public class QuestSheep : MonoBehaviour
     public void SumSheep()
     {
         sheepInside++;
+        Debug.Log(sheepInside);
     }
 }
