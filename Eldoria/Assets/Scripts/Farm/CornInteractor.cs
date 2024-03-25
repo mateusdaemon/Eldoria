@@ -28,7 +28,7 @@ public class CornInteractor : MonoBehaviour
             cornIconUI.SetActive(false);
             cornInteractUI.SetActive(false);
             cornCollected = true;
-            //cornParticle.Play();
+            cornParticle.Play();
         }
     }
 
