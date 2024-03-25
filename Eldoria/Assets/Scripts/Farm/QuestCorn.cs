@@ -6,6 +6,7 @@ public class QuestCorn : MonoBehaviour
 {
     public QuestManager qm;
     public GameObject questInteract;
+    public GameObject cornInteractor;
     private bool canStartQuest = false;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class QuestCorn : MonoBehaviour
         {
             qm.ActiveCornQuest();
             questInteract.SetActive(false);
+            cornInteractor.SetActive(true);
         }
         
     }

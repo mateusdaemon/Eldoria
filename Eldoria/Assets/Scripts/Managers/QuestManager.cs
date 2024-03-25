@@ -16,9 +16,11 @@ public class QuestManager : MonoBehaviour
     //CORN QUEST
     private bool cornActive = false;
     private bool cornQuestDone = false;
+    private bool wagonInteract = false;
     private string cornQuestText1 = "-> Colha todos os milhos na plantação.";
     private string cornQuestText2 = "-> Coloque os milhos na carroça.";
     private string cornQuestText3 = "-> Volte a falar com seu pai.";
+    private string cornQuestText4 = "(sem missões)";
 
     #region SHEEP_QUEST
     public void ActiveSheepQuest()
@@ -76,6 +78,31 @@ public class QuestManager : MonoBehaviour
     public void SetCornQuestDone(bool done)
     {
         cornQuestDone = done;
+    }
+
+    public void CornContinue()
+    {
+        hudManager.SetQuestText(cornQuestText2);
+    }
+
+    public void CornLastContinue()
+    {
+        hudManager.SetQuestText(cornQuestText3);
+    }
+
+    public void CornFinish()
+    {
+        hudManager.SetQuestText(cornQuestText4);
+    }
+
+    public void SetWagonInteract(bool interact)
+    {
+        wagonInteract = interact;
+    }
+
+    public bool GetWagonInteract()
+    {
+        return wagonInteract;
     }
     #endregion
 }
