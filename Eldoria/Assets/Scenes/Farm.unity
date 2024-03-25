@@ -207,6 +207,11 @@ PrefabInstance:
       propertyPath: questRef
       value: 
       objectReference: {fileID: 1630016884}
+    - target: {fileID: 4666602438503887171, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: grazingArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_Name
@@ -32637,6 +32642,11 @@ PrefabInstance:
       propertyPath: questRef
       value: 
       objectReference: {fileID: 1630016884}
+    - target: {fileID: 4666602438503887171, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: grazingArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_Name
@@ -59605,6 +59615,11 @@ PrefabInstance:
       propertyPath: questRef
       value: 
       objectReference: {fileID: 1630016884}
+    - target: {fileID: 4666602438503887171, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: grazingArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_Name
@@ -89029,7 +89044,7 @@ PrefabInstance:
     - target: {fileID: 3508194151215594377, guid: 94a0c01498954484e9817aae33dbc673,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5631049776625770617, guid: 94a0c01498954484e9817aae33dbc673,
         type: 3}
@@ -112455,6 +112470,11 @@ PrefabInstance:
       propertyPath: questRef
       value: 
       objectReference: {fileID: 1630016884}
+    - target: {fileID: 4666602438503887171, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: grazingArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_Name
@@ -113002,6 +113022,11 @@ PrefabInstance:
       propertyPath: questRef
       value: 
       objectReference: {fileID: 1630016884}
+    - target: {fileID: 4666602438503887171, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
+        type: 3}
+      propertyPath: grazingArea
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9148066683738163989, guid: cd5a179ffc0f79849a7f9d312ba3b2bf,
         type: 3}
       propertyPath: m_Name

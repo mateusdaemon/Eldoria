@@ -27,11 +27,6 @@ public class SheepHerding : MonoBehaviour
         if (runAway)
         {
             RunAwaySheep();            
-        } else
-        {
-            parentAnim.SetBool("frontWalk", false);
-            parentAnim.SetBool("backWalk", false);
-            parentAnim.SetBool("sideWalk", false);
         }
     }
 
@@ -52,7 +47,7 @@ public class SheepHerding : MonoBehaviour
                 sheepBea.Play();
             }
             playerRef = other.gameObject;
-            runAway = true;            
+            runAway = true;
         }
     }
 
@@ -164,4 +159,5 @@ public class SheepHerding : MonoBehaviour
                 break;
         }
     }
+
 }
