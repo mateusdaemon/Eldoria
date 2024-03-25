@@ -6,6 +6,8 @@ public class WagonInteractor : MonoBehaviour
 {
     public QuestManager qm;
     public GameObject wagonInteractUI;
+    public GameObject wagonInteractor;
+    public GameObject bagOfCorn;
 
     private bool canPlaceBag = false;
     // Start is called before the first frame update
@@ -19,9 +21,12 @@ public class WagonInteractor : MonoBehaviour
     {
         if (canPlaceBag && Input.GetKeyDown(KeyCode.F))
         {
-
-        }
-        
+            qm.CornLastContinue();
+            qm.SetWagonInteract(false);
+            qm.SetFinishCorn(true);
+            wagonInteractor.SetActive(false);
+            bagOfCorn.SetActive(true);
+        }        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -40,8 +45,11 @@ public class WagonInteractor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            wagonInteractUI.SetActive(false);
-            canPlaceBag = false;
+            if (wagonInteractUI != null)
+            {
+                wagonInteractUI.SetActive(false);
+                canPlaceBag = false;
+            }
         }
     }
 }

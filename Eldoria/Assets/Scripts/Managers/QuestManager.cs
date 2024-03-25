@@ -17,6 +17,7 @@ public class QuestManager : MonoBehaviour
     private bool cornActive = false;
     private bool cornQuestDone = false;
     private bool wagonInteract = false;
+    private bool finishCornQuest = false;
     private string cornQuestText1 = "-> Colha todos os milhos na plantação.";
     private string cornQuestText2 = "-> Coloque os milhos na carroça.";
     private string cornQuestText3 = "-> Volte a falar com seu pai.";
@@ -103,6 +104,16 @@ public class QuestManager : MonoBehaviour
     public bool GetWagonInteract()
     {
         return wagonInteract;
+    }
+
+    public void SetFinishCorn(bool finish)
+    {
+        finishCornQuest = finish;
+    }
+
+    public bool GetFinishCorn()
+    {
+        return finishCornQuest;
     }
     #endregion
 }

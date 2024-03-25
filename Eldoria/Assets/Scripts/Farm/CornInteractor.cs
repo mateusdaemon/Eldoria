@@ -6,8 +6,9 @@ public class CornInteractor : MonoBehaviour
 {
     public QuestManager qm;
     public GameObject cornInteractUI;
-    public GameObject cornIconUI;
+    public GameObject cornCollector;
     public ParticleSystem cornParticle;
+    public GameObject wagonInteractor;
 
     private bool canCollect = false;
     private bool cornCollected = false;
@@ -25,10 +26,12 @@ public class CornInteractor : MonoBehaviour
         {
             qm.CornContinue();
             qm.SetWagonInteract(true);
-            cornIconUI.SetActive(false);
+            cornCollector.SetActive(false);
             cornInteractUI.SetActive(false);
+            wagonInteractor.SetActive(true);
+            ParticleSystem corn = Instantiate(cornParticle, transform.position, new Quaternion());
+            corn.Play();
             cornCollected = true;
-            cornParticle.Play();
         }
     }
 
