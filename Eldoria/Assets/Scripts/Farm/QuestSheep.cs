@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class QuestSheep : MonoBehaviour
 {
-    public GameManager gm;
+    public QuestManager qm;
     public GameObject questInteract;
     private bool canStartQuest = false;
     private int sheepInside = 0;
+    private bool sheepContinue = false;
 
     // Start is called before the first frame update
     void Start()
@@ -18,15 +19,23 @@ public class QuestSheep : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canStartQuest && !gm.GetSheepActive() && Input.GetKeyUp(KeyCode.F))
+        if (canStartQuest && Input.GetKeyUp(KeyCode.F))
         {
-            gm.ActiveSheepQuest();
-            questInteract.SetActive(false);
+            if (!qm.GetSheepActive())
+            {
+                qm.ActiveSheepQuest();
+                questInteract.SetActive(false);
+            } else if (sheepContinue)
+            {
+                qm.SetSheepQuestDone(true);
+                questInteract.SetActive(false);
+            }
         }
 
-        if (sheepInside == 5)
+        if (sheepInside == 5 && !qm.SheepQuestDone())
         {
-            gm.SetSheepQuestDone(true);
+            qm.SheepContinue();
+            sheepContinue = true;
         }
     }
 
@@ -34,7 +43,7 @@ public class QuestSheep : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetSheepActive())
+            if (!qm.SheepQuestDone() && (!qm.GetSheepActive() || sheepContinue))
             {
                 questInteract.SetActive(true);
                 canStartQuest = true;
@@ -46,16 +55,14 @@ public class QuestSheep : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetSheepActive())
-            {
-                questInteract.SetActive(false);
-                canStartQuest = false;
-            }
+            questInteract.SetActive(false);
+            canStartQuest = false;
         }
     }
 
     public void SumSheep()
     {
         sheepInside++;
+        qm.UpdateSheepCount(sheepInside);
     }
 }

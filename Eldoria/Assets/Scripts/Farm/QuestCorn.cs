@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestCorn : MonoBehaviour
 {
-    public GameManager gm;
+    public QuestManager qm;
     public GameObject questInteract;
     private bool canStartQuest = false;
 
@@ -17,9 +17,9 @@ public class QuestCorn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canStartQuest && gm.SheepQuestDone() && !gm.GetCornActive() && Input.GetKeyDown(KeyCode.F))
+        if (canStartQuest && qm.SheepQuestDone() && !qm.GetCornActive() && Input.GetKeyDown(KeyCode.F))
         {
-            gm.ActiveCornQuest();
+            qm.ActiveCornQuest();
             questInteract.SetActive(false);
         }
         
@@ -29,7 +29,7 @@ public class QuestCorn : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetCornActive() && gm.SheepQuestDone())
+            if (!qm.GetCornActive() && qm.SheepQuestDone())
             {
                 questInteract.SetActive(true);
                 canStartQuest = true;
@@ -41,11 +41,8 @@ public class QuestCorn : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (!gm.GetCornActive())
-            {
-                questInteract.SetActive(false);
-                canStartQuest = false;
-            }
+            questInteract.SetActive(false);
+            canStartQuest = false;
         }
     }
 }
