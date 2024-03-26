@@ -17,6 +17,7 @@ public class Shooter : MonoBehaviour
 
     private Camera cam;
     private bool canShoot = true;
+    private float amount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,12 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canShoot)
+        {
+            amount += 1.0f / shootColdown * Time.deltaTime;
+            gm.hudManager.SetShootAmount(amount);
+        }
+
         if (!PlayerStats.CanShoot())
         {
             return;
@@ -79,6 +86,7 @@ public class Shooter : MonoBehaviour
     private void EnableShoot()
     {
         canShoot = true;
+        amount = 0;
         gm.EnableShoot();
     }
 }

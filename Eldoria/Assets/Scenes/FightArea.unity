@@ -689,6 +689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 456190594}
+    - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
       propertyPath: dodgeBgUI
       value: 
       objectReference: {fileID: 0}
@@ -707,6 +712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_v3
       objectReference: {fileID: 0}
+    - target: {fileID: 6943220556466695934, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 456190594}
     - target: {fileID: 6943220556466695934, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: shieldSfx
