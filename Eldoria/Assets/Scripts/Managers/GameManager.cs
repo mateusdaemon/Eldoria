@@ -26,7 +26,13 @@ public class GameManager : MonoBehaviour
     public void PlayerShoot()
     {
         PlayerStats.DropMana(shootManaCost);
+        hudManager.UseShootSkill();
         hudManager.SetManaAmount(PlayerStats.GetMana()/PlayerStats.GetMaxMana());
+    }
+
+    public void EnableShoot()
+    {
+        hudManager.ActivateShootSkill();
     }
 
     public void PlayerUseShield()
@@ -49,6 +55,15 @@ public class GameManager : MonoBehaviour
         return shieldManaCost;
     }
 
+    public void PlayerDodge()
+    {
+        hudManager.UseDodgeSkill();
+    }
+
+    public void EnableDodge()
+    {
+        hudManager.ActivateDodgeSkill();
+    }
 
     public void DrinkLifePot(float life)
     {

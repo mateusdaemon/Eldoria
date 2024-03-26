@@ -9,6 +9,7 @@ public class Dodge : MonoBehaviour
     private float xDir, zDir;
     private bool canDodge = true;
 
+    public GameManager gm;
     public float dodgeForce;
     public float coldown;
 
@@ -33,6 +34,7 @@ public class Dodge : MonoBehaviour
         {
             rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
             canDodge = false;
+            gm.PlayerDodge();
             Invoke("EnableDodge", coldown);
         }
     }
@@ -40,5 +42,6 @@ public class Dodge : MonoBehaviour
     private void EnableDodge()
     {
         canDodge = true;
+        gm.EnableDodge();
     }
 }

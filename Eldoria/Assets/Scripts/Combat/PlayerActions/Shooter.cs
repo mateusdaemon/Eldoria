@@ -27,7 +27,6 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (!PlayerStats.CanShoot())
         {
             return;
@@ -80,5 +79,6 @@ public class Shooter : MonoBehaviour
     private void EnableShoot()
     {
         canShoot = true;
+        gm.EnableShoot();
     }
 }
