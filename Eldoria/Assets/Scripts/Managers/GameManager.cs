@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int maxFPS;
 
     private float shootManaCost = 1;
+    private float shieldManaCost = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,27 @@ public class GameManager : MonoBehaviour
         PlayerStats.DropMana(shootManaCost);
         hudManager.SetManaAmount(PlayerStats.GetMana()/PlayerStats.GetMaxMana());
     }
+
+    public void PlayerUseShield()
+    {
+        PlayerStats.SetShoot(false);
+        PlayerStats.SetMove(false);
+        PlayerStats.DropMana(shieldManaCost);
+        hudManager.UseShieldSkill();
+        hudManager.SetManaAmount(PlayerStats.GetMana() / PlayerStats.GetMaxMana());
+    }
+    public void EnableShield()
+    {
+        PlayerStats.SetShoot(true);
+        PlayerStats.SetMove(true);
+        hudManager.ActivateShieldSkill();
+    }
+
+    public float GetShieldCost()
+    {
+        return shieldManaCost;
+    }
+
 
     public void DrinkLifePot(float life)
     {

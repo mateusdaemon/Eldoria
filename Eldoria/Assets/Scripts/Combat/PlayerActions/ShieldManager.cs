@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ShieldManager : MonoBehaviour
 {
+    public GameManager gm;
     public GameObject redShield;
     public GameObject greenShield;
     public GameObject blueShield;
     public GameObject neutralShield;
-    public int manaCost;
     public SpellbookMng spellbook;
     public AudioSource shieldSfx;
     public GameObject player;
@@ -26,7 +26,7 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerStats.GetMana() >= manaCost && Input.GetMouseButtonDown(1))
+        if (PlayerStats.GetMana() >= gm.GetShieldCost() && Input.GetMouseButtonDown(1))
         {
             switch (spellbook.currSpellbook)
             {
@@ -54,13 +54,13 @@ public class ShieldManager : MonoBehaviour
                     neutralShield = null;
                     break;
             }
-            shieldSfx.Play();
+
             // Shield height correction
             currShield.transform.position = new Vector3(currShield.transform.position.x, currShield.transform.position.y + 0.2f, currShield.transform.position.z);
-            PlayerStats.SetShoot(false);
-            PlayerStats.SetMove(false);
+
+            shieldSfx.Play();
+            gm.PlayerUseShield();
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
-            PlayerStats.DropMana(manaCost);
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -87,8 +87,7 @@ public class ShieldManager : MonoBehaviour
                 }
             }
 
-            PlayerStats.SetShoot(true);
-            PlayerStats.SetMove(true);
+            gm.EnableShield();
         }
     }
 }
