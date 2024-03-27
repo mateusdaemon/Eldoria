@@ -775,36 +775,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 988743208241786645, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0e862ea02aa98744e8eec760a599fb8a, type: 3}
-    - target: {fileID: 988743208241786645, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: gm
       value: 
       objectReference: {fileID: 456190594}
-    - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: dodgeBgUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028321217630674826, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ea315719b4a31274293c6336a4d15a50, type: 3}
-    - target: {fileID: 3028321217630674826, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5054131556247001451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: m_Name
@@ -820,11 +795,6 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 6943220556466695934, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: shieldSfx
-      value: 
-      objectReference: {fileID: 1378549314}
     - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: gm
@@ -835,71 +805,11 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: lifePotUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: manaPotUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7138833962882443784, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: drinkError
-      value: 
-      objectReference: {fileID: 867893911}
-    - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: redActive
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: blueActive
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7964820225507872425, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: greenActive
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: redCurseUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: blueCurseUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: greenCurseUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: breakCurseSfx
-      value: 
-      objectReference: {fileID: 1894826269}
-    - target: {fileID: 8344434389693342303, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: errorCurseSfx
-      value: 
-      objectReference: {fileID: 1254992391}
     - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: gm
@@ -910,25 +820,8 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: shootSfx
-      value: 
-      objectReference: {fileID: 1118882296}
-    - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: attackBgUI
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8926473964598151887, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
-        type: 3}
-      propertyPath: shootColdown
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5346664872663157301, guid: 52ea017f84f5d4a44bf7fd70d5800bbb, type: 3}
-    - {fileID: 1049477377241633097, guid: 52ea017f84f5d4a44bf7fd70d5800bbb, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52ea017f84f5d4a44bf7fd70d5800bbb, type: 3}
