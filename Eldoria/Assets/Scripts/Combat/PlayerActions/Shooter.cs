@@ -42,7 +42,6 @@ public class Shooter : MonoBehaviour
         Vector3 currTarget;
         Bullet currBullet = null;
 
-
         if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
         {
             Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);

@@ -16,6 +16,11 @@ public class ConsumePotions : MonoBehaviour
     public AudioSource drinkMana;
     public AudioSource drinkError;
 
+    private float manaAmount = 0;
+    private float manaColdownAmount = 1;
+    private float lifeAmount = 0;
+    private float lifeColdownAmount = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +30,22 @@ public class ConsumePotions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canUseMana)
+        {
+            manaAmount += 1.0f / manaColdown * Time.deltaTime;
+            manaColdownAmount -= 1.0f / manaColdown * Time.deltaTime;
+            gm.hudManager.SetManaPotAmount(manaAmount);
+            gm.hudManager.SetManaColdownAmount(manaColdownAmount);
+        }
+
+        if (!canUseLife)
+        {
+            lifeAmount += 1.0f / lifeColdown * Time.deltaTime;
+            lifeColdownAmount -= 1.0f / lifeColdown * Time.deltaTime;
+            gm.hudManager.SetLifePotAmount(lifeAmount);
+            gm.hudManager.SetLifeColdownAmount(lifeColdownAmount);
+        }
+
         float currMana = PlayerStats.GetMana();
         float currLife = PlayerStats.GetLife();
         float maxMana = PlayerStats.GetMaxMana();
@@ -75,12 +96,16 @@ public class ConsumePotions : MonoBehaviour
 
     private void ManaColdown()
     {
+        manaAmount = 0;
+        manaColdownAmount = 1;
         canUseMana = true;
         gm.EnableManaPot();
     }
 
     private void LifeColdown()
     {
+        lifeAmount = 0;
+        lifeColdownAmount = 1;
         canUseLife = true;
         gm.EnableLifePot();
     }
