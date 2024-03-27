@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class ConsumePotions : MonoBehaviour
 {
+    [Header("---Manager---")]
     public GameManager gm;
+    public SoundManager sm;
+
+    [Header("---Potion---")]
     public float manaColdown;
     public float lifeColdown;
     private bool canUseMana = true;
     private bool canUseLife = true;
     public float lifeIncrease;
     public float manaIncrease;
-    public AudioSource drinkLife;
-    public AudioSource drinkMana;
-    public AudioSource drinkError;
+
 
     private float manaAmount = 0;
     private float manaColdownAmount = 1;
@@ -63,12 +65,12 @@ public class ConsumePotions : MonoBehaviour
                 }
 
                 gm.DrinkLifePot(lifeToAdd);
-                drinkLife.Play();
+                sm.PlaySfx(sm.sfxDrinkLife);
                 canUseLife = false;
                 Invoke("LifeColdown", lifeColdown);
             } else
             {
-                drinkError.Play();
+                sm.PlaySfx(sm.sfxErroManaHeal);
             }
         }
 
@@ -84,12 +86,12 @@ public class ConsumePotions : MonoBehaviour
                 }
 
                 gm.DrinkManaPot(manaToAdd);
-                drinkMana.Play();
+                sm.PlaySfx(sm.sfxDrinkMana);
                 canUseMana = false;
                 Invoke("ManaColdown", manaColdown);
             } else
             {
-                drinkError.Play();
+                sm.PlaySfx(sm.sfxErroManaHeal);
             }
         }
     }

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class WolfCrocodileAttack : MonoBehaviour
 {
+    [Header("---Manager---")]
     public GameManager gm;
+    public SoundManager sm;
+
+    [Header("---WolfCrocodile---")]
     public Enemy enemyStats;
     public bool hitPlayer;
     public GameObject spriteEnemy;
-    public AudioSource sfxBark;
+
 
     private Animator anim;
 
@@ -37,7 +41,7 @@ public class WolfCrocodileAttack : MonoBehaviour
     {
         anim.SetBool("attack", true);
         Invoke("DisableAttack", anim.GetCurrentAnimatorClipInfo(0).Length);
-        sfxBark.Play();
+        sm.PlaySfx(sm.wolfBarkSound);
         
         bool hit = !PlayerStats.IsNeutralShielded();
 

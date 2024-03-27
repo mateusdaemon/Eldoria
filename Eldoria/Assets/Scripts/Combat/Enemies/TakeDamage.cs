@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class TakeDamage : MonoBehaviour
 {
+    public SoundManager sm;
     private Enemy currEnemy;
     public GameObject lifeBarUI;
-    public AudioSource sfxHurt;
+
     private float maxLife;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class TakeDamage : MonoBehaviour
             Destroy(other.gameObject);
 
             currEnemy.life -= (int)PlayerStats.GetDamage();
-            sfxHurt.Play();
+            sm.PlaySfx(sm.sfxWolfDie);
             lifeBarUI.GetComponent<Image>().fillAmount = currEnemy.life / maxLife;
         }
     }

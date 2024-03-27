@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
 {
+    [Header("---Manager---")]
     public GameManager gm;
+    public SoundManager sm;
+
+    [Header("---Player---")]
     public SpellbookMng spellbook;
     public Bullet redBullet;
     public Bullet greenBullet;
@@ -13,7 +17,7 @@ public class Shooter : MonoBehaviour
     public Bullet neutralBullet;
     public LayerMask layerClick;
     public float shootColdown;
-    public AudioSource shootSfx;
+    
 
     private Camera cam;
     private bool canShoot = true;
@@ -74,7 +78,7 @@ public class Shooter : MonoBehaviour
             }
 
             gm.PlayerShoot();
-            shootSfx.Play();
+            sm.PlaySfx(sm.sfxShooter);
             currBullet.transform.Rotate(new Vector3(70, 100, 0));
             currBullet.SetTarget(currTarget);
             canShoot = false;

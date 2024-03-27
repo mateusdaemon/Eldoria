@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ShieldManager : MonoBehaviour
 {
+    [Header("---Manager---")]
     public GameManager gm;
+    public SoundManager sm;
+
+    [Header("---Shield---")]
     public GameObject redShield;
     public GameObject greenShield;
     public GameObject blueShield;
     public GameObject neutralShield;
     public SpellbookMng spellbook;
-    public AudioSource shieldSfx;
     public GameObject player;
 
     private GameObject currShield;
@@ -58,7 +61,7 @@ public class ShieldManager : MonoBehaviour
             // Shield height correction
             currShield.transform.position = new Vector3(currShield.transform.position.x, currShield.transform.position.y + 0.2f, currShield.transform.position.z);
 
-            shieldSfx.Play();
+            sm.PlaySfx(sm.sfxShield);
             gm.PlayerUseShield();
             player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
         }

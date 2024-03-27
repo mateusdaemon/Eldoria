@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CurseManager : MonoBehaviour
 {
+    [Header("---Manager---")]
+    public SoundManager sm;
+
+    [Header("---Curse---")]
     public SpellbookMng spellbook;
     public int manaCost;
     public GameObject redCurseUI;
     public GameObject greenCurseUI;
     public GameObject blueCurseUI;
-    public AudioSource breakCurseSfx;
-    public AudioSource errorCurseSfx;
 
     private bool beingRedCursed = false;
     private bool beingGreenCursed = false;
@@ -98,10 +100,10 @@ public class CurseManager : MonoBehaviour
 
             if (mistake)
             {
-                errorCurseSfx.Play();
+                sm.PlaySfx(sm.sfxErroBreakCurse);
             } else
             {
-                breakCurseSfx.Play();
+                sm.PlaySfx(sm.sfxBreakCurse);
             }
         }
     }
