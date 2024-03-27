@@ -15,6 +15,8 @@ public class HudManager : MonoBehaviour
     public Image lifePotShine;
     public Image manaPot;
     public Image manaPotShine;
+    public Image lifePotColdown;
+    public Image manaPotColdown;
 
     [Header("Quests")]
     public TextMeshProUGUI questText;
@@ -30,19 +32,6 @@ public class HudManager : MonoBehaviour
     public Image dodge;
     public Image dodgeBright;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetLifeAmout(float amount)
     {
         lifeBar.fillAmount = amount;
@@ -56,25 +45,51 @@ public class HudManager : MonoBehaviour
     public void ActivateLifePot()
     {
         lifePot.fillAmount = 1;
+        lifePotColdown.enabled = false;
         lifePotShine.enabled = true;
     }
 
     public void ActivateManaPot()
     {
         manaPot.fillAmount = 1;
+        manaPotColdown.enabled = false;
         manaPotShine.enabled = true;
     }
 
     public void UseLifePot()
     {
         lifePot.fillAmount = 0;
+        lifePotColdown.enabled = true;
+        lifePotColdown.fillAmount = 1;
         lifePotShine.enabled = false;
+    }
+
+    public void SetLifePotAmount(float amount)
+    {
+        lifePot.fillAmount = amount;
+    }
+
+    public void SetLifeColdownAmount(float amount)
+    {
+        lifePotColdown.fillAmount = amount;
     }
 
     public void UseManaPot()
     {
         manaPot.fillAmount = 0;
+        manaPotColdown.enabled = true;
+        manaPotColdown.fillAmount = 1;
         manaPotShine.enabled = false;
+    }
+
+    public void SetManaPotAmount(float amount)
+    {
+        manaPot.fillAmount = amount;
+    }
+
+    public void SetManaColdownAmount(float amount)
+    {
+        manaPotColdown.fillAmount = amount;
     }
 
     public void SetQuestText(string text)
