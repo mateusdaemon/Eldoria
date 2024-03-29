@@ -29,21 +29,25 @@ public class Dodge : MonoBehaviour
             gm.hudManager.SetDodgeAmount(amount);
         }
 
-        if (!PlayerStats.CanMove())
-        {
-            return;
-        }
-
         xDir = Input.GetAxis("Horizontal");
         zDir = Input.GetAxis("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDodge)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
-            canDodge = false;
-            gm.PlayerDodge();
-            Invoke("EnableDodge", coldown);
+            if (PlayerStats.CanMove() && canDodge)
+            {
+                rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
+                canDodge = false;
+                gm.PlayerDodge();
+                Invoke("EnableDodge", coldown);
+            }
+            else
+            {
+                gm.CantDodgeFeedback();
+                Invoke("RestoreDodgeFeedback", 0.15f);
+            }
         }
+
     }
 
     private void EnableDodge()
@@ -51,5 +55,10 @@ public class Dodge : MonoBehaviour
         canDodge = true;
         amount = 0;
         gm.EnableDodge();
+    }
+
+    private void RestoreDodgeFeedback()
+    {
+        gm.RestoreDodgeFeedback();
     }
 }

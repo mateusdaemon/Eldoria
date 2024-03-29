@@ -3744,10 +3744,13 @@ MonoBehaviour:
   manaPotColdown: {fileID: 2576878826677308581}
   questText: {fileID: 8915970351820766578}
   neutralSelect: {fileID: 769107290916878916}
+  shootBG: {fileID: 1876749158091430507}
   shoot: {fileID: 7426470414483845331}
   shootBright: {fileID: 7490555339099167742}
+  shieldBG: {fileID: 2456968000597394086}
   shield: {fileID: 8199944570346720599}
   shieldBright: {fileID: 2479662550017479287}
+  dodgeBG: {fileID: 6911407408489394952}
   dodge: {fileID: 8799544144382985183}
   dodgeBright: {fileID: 1260473168653526522}
 --- !u!1 &7878107920139152974

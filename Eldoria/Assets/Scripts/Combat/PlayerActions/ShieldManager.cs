@@ -29,41 +29,48 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerStats.GetMana() >= gm.GetShieldCost() && Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
-            switch (spellbook.currSpellbook)
+            if (PlayerStats.GetMana() >= gm.GetShieldCost())
             {
-                case SpellbookMng.Spellbook.Red:
-                    currShield = Instantiate(redShield, this.transform.position, new Quaternion());
-                    shieldCurse = SpellbookMng.Spellbook.Red;
-                    PlayerStats.SetRedShielded(true);
-                    break;
-                case SpellbookMng.Spellbook.Green:
-                    currShield = Instantiate(greenShield, this.transform.position, new Quaternion());
-                    shieldCurse = SpellbookMng.Spellbook.Green;
-                    PlayerStats.SetGreenShielded(true);
-                    break;
-                case SpellbookMng.Spellbook.Blue:
-                    currShield = Instantiate(blueShield, this.transform.position, new Quaternion());
-                    shieldCurse = SpellbookMng.Spellbook.Blue;
-                    PlayerStats.SetBlueShielded(true);
-                    break;
-                case SpellbookMng.Spellbook.None:
-                    currShield = Instantiate(neutralShield, this.transform.position, new Quaternion());
-                    shieldCurse = SpellbookMng.Spellbook.None;
-                    PlayerStats.SetNeutralShielded(true);
-                    break;
-                default:
-                    neutralShield = null;
-                    break;
+                switch (spellbook.currSpellbook)
+                {
+                    case SpellbookMng.Spellbook.Red:
+                        currShield = Instantiate(redShield, this.transform.position, new Quaternion());
+                        shieldCurse = SpellbookMng.Spellbook.Red;
+                        PlayerStats.SetRedShielded(true);
+                        break;
+                    case SpellbookMng.Spellbook.Green:
+                        currShield = Instantiate(greenShield, this.transform.position, new Quaternion());
+                        shieldCurse = SpellbookMng.Spellbook.Green;
+                        PlayerStats.SetGreenShielded(true);
+                        break;
+                    case SpellbookMng.Spellbook.Blue:
+                        currShield = Instantiate(blueShield, this.transform.position, new Quaternion());
+                        shieldCurse = SpellbookMng.Spellbook.Blue;
+                        PlayerStats.SetBlueShielded(true);
+                        break;
+                    case SpellbookMng.Spellbook.None:
+                        currShield = Instantiate(neutralShield, this.transform.position, new Quaternion());
+                        shieldCurse = SpellbookMng.Spellbook.None;
+                        PlayerStats.SetNeutralShielded(true);
+                        break;
+                    default:
+                        neutralShield = null;
+                        break;
+                }
+
+                // Shield height correction
+                currShield.transform.position = new Vector3(currShield.transform.position.x, currShield.transform.position.y + 0.2f, currShield.transform.position.z);
+
+                sm.PlaySfx(sm.sfxShield);
+                gm.PlayerUseShield();
+                player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
+            } else
+            {
+                gm.CantShieldFeedback();
+                Invoke("RestoreShieldFeedback", 0.15f);
             }
-
-            // Shield height correction
-            currShield.transform.position = new Vector3(currShield.transform.position.x, currShield.transform.position.y + 0.2f, currShield.transform.position.z);
-
-            sm.PlaySfx(sm.sfxShield);
-            gm.PlayerUseShield();
-            player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
         }
 
         if (Input.GetMouseButtonUp(1))
@@ -92,5 +99,10 @@ public class ShieldManager : MonoBehaviour
 
             gm.EnableShield();
         }
+    }
+
+    private void RestoreShieldFeedback()
+    {
+        gm.RestoreShieldFeedback();
     }
 }

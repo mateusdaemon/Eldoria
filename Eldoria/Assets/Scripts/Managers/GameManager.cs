@@ -94,4 +94,34 @@ public class GameManager : MonoBehaviour
         PlayerStats.DropLife(damage);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
     }
+
+    public void CantShootFeedback()
+    {
+        hudManager.SetShootInvalid();
+    }
+
+    public void RestoreShootFeedback()
+    {
+        hudManager.RestorShootColor();
+    }
+
+    public void CantShieldFeedback()
+    {
+        hudManager.SetShieldInvalid();
+    }
+
+    public void RestoreShieldFeedback()
+    {
+        hudManager.RestorShieldColor();
+    }
+
+    public void CantDodgeFeedback()
+    {
+        hudManager.SetDodgeInvalid();
+    }
+
+    public void RestoreDodgeFeedback()
+    {
+        hudManager.RestorDodgeColor();
+    }
 }

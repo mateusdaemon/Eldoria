@@ -25,10 +25,13 @@ public class HudManager : MonoBehaviour
     public Image neutralSelect;
 
     [Header("Skills")]
+    public Image shootBG;
     public Image shoot;
     public Image shootBright;
+    public Image shieldBG;
     public Image shield;
     public Image shieldBright;
+    public Image dodgeBG;
     public Image dodge;
     public Image dodgeBright;
 
@@ -41,7 +44,12 @@ public class HudManager : MonoBehaviour
     {
         manaBar.fillAmount = amount;
     }
+    public void SetQuestText(string text)
+    {
+        questText.text = text;
+    }
 
+    #region POTIONS
     public void ActivateLifePot()
     {
         lifePot.fillAmount = 1;
@@ -91,12 +99,9 @@ public class HudManager : MonoBehaviour
     {
         manaPotColdown.fillAmount = amount;
     }
+    #endregion
 
-    public void SetQuestText(string text)
-    {
-        questText.text = text;
-    }
-
+    #region SKILLS
     public void ActivateShootSkill()
     {
         shoot.fillAmount = 1;
@@ -147,4 +152,41 @@ public class HudManager : MonoBehaviour
     {
         dodge.fillAmount = amount;
     }
+
+    public void SetShootInvalid()
+    {
+        shoot.color = Color.red;
+        shootBG.color = Color.red;
+    }
+
+    public void RestorShootColor()
+    {
+        shoot.color = Color.white;
+        shootBG.color = Color.white;
+    }
+
+    public void SetShieldInvalid()
+    {
+        shield.color = Color.red;
+        shieldBG.color = Color.red;
+    }
+
+    public void RestorShieldColor()
+    {
+        shield.color = Color.white;
+        shieldBG.color = Color.white;
+    }
+
+    public void SetDodgeInvalid()
+    {
+        dodge.color = Color.red;
+        dodgeBG.color = Color.red;
+    }
+
+    public void RestorDodgeColor()
+    {
+        dodge.color = Color.white;
+        dodgeBG.color = Color.white;
+    }
+    #endregion
 }

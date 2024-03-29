@@ -38,51 +38,53 @@ public class Shooter : MonoBehaviour
             gm.hudManager.SetShootAmount(amount);
         }
 
-        if (!PlayerStats.CanShoot())
-        {
-            return;
-        }
-
         Vector3 currTarget;
         Bullet currBullet = null;
 
-        if (canShoot && Input.GetMouseButtonDown(0) && PlayerStats.GetMana() > 0)
+        if (Input.GetMouseButtonDown(0))
         {
-            Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
+            if (PlayerStats.CanShoot() && canShoot && PlayerStats.GetMana() > 0)
             {
-                currTarget = hit.point;
-                currTarget.y = 0.2f; // all shots are in same height
-            }
-            else
-            {
-                currTarget = new Vector3(0, 0, 0);
-            }
+                Ray mouseRay = cam.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
+                {
+                    currTarget = hit.point;
+                    currTarget.y = 0.2f; // all shots are in same height
+                }
+                else
+                {
+                    currTarget = new Vector3(0, 0, 0);
+                }
 
-            switch (spellbook.currSpellbook)
-            {
-                case SpellbookMng.Spellbook.Red:
-                    currBullet = Instantiate(redBullet, this.transform.position, new Quaternion());
-                    break;
-                case SpellbookMng.Spellbook.Green:
-                    currBullet = Instantiate(greenBullet, this.transform.position, new Quaternion());
-                    break;
-                case SpellbookMng.Spellbook.Blue:
-                    currBullet = Instantiate(blueBullet, this.transform.position, new Quaternion());
-                    break;
-                case SpellbookMng.Spellbook.None:
-                    currBullet = Instantiate(neutralBullet, this.transform.position, new Quaternion());
-                    break;
-                default:
-                    break;
-            }
+                switch (spellbook.currSpellbook)
+                {
+                    case SpellbookMng.Spellbook.Red:
+                        currBullet = Instantiate(redBullet, this.transform.position, new Quaternion());
+                        break;
+                    case SpellbookMng.Spellbook.Green:
+                        currBullet = Instantiate(greenBullet, this.transform.position, new Quaternion());
+                        break;
+                    case SpellbookMng.Spellbook.Blue:
+                        currBullet = Instantiate(blueBullet, this.transform.position, new Quaternion());
+                        break;
+                    case SpellbookMng.Spellbook.None:
+                        currBullet = Instantiate(neutralBullet, this.transform.position, new Quaternion());
+                        break;
+                    default:
+                        break;
+                }
 
-            gm.PlayerShoot();
-            sm.PlaySfx(sm.sfxShooter);
-            currBullet.transform.Rotate(new Vector3(70, 100, 0));
-            currBullet.SetTarget(currTarget);
-            canShoot = false;
-            Invoke("EnableShoot", shootColdown);
+                gm.PlayerShoot();
+                sm.PlaySfx(sm.sfxShooter);
+                currBullet.transform.Rotate(new Vector3(70, 100, 0));
+                currBullet.SetTarget(currTarget);
+                canShoot = false;
+                Invoke("EnableShoot", shootColdown);
+            } else
+            {
+                gm.CantShootFeedback();
+                Invoke("RestoreShootFeedback", 0.15f);
+            }
         }
     }
 
@@ -91,5 +93,10 @@ public class Shooter : MonoBehaviour
         canShoot = true;
         amount = 0;
         gm.EnableShoot();
+    }
+
+    private void RestoreShootFeedback()
+    {
+        gm.RestoreShootFeedback();
     }
 }
