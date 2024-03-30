@@ -52,7 +52,9 @@ MonoBehaviour:
   farmBackground: {fileID: 8300000, guid: 35e92e69c3b28d8438db37f574a8ac8b, type: 3}
   fightBackground: {fileID: 8300000, guid: 09620c84c13cb9b44b4497b64328052c, type: 3}
   sfxShooter: {fileID: 8300000, guid: 1f986c054978a044ea623b97566dc175, type: 3}
+  sfxShooterErro: {fileID: 8300000, guid: d18d4565b7e7a664cba0963685f95543, type: 3}
   sfxShield: {fileID: 8300000, guid: b08d0c8df0d6663498857c7dda7f156d, type: 3}
+  sfxShieldErro: {fileID: 8300000, guid: f9ed4a11d0d13dc4d93349c9a5b0c427, type: 3}
   sfxBreakCurse: {fileID: 8300000, guid: 8316a604fc56fb046a8133ea556d2b0e, type: 3}
   sfxErroBreakCurse: {fileID: 8300000, guid: 549b53bb0316cfd488080aaf8d0c1df5, type: 3}
   sfxErroManaHeal: {fileID: 8300000, guid: 9fca1494094952c4390703a34079fab0, type: 3}
@@ -109,7 +111,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.674
   m_Pitch: 1
   Loop: 0
   Mute: 0
