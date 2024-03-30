@@ -893,6 +893,16 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.674
       objectReference: {fileID: 0}
+    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
+        type: 3}
+      propertyPath: sfxShieldErro
+      value: 
+      objectReference: {fileID: 8300000, guid: f9ed4a11d0d13dc4d93349c9a5b0c427, type: 3}
+    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
+        type: 3}
+      propertyPath: sfxShooterErro
+      value: 
+      objectReference: {fileID: 8300000, guid: d18d4565b7e7a664cba0963685f95543, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

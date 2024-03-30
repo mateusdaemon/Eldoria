@@ -15,12 +15,15 @@ public class SoundManager : MonoBehaviour
 
     [Header("--- PlayerSFX ---")]
     public AudioClip sfxShooter;
+    public AudioClip sfxShooterErro;
     public AudioClip sfxShield;
+    public AudioClip sfxShieldErro;
     public AudioClip sfxBreakCurse;
     public AudioClip sfxErroBreakCurse;
     public AudioClip sfxErroManaHeal;
     public AudioClip sfxDrinkLife;
     public AudioClip sfxDrinkMana;
+    
 
     [Header("--- Ambient ---")]
     public AudioClip windMillSound;
