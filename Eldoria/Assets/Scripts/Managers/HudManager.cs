@@ -49,6 +49,11 @@ public class HudManager : MonoBehaviour
         questText.text = text;
     }
 
+    public void SetTextNoQuest()
+    {
+        questText.text = "(sem missões)";
+    }
+
     #region POTIONS
     public void ActivateLifePot()
     {

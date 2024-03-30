@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 3724129642179621855}
   m_Layer: 0
   m_Name: Sheep
-  m_TagString: Untagged
+  m_TagString: Sheep
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,3 +369,4 @@ MonoBehaviour:
   point1: {fileID: 0}
   point2: {fileID: 0}
   area: {fileID: 0}
+  questRef: {fileID: 0}

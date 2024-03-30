@@ -18,4 +18,14 @@ public class Goal : MonoBehaviour
     {
         complete = true;
     }
+
+    public void AddAmount()
+    {
+        currAmount++;
+    }
+
+    public bool Complete()
+    {
+        return complete;
+    }
 }
