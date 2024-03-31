@@ -19,6 +19,7 @@ public class HudManager : MonoBehaviour
     public Image manaPotColdown;
 
     [Header("Quests")]
+    public TextMeshProUGUI questTitle;
     public TextMeshProUGUI questText;
 
     [Header("Books")]
@@ -43,6 +44,11 @@ public class HudManager : MonoBehaviour
     public void SetManaAmount(float amount)
     {
         manaBar.fillAmount = amount;
+    }
+
+    public void SetQuestTitle(string text)
+    {
+        questTitle.text = text;
     }
     public void SetQuestText(string text)
     {
