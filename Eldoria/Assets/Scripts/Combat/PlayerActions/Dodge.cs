@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Dodge : MonoBehaviour
 {
+    [Header("---Manager---")]
+    public SoundManager sm;
+
+    [Header("---Dodge---")]
     private Rigidbody rb;
     private float xDir, zDir;
     private bool canDodge = true;
@@ -36,6 +40,7 @@ public class Dodge : MonoBehaviour
         {
             if (PlayerStats.CanMove() && canDodge)
             {
+                sm.PlaySfx(sm.sfxDodge);
                 rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
                 canDodge = false;
                 gm.PlayerDodge();
@@ -43,6 +48,7 @@ public class Dodge : MonoBehaviour
             }
             else
             {
+                sm.PlaySfx(sm.sfxDodgeErro);
                 gm.CantDodgeFeedback();
                 Invoke("RestoreDodgeFeedback", 0.15f);
             }

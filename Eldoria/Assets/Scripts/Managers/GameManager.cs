@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public SoundManager sm;
     public HudManager hudManager;
     public int maxFPS;
 
@@ -91,6 +92,7 @@ public class GameManager : MonoBehaviour
 
     public void AttackPlayer(float damage)
     {
+        sm.PlaySfx(sm.sfxTakingDamage);
         PlayerStats.DropLife(damage);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
     }

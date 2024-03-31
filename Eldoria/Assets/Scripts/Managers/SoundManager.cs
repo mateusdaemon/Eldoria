@@ -23,6 +23,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip sfxErroManaHeal;
     public AudioClip sfxDrinkLife;
     public AudioClip sfxDrinkMana;
+    public AudioClip sfxDodge;
+    public AudioClip sfxDodgeErro;
+    public AudioClip sfxTakingDamage;
     
 
     [Header("--- Ambient ---")]

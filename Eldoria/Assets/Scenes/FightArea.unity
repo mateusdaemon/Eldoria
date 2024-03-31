@@ -780,6 +780,11 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 456190594}
+    - target: {fileID: 1406278368849766571, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
+        type: 3}
+      propertyPath: sm
+      value: 
+      objectReference: {fileID: 756688173}
     - target: {fileID: 5054131556247001451, guid: 52ea017f84f5d4a44bf7fd70d5800bbb,
         type: 3}
       propertyPath: m_Name
@@ -2524,6 +2529,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
+        type: 3}
+      propertyPath: sm
+      value: 
+      objectReference: {fileID: 756688173}
     - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
         type: 3}
       propertyPath: hudManager
