@@ -68,6 +68,7 @@ public class ShieldManager : MonoBehaviour
                 player.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0); // Disable movement
             } else
             {
+                sm.PlaySfx(sm.sfxShieldErro);
                 gm.CantShieldFeedback();
                 Invoke("RestoreShieldFeedback", 0.15f);
             }

@@ -82,6 +82,7 @@ public class Shooter : MonoBehaviour
                 Invoke("EnableShoot", shootColdown);
             } else
             {
+                sm.PlaySfx(sm.sfxShooterErro);
                 gm.CantShootFeedback();
                 Invoke("RestoreShootFeedback", 0.15f);
             }
