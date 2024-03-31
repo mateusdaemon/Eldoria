@@ -6,6 +6,7 @@ public class SheepInsideGoal : MonoBehaviour
 {
     public Quest questRelated;
     public Goal goal;
+    public HudManager hudManager;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class SheepInsideGoal : MonoBehaviour
         if (other.CompareTag("Sheep"))
         {
             goal.AddAmount();
+            string goalDesc = goal.description + "(" + goal.GetAmount() + "/" + goal.GetReqAmount() + ")";
+            hudManager.SetQuestText(goalDesc);
+            
             if (goal.CheckComplete())
             {
                 goal.CompleteGoal();

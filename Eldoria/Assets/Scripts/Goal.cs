@@ -28,4 +28,14 @@ public class Goal : MonoBehaviour
     {
         return complete;
     }
+
+    public int GetAmount()
+    {
+        return currAmount;
+    }
+
+    public int GetReqAmount()
+    {
+        return reqAmount;
+    }
 }

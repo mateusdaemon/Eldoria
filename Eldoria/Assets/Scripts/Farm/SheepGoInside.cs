@@ -78,8 +78,6 @@ public class SheepGoInside : MonoBehaviour
     {
         if (other.CompareTag("SheepTrigger") && !sheepCounted)
         {
-            questRef.SumSheep();
-            sheepCounted = true;
             goPos1 = true;
         }
     }

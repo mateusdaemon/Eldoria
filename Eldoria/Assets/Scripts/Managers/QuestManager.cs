@@ -6,6 +6,8 @@ public class QuestManager : MonoBehaviour
 {
     public HudManager hudManager;
 
+    private bool onQuest = false;
+
     // SHEEP QUEST
     private bool sheepActive = false;
     private bool sheepQuestDone = false;
@@ -116,4 +118,14 @@ public class QuestManager : MonoBehaviour
         return finishCornQuest;
     }
     #endregion
+
+    public bool QuestInProgress()
+    {
+        return onQuest;
+    }
+
+    public void SetQuestInProgress(bool inProgress)
+    {
+        onQuest = inProgress;
+    }
 }
