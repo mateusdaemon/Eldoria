@@ -39,6 +39,9 @@ public class HudManager : MonoBehaviour
     public Image dodgeBright;
     public GameObject skillsObject;
 
+    [Header("Keys")]
+    public GameObject keysObject;
+
     public void SetLifeAmout(float amount)
     {
         lifeBar.fillAmount = amount;
@@ -214,5 +217,6 @@ public class HudManager : MonoBehaviour
         manaBarObject.SetActive(true);
         potionsObject.SetActive(true);
         skillsObject.SetActive(true);
+        keysObject.SetActive(true);
     }
 }
