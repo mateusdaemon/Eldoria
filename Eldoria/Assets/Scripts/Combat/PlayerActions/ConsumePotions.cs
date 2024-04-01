@@ -17,6 +17,9 @@ public class ConsumePotions : MonoBehaviour
     public float lifeIncrease;
     public float manaIncrease;
 
+    [Header("---Feedbacks---")]
+    public ParticleSystem lifePotFdb;
+
 
     private float manaAmount = 0;
     private float manaColdownAmount = 1;
@@ -68,6 +71,9 @@ public class ConsumePotions : MonoBehaviour
                 {
                     lifeToAdd = maxLife - currLife;
                 }
+
+                ParticleSystem healParticle = Instantiate(lifePotFdb, transform.position, new Quaternion());
+                healParticle.Play();
 
                 gm.DrinkLifePot(lifeToAdd);
                 sm.PlaySfx(sm.sfxDrinkLife);
