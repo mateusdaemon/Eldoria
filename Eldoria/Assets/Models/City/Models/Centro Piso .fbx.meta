@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Guia
+    second: {fileID: 2100000, guid: 6e97e9d542bd823419f85385de7f2edb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Street City
-    second: {fileID: 2100000, guid: b6933fb72aa9fc748ac4b7e8f4f15a4d, type: 2}
+    second: {fileID: 2100000, guid: 78a7cd2bdb42a2342963a22d46fb375a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
