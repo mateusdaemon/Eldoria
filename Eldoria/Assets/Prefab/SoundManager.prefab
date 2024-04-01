@@ -54,14 +54,14 @@ MonoBehaviour:
   sfxShooter: {fileID: 8300000, guid: e9cdab702b49c5e4e83aaab70b7ad279, type: 3}
   sfxShooterErro: {fileID: 8300000, guid: f24528f8d273d434b9a71e99024f8b68, type: 3}
   sfxShield: {fileID: 8300000, guid: 89435067df86c5d49afa366319ca2986, type: 3}
-  sfxShieldErro: {fileID: 8300000, guid: f2958a30839feb14ea1ecbe8f40de6bf, type: 3}
+  sfxShieldErro: {fileID: 8300000, guid: f24528f8d273d434b9a71e99024f8b68, type: 3}
   sfxBreakCurse: {fileID: 8300000, guid: 0bbf3e5db9ec34e40abbeaf4a302f691, type: 3}
   sfxErroBreakCurse: {fileID: 8300000, guid: 549b53bb0316cfd488080aaf8d0c1df5, type: 3}
   sfxErroManaHeal: {fileID: 8300000, guid: 10a1ed0d3651dee469a60601c1c4b709, type: 3}
   sfxDrinkLife: {fileID: 8300000, guid: 5c4b825759ec9954f84e1fa77e791dc4, type: 3}
   sfxDrinkMana: {fileID: 8300000, guid: a42fe0fdd574fec45919aa8acc7e37f5, type: 3}
   sfxDodge: {fileID: 8300000, guid: ed942ef0e13def54aa335afb2bcad2e7, type: 3}
-  sfxDodgeErro: {fileID: 8300000, guid: 5cc32e7e29167984db78ffabd1e5c5a9, type: 3}
+  sfxDodgeErro: {fileID: 8300000, guid: f24528f8d273d434b9a71e99024f8b68, type: 3}
   sfxTakingDamage: {fileID: 8300000, guid: 233b645bc5485dd4eabd1b635c730ca7, type: 3}
   windMillSound: {fileID: 8300000, guid: aefbb4b551cfe2148ac632fc52556df6, type: 3}
   chimneySound: {fileID: 8300000, guid: c0a56223fce8e0a4d87b0929e2958983, type: 3}
