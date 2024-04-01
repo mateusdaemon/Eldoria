@@ -27,6 +27,8 @@ public class QuestList : MonoBehaviour
                     quest.StartQuest();
                     quest.active = true;
                     qm.SetQuestInProgress(true);
+                    canInteract = false;
+                    questInteract.SetActive(false);
                 }
             }
         }

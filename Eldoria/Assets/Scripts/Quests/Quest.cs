@@ -10,8 +10,10 @@ public class Quest : MonoBehaviour
     public HudManager hudManager;
     public bool enable = false;
     public bool active = false;
+    public Quest nextQuest;
     private bool complete = false;
     private bool finish = false;
+    private string noQuestTitle = "...";
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +43,10 @@ public class Quest : MonoBehaviour
         if (questDone)
         {
             hudManager.SetTextNoQuest();
+            hudManager.SetQuestTitle(noQuestTitle);
             qm.SetQuestInProgress(false);
             complete = true;
+            nextQuest.enable = true;
         }
     }
 
