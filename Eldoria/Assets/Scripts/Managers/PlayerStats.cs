@@ -17,7 +17,7 @@ public static class PlayerStats
     private static bool blueCursed = false;
     private static bool canShoot = true;
     private static bool canMove = true;
-    private static bool skillsEnable = false;
+    private static bool skillsEnable = true;
 
 
     // Shield states
