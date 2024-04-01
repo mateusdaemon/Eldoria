@@ -25,6 +25,8 @@ public class CatchBookGoal : MonoBehaviour
         if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
             hudManager.ActivateNeutralBook();
+            hudManager.ActivateCombatObjects();
+            PlayerStats.EnableSkill(true);
             
             goal.AddAmount();
             if (goal.CheckComplete())

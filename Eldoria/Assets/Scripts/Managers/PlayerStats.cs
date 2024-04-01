@@ -17,6 +17,8 @@ public static class PlayerStats
     private static bool blueCursed = false;
     private static bool canShoot = true;
     private static bool canMove = true;
+    private static bool skillsEnable = false;
+
 
     // Shield states
     private static bool neutralShielded = false;
@@ -175,4 +177,13 @@ public static class PlayerStats
         blueShielded = shield;
     }
 
+    public static void EnableSkill(bool enable)
+    {
+        skillsEnable = enable;
+    }
+
+    public static bool SkillEnable()
+    {
+        return skillsEnable;
+    }
 }

@@ -32,6 +32,11 @@ public class ConsumePotions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerStats.SkillEnable())
+        {
+            return;
+        }
+
         if (!canUseMana)
         {
             manaAmount += 1.0f / manaColdown * Time.deltaTime;

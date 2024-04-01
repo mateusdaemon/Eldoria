@@ -9,6 +9,7 @@ public class HudManager : MonoBehaviour
     [Header("Player Stats")]
     public Image lifeBar;
     public Image manaBar;
+    public GameObject manaBarObject;
 
     [Header("Potions")]
     public Image lifePot;
@@ -17,6 +18,7 @@ public class HudManager : MonoBehaviour
     public Image manaPotShine;
     public Image lifePotColdown;
     public Image manaPotColdown;
+    public GameObject potionsObject;
 
     [Header("Quests")]
     public TextMeshProUGUI questTitle;
@@ -35,6 +37,7 @@ public class HudManager : MonoBehaviour
     public Image dodgeBG;
     public Image dodge;
     public Image dodgeBright;
+    public GameObject skillsObject;
 
     public void SetLifeAmout(float amount)
     {
@@ -204,5 +207,12 @@ public class HudManager : MonoBehaviour
     public void ActivateNeutralBook()
     {
         neutralSelect.enabled = true;
+    }
+
+    public void ActivateCombatObjects()
+    {
+        manaBarObject.SetActive(true);
+        potionsObject.SetActive(true);
+        skillsObject.SetActive(true);
     }
 }

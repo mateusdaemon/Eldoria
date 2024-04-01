@@ -32,6 +32,11 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerStats.SkillEnable())
+        {
+            return;
+        }
+
         if (!canShoot)
         {
             amount += 1.0f / shootColdown * Time.deltaTime;

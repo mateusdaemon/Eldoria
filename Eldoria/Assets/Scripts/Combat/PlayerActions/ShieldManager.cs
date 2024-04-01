@@ -29,6 +29,11 @@ public class ShieldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerStats.SkillEnable())
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (PlayerStats.GetMana() >= gm.GetShieldCost())
