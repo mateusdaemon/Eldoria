@@ -200,4 +200,9 @@ public class HudManager : MonoBehaviour
         dodgeBG.color = Color.white;
     }
     #endregion
+
+    public void ActivateNeutralBook()
+    {
+        neutralSelect.enabled = true;
+    }
 }

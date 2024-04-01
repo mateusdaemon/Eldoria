@@ -62,7 +62,7 @@ public class CollectCornGoal : MonoBehaviour
 
         if (goal.CheckComplete())
         {
-            //wagonGoalObject.SetActive(true);
+            wagonGoalObject.SetActive(true);
             goal.CompleteGoal();
             questRelated.CheckForComplete();
         }
