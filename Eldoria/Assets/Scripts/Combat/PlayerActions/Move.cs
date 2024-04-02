@@ -32,6 +32,12 @@ public class Move : MonoBehaviour
         {
             OrientPlayerSprite();
             rb.AddForce(new Vector3(xDir, 0, zDir) * velocity);
+        } else
+        {
+            animatedFront.GetComponent<Animator>().SetBool("walk", false);
+            animatedBack.GetComponent<Animator>().SetBool("walk", false);
+            animatedRight.GetComponent<Animator>().SetBool("walk", false);
+            animatedLeft.GetComponent<Animator>().SetBool("walk", false);
         }
 
         //rb.velocity = new Vector3(xDir, 0, zDir) * velocity;
@@ -50,6 +56,7 @@ public class Move : MonoBehaviour
             animatedRight.SetActive(false);
             animatedBack.SetActive(false);
             animatedFront.SetActive(false);
+            animatedLeft.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Left;
         }
         else if (xDir > 0)
@@ -59,6 +66,7 @@ public class Move : MonoBehaviour
             animatedRight.SetActive(true);
             animatedBack.SetActive(false);
             animatedFront.SetActive(false);
+            animatedRight.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Right;
         }
         else if (zDir > xDir)
@@ -68,6 +76,7 @@ public class Move : MonoBehaviour
             animatedLeft.SetActive(false);
             animatedBack.SetActive(true);
             animatedFront.SetActive(false);
+            animatedBack.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Back;
         }
         else if (zDir < xDir)
@@ -77,6 +86,7 @@ public class Move : MonoBehaviour
             animatedLeft.SetActive(false);
             animatedBack.SetActive(false);
             animatedFront.SetActive(true);
+            animatedFront.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Front;
         }
 

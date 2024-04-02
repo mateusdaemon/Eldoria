@@ -336,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 20
-  playerSpriteObj: {fileID: 0}
   animatedFront: {fileID: 4999365187568305402}
   animatedBack: {fileID: 150530882581981149}
   animatedRight: {fileID: 2172421492800576811}
@@ -487,7 +486,7 @@ PrefabInstance:
     - target: {fileID: 5091316643188342340, guid: 1640f552c828bcc4b8dfbad67f87fa2c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9207221848485024254, guid: 1640f552c828bcc4b8dfbad67f87fa2c,
         type: 3}
@@ -947,7 +946,7 @@ PrefabInstance:
     - target: {fileID: 3919572717992498348, guid: ad6b98a166d9f494dba836dd03bf7c45,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6270695153848525741, guid: ad6b98a166d9f494dba836dd03bf7c45,
         type: 3}
