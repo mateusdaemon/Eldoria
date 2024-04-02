@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Dialogue : MonoBehaviour
 {
     public string npcName;
-    public Sprite npcPìc;
+    public Sprite npcPic;
     [TextArea(4, 10)]
     public string[] npcTexts;
     [TextArea(4, 10)]

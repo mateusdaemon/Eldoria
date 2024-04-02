@@ -36,10 +36,11 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void SetDialTree(List<DialNode> dialNodes, string name)
+    public void SetDialTree(List<DialNode> dialNodes, string name, Sprite npcImg)
     {
         dialTree = dialNodes;
         npcName.text = name;
+        npcImgUI.sprite = npcImg;
         npcText.text = dialTree[0].npcText;
         npcText.maxVisibleCharacters = 0;
         ans1.text = dialTree[0].ans1;
@@ -55,6 +56,8 @@ public class DialogueManager : MonoBehaviour
         {
             btn2.SetActive(true);
         }
+
+        treeIndex = 0;
     }
 
     public void PrintNextNode()

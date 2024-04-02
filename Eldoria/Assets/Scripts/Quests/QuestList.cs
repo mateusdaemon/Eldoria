@@ -26,7 +26,7 @@ public class QuestList : MonoBehaviour
             {
                 if (quest.enable && !quest.active)
                 {
-                    dm.SetDialTree(quest.questDialogue.GetDialTree(), quest.questDialogue.npcName);
+                    dm.SetDialTree(quest.questDialogue.GetDialTree(), quest.questDialogue.npcName, quest.questDialogue.npcPic);
                     dialogueObj.SetActive(true);
                     quest.StartQuest();
                     quest.active = true;

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Move : MonoBehaviour
@@ -34,10 +33,10 @@ public class Move : MonoBehaviour
             rb.AddForce(new Vector3(xDir, 0, zDir) * velocity);
         } else
         {
-            animatedFront.GetComponent<Animator>().SetBool("walk", false);
-            animatedBack.GetComponent<Animator>().SetBool("walk", false);
-            animatedRight.GetComponent<Animator>().SetBool("walk", false);
-            animatedLeft.GetComponent<Animator>().SetBool("walk", false);
+            if (animatedFront.activeSelf) { animatedFront.GetComponent<Animator>().SetBool("walk", false); }
+            if (animatedBack.activeSelf) { animatedBack.GetComponent<Animator>().SetBool("walk", false); }
+            if (animatedRight.activeSelf) { animatedRight.GetComponent<Animator>().SetBool("walk", false); }
+            if (animatedLeft.activeSelf) { animatedLeft.GetComponent<Animator>().SetBool("walk", false); }
         }
 
         //rb.velocity = new Vector3(xDir, 0, zDir) * velocity;
