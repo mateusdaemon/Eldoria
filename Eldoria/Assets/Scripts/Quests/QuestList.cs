@@ -5,6 +5,8 @@ using UnityEngine;
 public class QuestList : MonoBehaviour
 {
     public QuestManager qm;
+    public DialogueManager dm;
+    public GameObject dialogueObj;
     public Quest[] quests;
     public GameObject questInteract;
     private bool canInteract = false;
@@ -24,6 +26,8 @@ public class QuestList : MonoBehaviour
             {
                 if (quest.enable && !quest.active)
                 {
+                    dm.SetDialTree(quest.questDialogue.GetDialTree(), quest.questDialogue.npcName);
+                    dialogueObj.SetActive(true);
                     quest.StartQuest();
                     quest.active = true;
                     qm.SetQuestInProgress(true);

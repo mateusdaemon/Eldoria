@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
+    [Header("Managers")]
     public QuestManager qm;
+    public HudManager hudManager;
+
+    [Header("Quest info")]
     public string questTitle;
     public Goal[] goals;
-    public HudManager hudManager;
     public bool enable = false;
     public bool active = false;
+    public Dialogue questDialogue;
     public Quest nextQuest;
+
     private bool complete = false;
     private bool finish = false;
     private string noQuestTitle = "...";
