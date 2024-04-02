@@ -3735,6 +3735,7 @@ MonoBehaviour:
   dodge: {fileID: 8799544144382985183}
   dodgeBright: {fileID: 1260473168653526522}
   skillsObject: {fileID: 1783142081099712557}
+  keysObject: {fileID: 7486853598979640269}
 --- !u!1 &7878107920139152974
 GameObject:
   m_ObjectHideFlags: 0
