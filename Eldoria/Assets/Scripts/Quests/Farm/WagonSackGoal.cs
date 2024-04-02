@@ -32,7 +32,7 @@ public class WagonSackGoal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (questRelated.enable)
+            if (questRelated.active)
             {
                 canInteract = true;
                 interactionUI.SetActive(true);

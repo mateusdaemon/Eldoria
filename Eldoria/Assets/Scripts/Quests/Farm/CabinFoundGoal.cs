@@ -22,7 +22,7 @@ public class CabinFoundGoal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (questRelated.enable)
+            if (questRelated.active)
             {
                 goal.AddAmount();
 

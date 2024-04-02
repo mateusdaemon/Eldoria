@@ -8,15 +8,19 @@ public class CollectCornGoal : MonoBehaviour
     public Goal goal;
     public HudManager hudManager;
     public GameObject interactionUI;
+    public GameObject plantGroup;
+    public GameObject cornGroup;
     public ParticleSystem cornParticle;
     public GameObject wagonGoalObject;
 
     private bool canCollect = false;
+    private Vector3 particleSplashPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        particleSplashPos = transform.position;
+        particleSplashPos.y = 3.0f;
     }
 
     // Update is called once per frame
@@ -25,6 +29,8 @@ public class CollectCornGoal : MonoBehaviour
         if (canCollect && Input.GetKeyDown(KeyCode.F))
         {
             CollectCorn();
+            cornGroup.SetActive(false);
+            plantGroup.transform.Translate(new Vector3(0, -1, 0));
             Destroy(gameObject);
         }
     }
@@ -33,7 +39,7 @@ public class CollectCornGoal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (questRelated.enable)
+            if (questRelated.active)
             {
                 canCollect = true;
                 interactionUI.SetActive(true);
@@ -52,7 +58,7 @@ public class CollectCornGoal : MonoBehaviour
 
     private void CollectCorn()
     {
-        ParticleSystem corn = Instantiate(cornParticle, transform.position, new Quaternion());
+        ParticleSystem corn = Instantiate(cornParticle, particleSplashPos, cornParticle.transform.rotation);
         corn.Play();
 
         goal.AddAmount();
