@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Move : MonoBehaviour
 {
     private Rigidbody rb;
     private float xDir, zDir;
-    private Animator anim;
-    private SpriteRenderer sr;
+    //private Animator anim;
+    //private SpriteRenderer sr;
 
     public float velocity;
     public GameObject playerSpriteObj;
+    public GameObject animatedFront, animatedBack, animatedRight, animatedLeft;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
-        anim = playerSpriteObj.GetComponent<Animator>();
-        sr = playerSpriteObj.GetComponent<SpriteRenderer>();
+        //anim = playerSpriteObj.GetComponent<Animator>();
+        //sr = playerSpriteObj.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -31,57 +33,58 @@ public class Move : MonoBehaviour
         xDir = Input.GetAxis("Horizontal");
         zDir = Input.GetAxis("Vertical");
 
-        if (xDir == 0 && zDir == 0)
-        {
-            anim.SetBool("frontWalk", false);
-            anim.SetBool("backWalk", false);
-            anim.SetBool("sideWalk", false);
-        }
-        else
+        if (xDir != 0 || zDir != 0)
         {
             OrientPlayerSprite();
+            rb.AddForce(new Vector3(xDir, 0, zDir) * velocity);
         }
 
         //rb.velocity = new Vector3(xDir, 0, zDir) * velocity;
-        rb.AddForce(new Vector3(xDir, 0, zDir) * velocity);
     }
 
 
     private void OrientPlayerSprite()
     {
+        PlayerStats.Direction dir = PlayerStats.Direction.Front;
+
+
         if (xDir < 0)
         {
             // walk left
-            sr.flipX = true;
-            anim.SetBool("sideWalk", true);
-
-            anim.SetBool("frontWalk", false);
-            anim.SetBool("backWalk", false);
+            animatedLeft.SetActive(true);
+            animatedRight.SetActive(false);
+            animatedBack.SetActive(false);
+            animatedFront.SetActive(false);
+            dir = PlayerStats.Direction.Left;
         }
         else if (xDir > 0)
         {
             // walk right
-            sr.flipX = false;
-            anim.SetBool("sideWalk", true);
-
-            anim.SetBool("frontWalk", false);
-            anim.SetBool("backWalk", false);
+            animatedLeft.SetActive(false);
+            animatedRight.SetActive(true);
+            animatedBack.SetActive(false);
+            animatedFront.SetActive(false);
+            dir = PlayerStats.Direction.Right;
         }
         else if (zDir > xDir)
         {
             // walk back
-            anim.SetBool("backWalk", true);
-
-            anim.SetBool("sideWalk", false);
-            anim.SetBool("frontWalk", false);
+            animatedRight.SetActive(false);
+            animatedLeft.SetActive(false);
+            animatedBack.SetActive(true);
+            animatedFront.SetActive(false);
+            dir = PlayerStats.Direction.Back;
         }
         else if (zDir < xDir)
         {
             // walk front
-            anim.SetBool("frontWalk", true);
-
-            anim.SetBool("backWalk", false);
-            anim.SetBool("sideWalk", false);
+            animatedRight.SetActive(false);
+            animatedLeft.SetActive(false);
+            animatedBack.SetActive(false);
+            animatedFront.SetActive(true);
+            dir = PlayerStats.Direction.Front;
         }
+
+        PlayerStats.SetFacing(dir);
     }
 }

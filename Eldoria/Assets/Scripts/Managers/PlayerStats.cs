@@ -18,6 +18,7 @@ public static class PlayerStats
     private static bool canShoot = true;
     private static bool canMove = true;
     private static bool skillsEnable = true;
+    private static Direction facing = Direction.Front;
 
 
     // Shield states
@@ -185,5 +186,15 @@ public static class PlayerStats
     public static bool SkillEnable()
     {
         return skillsEnable;
+    }
+
+    public static void SetFacing(Direction direction)
+    {
+        facing = direction;
+    }
+
+    public static Direction FacingDir()
+    {
+        return facing;
     }
 }
