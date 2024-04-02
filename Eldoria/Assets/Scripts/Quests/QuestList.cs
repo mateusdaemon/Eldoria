@@ -35,8 +35,7 @@ public class QuestList : MonoBehaviour
                     questInteract.SetActive(false);
                 }
             }
-        }
-        
+        }        
     }
 
     private void OnTriggerEnter(Collider other)

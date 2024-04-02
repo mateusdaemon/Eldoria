@@ -14,6 +14,8 @@ public class Quest : MonoBehaviour
     public bool enable = false;
     public bool active = false;
     public Dialogue questDialogue;
+
+    [Header("Next quest")]
     public Quest nextQuest;
 
     private bool complete = false;
