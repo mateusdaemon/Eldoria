@@ -3,7 +3,42 @@ guid: 724a6b0a3cbd9724a8103f9abc53b012
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corda Ponte
+    second: {fileID: 2100000, guid: 8083c86ee6d1c6c469f0c63512b7a8f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corda Ponte Detalhe
+    second: {fileID: 2100000, guid: 5e5719e71fe3f3f42b6b2ade0c858016, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corda_
+    second: {fileID: 2100000, guid: 74d658404bbb0a745b3722a4d73ab257, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Madeira Ponte
+    second: {fileID: 2100000, guid: ba41c046d0439af49903fee8949487f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mini Corda
+    second: {fileID: 2100000, guid: cf284f758dd4cf949810c565f1a8af60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ponta
+    second: {fileID: 2100000, guid: 3cf0d47da60728c4498306f319d5f420, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Toco Ponte
+    second: {fileID: 2100000, guid: 9bca72c8afdbc124ab51e76971a313d5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
