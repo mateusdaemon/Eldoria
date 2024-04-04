@@ -63,7 +63,7 @@ public class HudManager : MonoBehaviour
 
     public void SetTextNoQuest()
     {
-        questText.text = "(sem missões)";
+        questText.text = "Nada de novo por aqui";
     }
 
     #region POTIONS

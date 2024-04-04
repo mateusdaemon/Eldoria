@@ -20,7 +20,7 @@ public class Quest : MonoBehaviour
 
     private bool complete = false;
     //private bool finish = false;
-    private string noQuestTitle = "...";
+    private string noQuestTitle = "";
 
     // Start is called before the first frame update
     void Start()
