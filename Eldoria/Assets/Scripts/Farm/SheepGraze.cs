@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SheepGraze : MonoBehaviour
 {
-    public float moveSpeed = 10f; // Velocidade de movimento das ovelhas
+    public float moveSpeed = 5f; // Velocidade de movimento das ovelhas
     public float grazingTime = 4f; // Tempo de pastagem antes de se mover para outro local
     public Collider pastureArea; // Collider representando a área de pastagem
     private Vector3 targetPosition; // Posição alvo dentro da área de pasto
@@ -17,7 +17,7 @@ public class SheepGraze : MonoBehaviour
         SetRandomTargetPosition();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         // Se a ovelha estiver se movendo, mova-a em direção à posição alvo
         if (isMoving && shouldGraze)
