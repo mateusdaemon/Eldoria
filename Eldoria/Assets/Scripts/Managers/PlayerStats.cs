@@ -18,6 +18,7 @@ public static class PlayerStats
     private static bool canShoot = true;
     private static bool canMove = true;
     private static bool skillsEnable = true;
+    private static bool isDialoguing = false;
     private static Direction facing = Direction.Front;
 
 
@@ -197,4 +198,15 @@ public static class PlayerStats
     {
         return facing;
     }
+
+    public static bool IsDialoguing()
+    {
+        return isDialoguing;
+    }
+
+    public static void SetDialoguing(bool dialoguing)
+    {
+        isDialoguing = dialoguing;
+    }
+
 }

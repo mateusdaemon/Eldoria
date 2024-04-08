@@ -36,7 +36,7 @@ public class ConsumePotions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!PlayerStats.SkillEnable())
+        if (!PlayerStats.SkillEnable() || PlayerStats.IsDialoguing())
         {
             return;
         }

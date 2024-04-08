@@ -58,6 +58,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         treeIndex = 0;
+        PlayerStats.SetDialoguing(true);
+                
     }
 
     public void PrintNextNode()
@@ -67,6 +69,7 @@ public class DialogueManager : MonoBehaviour
 
         if (dialTree[treeIndex].leafNode)
         {
+            PlayerStats.SetDialoguing(false);
             dialogueObjects.SetActive(false);
             return;
         }

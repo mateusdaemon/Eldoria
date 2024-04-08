@@ -19,7 +19,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!PlayerStats.CanMove())
+        if (!PlayerStats.CanMove() || PlayerStats.IsDialoguing())
         {
             return;
         }
