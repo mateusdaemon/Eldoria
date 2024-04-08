@@ -3,7 +3,17 @@ guid: 960980f9ba54e5c4ebb32d6972a1ae0c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bridge Stone
+    second: {fileID: 2100000, guid: 4ae8d231fc3fb6040b4ef1c9babc1e86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Details Bridge
+    second: {fileID: 2100000, guid: 382526c5629283840a3074b6e0b27290, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
