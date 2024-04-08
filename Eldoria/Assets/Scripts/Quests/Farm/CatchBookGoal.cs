@@ -10,6 +10,7 @@ public class CatchBookGoal : MonoBehaviour
     public HudManager hudManager;
     public GameObject bookModel;
     public GameObject wolfPackGoal;
+    public ParticleSystem catchFeedback;
 
     private bool canInteract = false;
 
@@ -24,6 +25,7 @@ public class CatchBookGoal : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
+            catchFeedback.Play();
             hudManager.ActivateNeutralBook();
             hudManager.ActivateCombatObjects();
             PlayerStats.EnableSkill(true);
