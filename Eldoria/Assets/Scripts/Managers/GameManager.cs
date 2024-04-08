@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private float shootManaCost = 1;
     private float shieldManaCost = 2;
+    private float maxShieldPoints = 7;
 
     // Start is called before the first frame update
     void Start()
@@ -44,16 +45,13 @@ public class GameManager : MonoBehaviour
 
     public void PlayerUseShield()
     {
-        PlayerStats.SetShoot(false);
-        PlayerStats.SetMove(false);
         PlayerStats.DropMana(shieldManaCost);
+        PlayerStats.SetShieldPoints(maxShieldPoints);
         hudManager.UseShieldSkill();
         hudManager.SetManaAmount(PlayerStats.GetMana() / PlayerStats.GetMaxMana());
     }
     public void EnableShield()
     {
-        PlayerStats.SetShoot(true);
-        PlayerStats.SetMove(true);
         hudManager.ActivateShieldSkill();
     }
 
@@ -99,7 +97,22 @@ public class GameManager : MonoBehaviour
     public void AttackPlayer(float damage)
     {
         sm.PlaySfx(sm.sfxTakingDamage);
-        PlayerStats.DropLife(damage);
+        float damageToLife = 0;
+
+        if (PlayerStats.GetShieldPoints() > 0)
+        {
+            if (PlayerStats.GetShieldPoints() > damage)
+            {
+                PlayerStats.SetShieldPoints(PlayerStats.GetShieldPoints() - damage);
+                hudManager.SetShieldBarAmount(PlayerStats.GetShieldPoints() / maxShieldPoints);
+            } else
+            {
+                hudManager.BreakShield();
+                damageToLife = damage - PlayerStats.GetShieldPoints();
+            }
+        }
+
+        PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
     }
 

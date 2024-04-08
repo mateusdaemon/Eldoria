@@ -9,6 +9,7 @@ public static class PlayerStats
     private static float maxMana = 20;
     private static float life = 10;
     private static float mana = 20;
+    private static float shieldPoints = 7;
     private static float playerDamage = 2;
 
     // Player states
@@ -29,7 +30,7 @@ public static class PlayerStats
     private static bool blueShielded = false;
 
     // Global utilities
-    public enum Direction {Right, Left, Front, Back };
+    public enum Direction { Right, Left, Front, Back };
 
     public static float GetMaxMana()
     {
@@ -79,6 +80,16 @@ public static class PlayerStats
     public static void SetMana(float manaTotal)
     {
         mana = manaTotal;
+    }
+
+    public static void SetShieldPoints(float points)
+    {
+        shieldPoints = points;
+    }
+
+    public static float GetShieldPoints()
+    {
+        return shieldPoints;
     }
 
     public static bool RedCursed()

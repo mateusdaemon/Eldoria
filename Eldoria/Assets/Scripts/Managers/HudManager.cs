@@ -9,6 +9,7 @@ public class HudManager : MonoBehaviour
     [Header("Player Stats")]
     public Image lifeBar;
     public Image manaBar;
+    public Image shieldBar;
     public GameObject manaBarObject;
 
     [Header("Potions")]
@@ -50,6 +51,11 @@ public class HudManager : MonoBehaviour
     public void SetManaAmount(float amount)
     {
         manaBar.fillAmount = amount;
+    }
+
+    public void SetShieldBarAmount(float amount)
+    {
+        shieldBar.fillAmount = amount;
     }
 
     public void SetQuestTitle(string text)
@@ -141,6 +147,13 @@ public class HudManager : MonoBehaviour
     {
         shield.fillAmount = 0;
         shieldBright.enabled = false;
+        shieldBar.enabled = true;
+        shieldBar.fillAmount = 1;
+    }
+
+    public void BreakShield()
+    {
+        shieldBar.enabled = false;
     }
 
     public void ActivateDodgeSkill()

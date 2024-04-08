@@ -46,16 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   sm: {fileID: 0}
-  redShield: {fileID: 4216530364152762562, guid: be47ec775e8ae5c4e830e2f549d390a3,
-    type: 3}
-  greenShield: {fileID: 3272961745497509822, guid: c1b4e2f238ed87b4aa8b79bbbd71d415,
-    type: 3}
-  blueShield: {fileID: 2825439032628321917, guid: 40310a203d3127a4d837dea4846157aa,
-    type: 3}
-  neutralShield: {fileID: 2461873975215624803, guid: 205dd3721fada3c419f6d78af57bc699,
-    type: 3}
-  spellbook: {fileID: 7964820225507872425}
   player: {fileID: 5054131556247001451}
+  shieldColdown: 10
 --- !u!1 &3791153469134743816
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +479,7 @@ PrefabInstance:
     - target: {fileID: 5091316643188342340, guid: 1640f552c828bcc4b8dfbad67f87fa2c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9207221848485024254, guid: 1640f552c828bcc4b8dfbad67f87fa2c,
         type: 3}
@@ -679,6 +671,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 466031970189591277}
     m_Modifications:
+    - target: {fileID: 2260145791720181985, guid: 618319bdefdc88e4aba4b213a4645816,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997276120563599074, guid: 618319bdefdc88e4aba4b213a4645816,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7252650803555075315, guid: 618319bdefdc88e4aba4b213a4645816,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158828287159040589, guid: cacaa9a6869822f46997cadc9e372e17,
         type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158828287159040589, guid: cacaa9a6869822f46997cadc9e372e17,
+        type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -847,6 +854,11 @@ PrefabInstance:
     - target: {fileID: 6078744067146128651, guid: cacaa9a6869822f46997cadc9e372e17,
         type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078744067146128651, guid: cacaa9a6869822f46997cadc9e372e17,
+        type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6078744067146128651, guid: cacaa9a6869822f46997cadc9e372e17,
@@ -871,6 +883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6118403861921677514, guid: cacaa9a6869822f46997cadc9e372e17,
         type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118403861921677514, guid: cacaa9a6869822f46997cadc9e372e17,
+        type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0
       objectReference: {fileID: 0}
@@ -883,6 +900,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7282837296632157059, guid: cacaa9a6869822f46997cadc9e372e17,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7282837296632157059, guid: cacaa9a6869822f46997cadc9e372e17,
         type: 3}
@@ -1020,6 +1042,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 466031970189591277}
     m_Modifications:
+    - target: {fileID: 2260145791720181985, guid: 407477c8817338040a757ac7696313ce,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2997276120563599074, guid: 407477c8817338040a757ac7696313ce,
+        type: 3}
+      propertyPath: stopAction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7252650803555075315, guid: 407477c8817338040a757ac7696313ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1108,7 +1140,7 @@ PrefabInstance:
     - target: {fileID: 3919572717992498348, guid: ad6b98a166d9f494dba836dd03bf7c45,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6270695153848525741, guid: ad6b98a166d9f494dba836dd03bf7c45,
         type: 3}
