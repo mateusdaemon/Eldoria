@@ -12,6 +12,7 @@ public class SheepHerding : MonoBehaviour
     private SpriteRenderer parentSr;
 
     public AudioSource sheepBea;
+    public SheepGraze grazeBehavior;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class SheepHerding : MonoBehaviour
             {
                 sheepBea.Play();
             }
+            grazeBehavior.Graze(false);
             playerRef = other.gameObject;
             runAway = true;
         }
@@ -57,6 +59,7 @@ public class SheepHerding : MonoBehaviour
         {
             playerRef = null;
             runAway = false;
+            grazeBehavior.Graze(true);
         }
     }
 

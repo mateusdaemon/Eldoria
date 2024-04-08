@@ -9,6 +9,7 @@ public class SheepGraze : MonoBehaviour
     public Collider pastureArea; // Collider representando a área de pastagem
     private Vector3 targetPosition; // Posição alvo dentro da área de pasto
     private bool isMoving = false; // Flag para verificar se a ovelha está se movendo
+    private bool shouldGraze = true;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class SheepGraze : MonoBehaviour
     private void Update()
     {
         // Se a ovelha estiver se movendo, mova-a em direção à posição alvo
-        if (isMoving)
+        if (isMoving && shouldGraze)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
@@ -51,5 +52,10 @@ public class SheepGraze : MonoBehaviour
         float randomZ = Random.Range(center.z - size.z / 2, center.z + size.z / 2);
 
         return new Vector3(randomX, transform.position.y, randomZ);
+    }
+
+    public void Graze(bool graze)
+    {
+        shouldGraze = graze;
     }
 }

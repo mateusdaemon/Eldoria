@@ -7,6 +7,7 @@ public class SheepGoInside : MonoBehaviour
     public GameObject point1;
     public GameObject point2;
     public GameObject area;
+    public SheepGraze grazingBehavior;
 
     private Vector3 pos1, pos2, fitPos;
     private float xBoundArea, zBoundArea;
@@ -76,6 +77,7 @@ public class SheepGoInside : MonoBehaviour
     {
         if (other.CompareTag("SheepTrigger"))
         {
+            grazingBehavior.Graze(false);
             goPos1 = true;
         }
     }
