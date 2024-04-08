@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sheepBea: {fileID: 21908617674934756}
+  grazeBehavior: {fileID: 8533463343881956361}
 --- !u!135 &1792947329054426876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -370,6 +371,7 @@ MonoBehaviour:
   point1: {fileID: 0}
   point2: {fileID: 0}
   area: {fileID: 0}
+  grazingBehavior: {fileID: 8533463343881956361}
 --- !u!114 &8533463343881956361
 MonoBehaviour:
   m_ObjectHideFlags: 0
