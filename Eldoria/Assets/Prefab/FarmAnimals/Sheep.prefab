@@ -209,6 +209,7 @@ GameObject:
   - component: {fileID: 6189942962268417685}
   - component: {fileID: 7296800259069420252}
   - component: {fileID: 3724129642179621855}
+  - component: {fileID: 8533463343881956361}
   m_Layer: 0
   m_Name: Sheep
   m_TagString: Sheep
@@ -369,4 +370,18 @@ MonoBehaviour:
   point1: {fileID: 0}
   point2: {fileID: 0}
   area: {fileID: 0}
-  questRef: {fileID: 0}
+--- !u!114 &8533463343881956361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148066683738163989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691ad2d7506d48348bd6d0e4db345e64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 1
+  grazingTime: 4
+  pastureArea: {fileID: 0}
