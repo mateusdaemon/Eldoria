@@ -6,11 +6,12 @@ public class Bullet : MonoBehaviour
 {
     private Vector3 target;
     public ParticleSystem effect;
+    private Vector3 firstPos;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        firstPos = transform.position;
     }
 
     // Update is called once per frame
@@ -26,7 +27,7 @@ public class Bullet : MonoBehaviour
 
     public void MoveToTarget()
     {
-        if (transform.position != target)
+        if (transform.position != target && Vector3.Distance(firstPos, transform.position) <= 12.0f)
         {
             this.transform.position = Vector3.MoveTowards(transform.position, this.target, 0.5f);
         }
