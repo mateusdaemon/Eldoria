@@ -9,11 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Pedra Chao
     second: {fileID: 2100000, guid: f5acf2f742ab6ec4d9ea3109571ea7d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pedra Chao Center
-    second: {fileID: 2100000, guid: 34503e13871197b4a9f78065f4384b7f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
