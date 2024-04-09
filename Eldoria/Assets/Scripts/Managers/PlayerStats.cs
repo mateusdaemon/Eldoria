@@ -9,7 +9,7 @@ public static class PlayerStats
     private static float maxMana = 20;
     private static float life = 10;
     private static float mana = 20;
-    private static float shieldPoints = 7;
+    private static float shieldPoints = 0;
     private static float playerDamage = 2;
 
     // Player states

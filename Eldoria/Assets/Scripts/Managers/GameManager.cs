@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
                 hudManager.BreakShield();
                 damageToLife = damage - PlayerStats.GetShieldPoints();
             }
-        }
+        } else { damageToLife = damage; }
 
         PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
