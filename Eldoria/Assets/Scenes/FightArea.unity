@@ -908,7 +908,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sfxShield
       value: 
-      objectReference: {fileID: 8300000, guid: d9d3ff25849217245a6c5f4ef27fa6d4, type: 3}
+      objectReference: {fileID: 8300000, guid: d7d5171e148febb4c8e7c586dfd4b33b, type: 3}
     - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
         type: 3}
       propertyPath: sfxShooter
