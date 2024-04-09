@@ -45,6 +45,10 @@ public class Dodge : MonoBehaviour
         {
             if (PlayerStats.CanMove() && canDodge)
             {
+                if (xDir == 0 && zDir == 0)
+                {
+                    SetDodgeDirection(ref xDir, ref zDir);
+                }
                 sm.PlaySfx(sm.sfxDodge);
                 rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
                 canDodge = false;
@@ -71,5 +75,27 @@ public class Dodge : MonoBehaviour
     private void RestoreDodgeFeedback()
     {
         gm.RestoreDodgeFeedback();
+    }
+
+    private void SetDodgeDirection(ref float xDir, ref float zDir)
+    {
+        xDir = 0; zDir = 0;
+        switch (PlayerStats.FacingDir())
+        {
+            case PlayerStats.Direction.Right:
+                xDir = -1;
+                break;
+            case PlayerStats.Direction.Left:
+                xDir = 1;
+                break;
+            case PlayerStats.Direction.Front:
+                zDir = 1;
+                break;
+            case PlayerStats.Direction.Back:
+                zDir = -1;
+                break;
+            default:
+                break;
+        }
     }
 }
