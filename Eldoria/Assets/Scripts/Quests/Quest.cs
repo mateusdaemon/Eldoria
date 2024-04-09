@@ -17,6 +17,7 @@ public class Quest : MonoBehaviour
 
     [Header("Next quest")]
     public Quest nextQuest;
+    public GameObject questInteract;
 
     private bool complete = false;
     //private bool finish = false;
@@ -54,6 +55,7 @@ public class Quest : MonoBehaviour
             qm.SetQuestInProgress(false);
             complete = true;
             nextQuest.enable = true;
+            nextQuest.EnableQuestInteraction(true);
         }
     }
 
@@ -63,5 +65,8 @@ public class Quest : MonoBehaviour
         hudManager.SetQuestText(goals[0].description);
     }
 
-    
+    public void EnableQuestInteraction(bool enable)
+    {
+        questInteract.SetActive(enable);
+    }
 }

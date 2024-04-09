@@ -30,6 +30,7 @@ public class QuestList : MonoBehaviour
                     dialogueObj.SetActive(true);
                     quest.StartQuest();
                     quest.active = true;
+                    quest.EnableQuestInteraction(false);
                     qm.SetQuestInProgress(true);
                     canInteract = false;
                     questInteract.SetActive(false);
