@@ -26,6 +26,7 @@ public class HudManager : MonoBehaviour
     public TextMeshProUGUI questText;
 
     [Header("Books")]
+    public GameObject books;
     public Image neutralSelect;
 
     [Header("Skills")]
@@ -231,5 +232,6 @@ public class HudManager : MonoBehaviour
         potionsObject.SetActive(true);
         skillsObject.SetActive(true);
         keysObject.SetActive(true);
+        books.SetActive(true);
     }
 }
