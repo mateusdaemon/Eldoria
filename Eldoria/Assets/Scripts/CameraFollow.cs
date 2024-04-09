@@ -48,7 +48,7 @@ public class CameraFollow : MonoBehaviour
                 }
                 else
                 {
-                    targetY = transform.position.y - 1.0f;
+                    targetY = transform.position.y - 0.4f;
                 }
 
                 Vector3 heightPosition = new Vector3(transform.position.x, targetY, transform.position.z);
@@ -62,7 +62,7 @@ public class CameraFollow : MonoBehaviour
                     targetY = maxHeight;
                 } else
                 {
-                    targetY = transform.position.y + 1.0f;
+                    targetY = transform.position.y + 0.4f;
                 }
 
                 Vector3 heightPosition = new Vector3(transform.position.x, targetY, transform.position.z);
