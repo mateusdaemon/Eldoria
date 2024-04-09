@@ -47,7 +47,7 @@ MonoBehaviour:
   gm: {fileID: 0}
   sm: {fileID: 0}
   player: {fileID: 5054131556247001451}
-  shieldColdown: 10
+  shieldColdown: 15
 --- !u!1 &3791153469134743816
 GameObject:
   m_ObjectHideFlags: 0

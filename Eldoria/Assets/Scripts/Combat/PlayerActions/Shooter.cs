@@ -73,7 +73,7 @@ public class Shooter : MonoBehaviour
                         currBullet = Instantiate(blueBullet, this.transform.position, new Quaternion());
                         break;
                     case SpellbookMng.Spellbook.None:
-                        currBullet = Instantiate(neutralBullet, this.transform.position, new Quaternion());
+                        currBullet = Instantiate(neutralBullet, this.transform.position, neutralBullet.transform.rotation);
                         break;
                     default:
                         break;
@@ -81,7 +81,6 @@ public class Shooter : MonoBehaviour
 
                 gm.PlayerShoot();
                 sm.PlaySfx(sm.sfxShooter);
-                currBullet.transform.Rotate(new Vector3(70, 100, 0));
                 currBullet.SetTarget(currTarget);
                 canShoot = false;
                 Invoke("EnableShoot", shootColdown);

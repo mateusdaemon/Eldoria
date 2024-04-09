@@ -28,6 +28,7 @@ public class SheepGraze : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
                 isMoving = false;
+                grazingTime = Random.Range(8.0f, 16.0f);
                 // Inicia a contagem para a próxima movimentação após o tempo de pastagem
                 Invoke("SetRandomTargetPosition", grazingTime);
             }
