@@ -35,9 +35,12 @@ public class TakeDamage : MonoBehaviour
             blood.Play();
 
             currEnemy.life -= (int)PlayerStats.GetDamage();
-            sm.PlaySfx(sm.sfxWolfDie);
-            blood.Play();
             lifeBarUI.GetComponent<Image>().fillAmount = currEnemy.life / maxLife;
         }
+    }
+
+    private void OnDestroy()
+    {
+        sm.PlaySfx(sm.sfxWolfDie);
     }
 }
