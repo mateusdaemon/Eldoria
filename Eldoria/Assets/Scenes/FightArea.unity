@@ -913,17 +913,22 @@ PrefabInstance:
         type: 3}
       propertyPath: sfxShooter
       value: 
-      objectReference: {fileID: 8300000, guid: 7d9129bdd4fe12346936f2dcd97e09b0, type: 3}
+      objectReference: {fileID: 8300000, guid: ca5c6815c206fbf478cd1bacecade401, type: 3}
     - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
         type: 3}
       propertyPath: sfxDodgeErro
       value: 
-      objectReference: {fileID: 8300000, guid: f24528f8d273d434b9a71e99024f8b68, type: 3}
+      objectReference: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
     - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
         type: 3}
       propertyPath: sfxShieldErro
       value: 
-      objectReference: {fileID: 8300000, guid: f24528f8d273d434b9a71e99024f8b68, type: 3}
+      objectReference: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
+    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
+        type: 3}
+      propertyPath: sfxShooterErro
+      value: 
+      objectReference: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
