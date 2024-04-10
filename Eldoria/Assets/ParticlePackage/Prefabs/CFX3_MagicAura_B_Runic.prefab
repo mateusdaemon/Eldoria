@@ -4817,7 +4817,6 @@ GameObject:
   - component: {fileID: 1664496191109752358}
   - component: {fileID: 6118403861921677514}
   - component: {fileID: 1346085597842977437}
-  - component: {fileID: 4266993150582935061}
   m_Layer: 0
   m_Name: CFX3 Small Aura
   m_TagString: Untagged
@@ -9599,19 +9598,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &4266993150582935061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619443578511329245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
 --- !u!1 &3108034865882762771
 GameObject:
   m_ObjectHideFlags: 0
@@ -9623,7 +9609,6 @@ GameObject:
   - component: {fileID: 4083181822718024368}
   - component: {fileID: 6078744067146128651}
   - component: {fileID: 2954949391839116378}
-  - component: {fileID: 7599708118159717412}
   m_Layer: 0
   m_Name: CFX3_MagicAura_B_Runic
   m_TagString: Untagged
@@ -14408,19 +14393,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &7599708118159717412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3108034865882762771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fd2e8874f60266498a388d7229a1bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnlyDeactivate: 0
 --- !u!1 &8338923060885506559
 GameObject:
   m_ObjectHideFlags: 0

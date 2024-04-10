@@ -11,6 +11,7 @@ public class CatchBookGoal : MonoBehaviour
     public GameObject bookModel;
     public GameObject wolfPackGoal;
     public ParticleSystem catchFeedback;
+    public GameObject bookAura;
 
     private bool canInteract = false;
 
@@ -29,7 +30,8 @@ public class CatchBookGoal : MonoBehaviour
             hudManager.ActivateNeutralBook();
             hudManager.ActivateCombatObjects();
             PlayerStats.EnableSkill(true);
-            
+            Destroy(bookAura);
+
             goal.AddAmount();
             if (goal.CheckComplete())
             {
