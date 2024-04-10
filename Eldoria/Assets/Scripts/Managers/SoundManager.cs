@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     [Header("--- Audio Source ---")]
     [SerializeField] AudioSource musicSource;
+    [SerializeField] AudioSource birdsSource;
     [SerializeField] AudioSource sfxSource;
 
     [Header("--- Music ---")]
@@ -42,5 +44,21 @@ public class SoundManager : MonoBehaviour
     public void PlaySfx(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayFarm()
+    {
+        musicSource.clip = farmBackground;
+        birdsSource.clip = birdSound;
+        musicSource.Play();
+        birdsSource.Play();
+    }
+
+    private void Start()
+    {
+        if(SceneManager.GetActiveScene().name == "Farm")
+        {
+            PlayFarm();
+        }
     }
 }
