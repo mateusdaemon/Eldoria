@@ -22,8 +22,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Door 2 house 13
+    second: {fileID: 2100000, guid: aca8e9391e5786b4a8d2fdd086dab8a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entrada House 13
+    second: {fileID: 2100000, guid: 001e31431f217f24bbb4eb9c963d7028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass House 13
     second: {fileID: 2100000, guid: 85715e9ba8db9ab4595279ae83f0a52f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Guia Taverna 2
+    second: {fileID: 2100000, guid: d8bce043dd24f0241ac83aa39e198a68, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
