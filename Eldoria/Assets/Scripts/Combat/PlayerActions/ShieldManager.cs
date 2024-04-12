@@ -8,6 +8,7 @@ public class ShieldManager : MonoBehaviour
     public GameManager gm;
     public SoundManager sm;
     public GameObject player;
+    public ParticleSystem shieldFdb;
     public float shieldColdown;
 
     private bool canShield = true;
@@ -39,6 +40,7 @@ public class ShieldManager : MonoBehaviour
             {
                 sm.PlaySfx(sm.sfxShield);
                 gm.PlayerUseShield();
+                shieldFdb.Play();
                 Invoke("ActivateShieldSkill", shieldColdown);
                 canShield = false;
             } else
