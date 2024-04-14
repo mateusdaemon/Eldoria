@@ -11,6 +11,7 @@ TagManager:
   - SheepTrigger
   - Audio
   - Sheep
+  - DmgFdb
   layers:
   - Default
   - TransparentFX

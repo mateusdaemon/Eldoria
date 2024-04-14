@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public SoundManager sm;
     public HudManager hudManager;
+    public GameObject playerRef;
     public int maxFPS;
 
     private float shootManaCost = 1;
@@ -111,6 +112,12 @@ public class GameManager : MonoBehaviour
                 damageToLife = damage - PlayerStats.GetShieldPoints();
             }
         } else { damageToLife = damage; }
+
+        if (damageToLife > 0)
+        {
+            playerRef.GetComponent<PlayerDamageFdb>().DamageFeedback();
+            sm.PlaySfx(sm.sfxTakingDamage);
+        }
 
         PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());

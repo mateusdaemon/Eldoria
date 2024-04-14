@@ -821,7 +821,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318417313}
   m_SourcePrefab: {fileID: 100100000, guid: c30b914e66f5aee4bb16ce9ea3208bf6, type: 3}
 --- !u!1 &318417305 stripped
 GameObject:
@@ -829,6 +833,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 300308215}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &318417313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318417305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58a81b13aa14a54882bc80e06c15f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 456190594}
+  bloodFdb: {fileID: 1098986919}
 --- !u!114 &456190594 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
@@ -1397,6 +1415,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 196284388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1098986919 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5939420451367628629, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 300308215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1117157288 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4998785292397457570, guid: c42ad8579d54d47459d4e0d22c55a23e,
@@ -2528,6 +2552,11 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
+    - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
+        type: 3}
+      propertyPath: playerRef
+      value: 
+      objectReference: {fileID: 318417305}
     - target: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
         type: 3}
       propertyPath: hudManager
