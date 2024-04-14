@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 7138833962882443784}
   - component: {fileID: 8344434389693342303}
   - component: {fileID: 1406278368849766571}
+  - component: {fileID: 7148759014780889468}
   m_Layer: 14
   m_Name: Player_v4
   m_TagString: Player
@@ -390,6 +391,20 @@ MonoBehaviour:
   gm: {fileID: 0}
   dodgeForce: 10
   coldown: 2
+--- !u!114 &7148759014780889468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5054131556247001451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58a81b13aa14a54882bc80e06c15f7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  bloodFdb: {fileID: 5939420451367628629}
 --- !u!1 &5073907797615219488
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +862,12 @@ PrefabInstance:
 --- !u!4 &4249753935461415650 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2779300266056761729, guid: 68a6f518c67dd3e41be4d83738cb6222,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046928284319005539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5939420451367628629 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5621944804532130870, guid: 68a6f518c67dd3e41be4d83738cb6222,
     type: 3}
   m_PrefabInstance: {fileID: 2046928284319005539}
   m_PrefabAsset: {fileID: 0}
@@ -1527,7 +1548,7 @@ PrefabInstance:
     - target: {fileID: 7710331113042080598, guid: c11c2a138a13fd2469740a251b7edb26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1
+      value: -0.86
       objectReference: {fileID: 0}
     - target: {fileID: 7710331113042080598, guid: c11c2a138a13fd2469740a251b7edb26,
         type: 3}
