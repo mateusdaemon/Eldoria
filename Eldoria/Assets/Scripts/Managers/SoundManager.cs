@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip sfxDodge;
     public AudioClip sfxDodgeErro;
     public AudioClip sfxTakingDamage;
+    public AudioClip sfxWalk;
     
 
     [Header("--- Ambient ---")]
