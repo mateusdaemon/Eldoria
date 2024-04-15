@@ -1,9 +1,84 @@
 fileFormatVersion: 2
-guid: c71facf74ebf5b5439faa9d2dec20e7d
+guid: 7d728136746d61240b222118613e89e6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detalhes Door 2 House 9
+    second: {fileID: 2100000, guid: ac4f37d8557ce7742b0f693520453bd7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Detalhes House 9
+    second: {fileID: 2100000, guid: e31f2afe3547323458ad84969754b57f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door 2 house 9
+    second: {fileID: 2100000, guid: 7748165cc3c6be944a52436919fc8f30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door House 1
+    second: {fileID: 2100000, guid: 8c7a0344af1d2784bbe93bbbe17826a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door House 9
+    second: {fileID: 2100000, guid: 90e39cb1cc7d57b47b101d6ac4928d29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 64a2c4deed4b842488299c01539fc36c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House 9 Pedra
+    second: {fileID: 2100000, guid: 0e7d371299d9a274f8ee9809017dca8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: House 9_
+    second: {fileID: 2100000, guid: aa365190092cb9c458c3d1b5f9ee69a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.023
+    second: {fileID: 2100000, guid: b3ec8ee2c04dd67489346664a0753b1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.024
+    second: {fileID: 2100000, guid: 04ea8fe4c1041654cbe12be1b714101b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Ma\xE7aneta House 9"
+    second: {fileID: 2100000, guid: 67316730dc8ca9b4cb49f20303659d90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piso house 9
+    second: {fileID: 2100000, guid: b53d2654606108f4898fae17325cddfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piso house 9.1
+    second: {fileID: 2100000, guid: 685b2caf8596512429b0b07dfcfc6c6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows hs9
+    second: {fileID: 2100000, guid: d0779f85b379af94e8a6f73bc15867d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hs 9 pedra
+    second: {fileID: 2100000, guid: b4c58bb8225bf7947ad7d33472b5f208, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
