@@ -116,6 +116,9 @@ public class GameManager : MonoBehaviour
         {
             playerRef.GetComponent<PlayerDamageFdb>().DamageFeedback();
             sm.PlaySfx(sm.sfxTakingDamage);
+        } else
+        {
+            sm.PlaySfx(sm.sfxTakingShieldDamage);
         }
 
         PlayerStats.DropLife(damageToLife);

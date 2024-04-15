@@ -65,6 +65,9 @@ MonoBehaviour:
   sfxDodge: {fileID: 8300000, guid: 3a32f49ee3323f94f96e99a9a24e0d7c, type: 3}
   sfxDodgeErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
   sfxTakingDamage: {fileID: 8300000, guid: 233b645bc5485dd4eabd1b635c730ca7, type: 3}
+  sfxTakingShieldDamage: {fileID: 8300000, guid: bf77a9814c3abf3488c0ec1ba46e9a66,
+    type: 3}
+  sfxWalk: {fileID: 8300000, guid: 31c950651735f614c97960e3d9e77221, type: 3}
   windMillSound: {fileID: 8300000, guid: aefbb4b551cfe2148ac632fc52556df6, type: 3}
   chimneySound: {fileID: 8300000, guid: c0a56223fce8e0a4d87b0929e2958983, type: 3}
   sheepSound: {fileID: 8300000, guid: 3079782679d6b7146ad6b9b76587aebb, type: 3}
