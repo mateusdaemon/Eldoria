@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public GameManager gm;
     private Rigidbody rb;
     private float xDir, zDir;
 
