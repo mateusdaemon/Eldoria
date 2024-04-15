@@ -97,7 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void AttackPlayer(float damage)
     {
-        sm.PlaySfx(sm.sfxTakingDamage);
         float damageToLife = 0;
 
         if (PlayerStats.GetShieldPoints() > 0)
