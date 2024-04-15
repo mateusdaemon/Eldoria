@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TakeDamage : MonoBehaviour
+public class WolfTakeDamage : MonoBehaviour
 {
     public SoundManager sm;
     public GameObject lifeBarUI;
     public ParticleSystem blood;
 
     private Enemy currEnemy;
-    private float maxLife;
     // Start is called before the first frame update
     void Start()
     {
         currEnemy = GetComponent<Enemy>();
-        maxLife = currEnemy.life;
     }
 
     // Update is called once per frame
@@ -34,8 +32,7 @@ public class TakeDamage : MonoBehaviour
             blood.transform.position = other.ClosestPoint(transform.position);
             blood.Play();
 
-            currEnemy.life -= (int)PlayerStats.GetDamage();
-            lifeBarUI.GetComponent<Image>().fillAmount = currEnemy.life / maxLife;
+            currEnemy.TakeDamage(PlayerStats.GetDamage());
         }
     }
 

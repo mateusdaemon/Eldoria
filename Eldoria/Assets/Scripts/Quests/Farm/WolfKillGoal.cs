@@ -23,8 +23,6 @@ public class WolfKillGoal : MonoBehaviour
     private void OnDestroy()
     {
         goal.AddAmount();
-        string goalDesc = goal.description + "(" + goal.GetAmount() + "/" + goal.GetReqAmount() + ")";
-        hudManager.SetQuestText(goalDesc);
 
         if (goal.CheckComplete())
         {

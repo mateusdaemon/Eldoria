@@ -12,10 +12,9 @@ public class WolfCrocBehavior : MonoBehaviour
     private bool originSet = false;
     private bool isAttaking = false;
     private WolfCrocState wolfState;
+    private Enemy enemy;
 
-    public float distancePlayer;
     public WolfCrocodileAttack attackArea;
-    public GameObject sprite;
     public GameObject warnSign;
     public GameObject dangerSign;
 
@@ -23,6 +22,7 @@ public class WolfCrocBehavior : MonoBehaviour
     void Start()
     {
         parent = this.transform.parent.gameObject;
+        enemy = parent.GetComponent<Enemy>();
         wolfState = parent.GetComponent<WolfCrocState>();
         Invoke("SetOrigin", 1);
     }
@@ -53,6 +53,7 @@ public class WolfCrocBehavior : MonoBehaviour
             }
             else
             {
+                enemy.ResetLife();
                 wolfState.SetWolfState(WolfCrocState.WolfState.Idle);
             }
         }
