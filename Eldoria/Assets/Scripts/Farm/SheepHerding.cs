@@ -8,8 +8,7 @@ public class SheepHerding : MonoBehaviour
     private GameObject playerRef;
     private bool runAway = false;
     private PlayerStats.Direction runAwayDir;
-    private Animator parentAnim;
-    private SpriteRenderer parentSr;
+    private SheepState sheepState;
 
     public AudioSource sheepBea;
     public SheepGraze grazeBehavior;
@@ -18,8 +17,7 @@ public class SheepHerding : MonoBehaviour
     void Start()
     {
         parent = transform.parent.gameObject;
-        parentAnim = parent.GetComponent<Animator>();
-        parentSr = parent.GetComponent<SpriteRenderer>();
+        sheepState = parent.GetComponent<SheepState>();
     }
 
     // Update is called once per frame
@@ -127,36 +125,26 @@ public class SheepHerding : MonoBehaviour
 
         Vector3 target = new Vector3(posX, 0, posZ);
 
-        OrientSheepSprite();
+        OrientSheepAnim();
 
         parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
     }
 
-    private void OrientSheepSprite()
+    private void OrientSheepAnim()
     {
         switch (runAwayDir)
         {
             case PlayerStats.Direction.Right:
-                parentAnim.SetBool("frontWalk", false);
-                parentAnim.SetBool("backWalk", false);
-                parentAnim.SetBool("sideWalk", true);
-                parentSr.flipX = true;
+                sheepState.SetSheepState(SheepState.ShipState.GoRight);
                 break;
             case PlayerStats.Direction.Left:
-                parentAnim.SetBool("frontWalk", false);
-                parentAnim.SetBool("backWalk", false);
-                parentAnim.SetBool("sideWalk", true);
-                parentSr.flipX = false;
+                sheepState.SetSheepState(SheepState.ShipState.GoLeft);
                 break;
             case PlayerStats.Direction.Front:
-                parentAnim.SetBool("frontWalk", true);
-                parentAnim.SetBool("backWalk", false);
-                parentAnim.SetBool("sideWalk", false);
+                sheepState.SetSheepState(SheepState.ShipState.GoFront);
                 break;
             case PlayerStats.Direction.Back:
-                parentAnim.SetBool("frontWalk", false);
-                parentAnim.SetBool("backWalk", true);
-                parentAnim.SetBool("sideWalk", false);
+                sheepState.SetSheepState(SheepState.ShipState.GoBack);
                 break;
             default:
                 break;

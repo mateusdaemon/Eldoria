@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SheepGraze : MonoBehaviour
@@ -10,9 +11,11 @@ public class SheepGraze : MonoBehaviour
     private Vector3 targetPosition; // Posição alvo dentro da área de pasto
     private bool isMoving = false; // Flag para verificar se a ovelha está se movendo
     private bool shouldGraze = true;
+    private SheepState sheepState;
 
     private void Start()
     {
+        sheepState = GetComponent<SheepState>();
         // Inicializa a posição alvo dentro da área de pasto
         SetRandomTargetPosition();
     }
@@ -28,7 +31,8 @@ public class SheepGraze : MonoBehaviour
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
                 isMoving = false;
-                grazingTime = Random.Range(8.0f, 16.0f);
+                grazingTime = Random.Range(5.0f, 8.0f);
+                sheepState.SetSheepState(SheepState.ShipState.Graze);
                 // Inicia a contagem para a próxima movimentação após o tempo de pastagem
                 Invoke("SetRandomTargetPosition", grazingTime);
             }
@@ -39,6 +43,7 @@ public class SheepGraze : MonoBehaviour
     {
         // Obtém uma posição aleatória dentro dos limites da área de pasto
         targetPosition = GetRandomPositionInPastureArea(pastureArea);
+        SetSheepDirection(targetPosition);
         isMoving = true;
     }
 
@@ -58,5 +63,40 @@ public class SheepGraze : MonoBehaviour
     public void Graze(bool graze)
     {
         shouldGraze = graze;
+    }
+
+    private void SetSheepDirection(Vector3 targetPos)
+    {
+        // Calcula a diferença entre as coordenadas X da posição alvo e da ovelha
+        float deltaX = targetPos.x - transform.position.x;
+
+        // Calcula a diferença entre as coordenadas Z da posição alvo e da ovelha
+        float deltaZ = targetPos.z - transform.position.z;
+
+        // Define a direção com base nas diferenças
+        if (Mathf.Abs(deltaX) > Mathf.Abs(deltaZ)) // Se a diferença em X for maior que a diferença em Z
+        {
+            // Define a direção como esquerda ou direita com base no sinal de deltaX
+            if (deltaX > 0)
+            {
+                sheepState.SetSheepState(SheepState.ShipState.GoRight);
+            }
+            else
+            {
+                sheepState.SetSheepState(SheepState.ShipState.GoLeft);
+            }
+        }
+        else // Se a diferença em Z for maior ou igual à diferença em X
+        {
+            // Define a direção como para frente ou para trás com base no sinal de deltaZ
+            if (deltaZ > 0)
+            {
+                sheepState.SetSheepState(SheepState.ShipState.GoBack);
+            }
+            else
+            {
+                sheepState.SetSheepState(SheepState.ShipState.GoFront);
+            }
+        }
     }
 }

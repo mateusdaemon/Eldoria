@@ -9,11 +9,10 @@ public class SheepGoInside : MonoBehaviour
     public GameObject area;
     public SheepGraze grazingBehavior;
 
+    private SheepState sheepState;
     private Vector3 pos1, pos2, fitPos;
     private float xBoundArea, zBoundArea;
     private bool goPos1 = false, goPos2 = false, fitArea = false;
-    private Animator anim;
-    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +27,7 @@ public class SheepGoInside : MonoBehaviour
         fitPos.x += Random.Range(-xBoundArea, xBoundArea);
         fitPos.z += Random.Range(-zBoundArea, zBoundArea);
 
-        anim = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
+        sheepState = GetComponent<SheepState>();
     }
 
     // Update is called once per frame
@@ -38,9 +36,7 @@ public class SheepGoInside : MonoBehaviour
         if (Vector3.Distance(transform.position, pos1) >= 1.0f  && goPos1 == true)
         {
             pos1.y = transform.position.y;
-            anim.SetBool("frontWalk", false);
-            anim.SetBool("backWalk", true);
-            anim.SetBool("sideWalk", false);
+            sheepState.SetSheepState(SheepState.ShipState.GoBack);
             transform.position = Vector3.MoveTowards(transform.position, pos1, 0.1f);
         } else if (goPos1)
         {
@@ -51,10 +47,7 @@ public class SheepGoInside : MonoBehaviour
         if (Vector3.Distance(transform.position, pos2) >= 1.0f && goPos2 == true)
         {
             pos2.y = transform.position.y;
-            anim.SetBool("frontWalk", false);
-            anim.SetBool("backWalk", false);
-            anim.SetBool("sideWalk", true);
-            sr.flipX = true;
+            sheepState.SetSheepState(SheepState.ShipState.GoRight);
             transform.position = Vector3.MoveTowards(transform.position, pos2, 0.1f);
         }
         else if (goPos2)
@@ -69,6 +62,7 @@ public class SheepGoInside : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, fitPos, 0.1f);
         } else if (fitArea == true)
         {
+            sheepState.SetSheepState(SheepState.ShipState.Idle);
             fitArea = false;
         }
     }
