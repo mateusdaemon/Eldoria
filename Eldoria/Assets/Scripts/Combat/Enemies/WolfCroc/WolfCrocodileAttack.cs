@@ -9,16 +9,15 @@ public class WolfCrocodileAttack : MonoBehaviour
     public SoundManager sm;
 
     [Header("---WolfCrocodile---")]
-    public Enemy enemyStats;
     public bool hitPlayer;
-    public GameObject spriteEnemy;
 
-
-    private Animator anim;
+    private Enemy enemy;
+    private WolfCrocState wolfState;
 
     private void Start()
     {
-        anim = spriteEnemy.GetComponent<Animator>();
+        enemy = gameObject.GetComponentInParent<Enemy>();
+        wolfState = GetComponentInParent<WolfCrocState>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,22 +36,21 @@ public class WolfCrocodileAttack : MonoBehaviour
         }
     }
 
-    public void AttackPlayer(Enemy currEnemy)
+    public bool AttackPlayer()
     {
-        anim.SetBool("attack", true);
-        Invoke("DisableAttack", anim.GetCurrentAnimatorClipInfo(0).Length);
-        sm.PlaySfx(sm.wolfBarkSound);
-        
-        bool hit = !PlayerStats.IsNeutralShielded();
-
-        if (hit)
+        if (hitPlayer)
         {
-            gm.AttackPlayer(enemyStats.damage);
+            wolfState.SetWolfState(WolfCrocState.WolfState.Attack);
+            sm.PlaySfx(sm.wolfBarkSound);
+            Invoke("DisableAttack", 0.5f);
+            enemy.AttackPlayer();
         }
+
+        return hitPlayer;
     }
 
     private void DisableAttack()
     {
-        anim.SetBool("attack", false);
+        wolfState.SetWolfState(WolfCrocState.WolfState.Idle);
     }
 }

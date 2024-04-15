@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3159234937779553791}
   - component: {fileID: 8746352021814632980}
   - component: {fileID: 5322883842308816670}
+  - component: {fileID: 7077523601790600249}
   m_Layer: 9
   m_Name: Wolf_anim
   m_TagString: Enemy
@@ -235,6 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c76bad4543d5d4bb60c5e50e905ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
   life: 5
   damage: 2
   curse: 0
@@ -265,6 +267,20 @@ MonoBehaviour:
   sm: {fileID: 0}
   lifeBarUI: {fileID: 4929836923450724137}
   blood: {fileID: 1884418188692892703}
+--- !u!114 &7077523601790600249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870158907444366651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 493ab042c653da64a976e469c879530b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wolfAnimator: {fileID: 7808477998037897325}
+  wolfSprite: {fileID: 4799419742401307719}
 --- !u!1 &1268807499695542526
 GameObject:
   m_ObjectHideFlags: 0

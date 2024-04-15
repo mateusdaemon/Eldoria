@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameManager gm;
     public int life;
     public int damage;
     public SpellbookMng.Spellbook curse;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +23,15 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
         
+    }
+
+    public void AttackPlayer()
+    {
+        gm.AttackPlayer(damage);
+    }
+
+    public void TakeDamage()
+    {
+
     }
 }

@@ -11,8 +11,7 @@ public class WolfCrocBehavior : MonoBehaviour
     private Vector3 moveTarget;
     private bool originSet = false;
     private bool isAttaking = false;
-    private SpriteRenderer sr;
-    private Animator anim;
+    private WolfCrocState wolfState;
 
     public float distancePlayer;
     public WolfCrocodileAttack attackArea;
@@ -24,8 +23,7 @@ public class WolfCrocBehavior : MonoBehaviour
     void Start()
     {
         parent = this.transform.parent.gameObject;
-        sr = sprite.GetComponent<SpriteRenderer>();
-        anim = sprite.GetComponent<Animator>();
+        wolfState = parent.GetComponent<WolfCrocState>();
         Invoke("SetOrigin", 1);
     }
 
@@ -34,41 +32,28 @@ public class WolfCrocBehavior : MonoBehaviour
     {
         if (goToPlayer)
         {
-            if (!isAttaking && Vector3.Distance(parent.transform.position, playerRef.transform.position) > distancePlayer)
+            if (!isAttaking)
             {
-                anim.SetBool("walk", true);
-                if (playerRef.transform.position.x > transform.position.x)
+                if (!attackArea.hitPlayer)
                 {
-                    sr.flipX = true;
-                }
-                else
+                    MoveToPlayer();
+                } else
                 {
-                    sr.flipX = false;
-                }
-                moveTarget.x = playerRef.transform.position.x;
-                moveTarget.z = playerRef.transform.position.z;
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.15f);
-            }
-            else
-            {
-                anim.SetBool("walk", false);
-                if (!isAttaking)
-                {
-                    isAttaking = true;
                     Invoke("AttackPlayer", 0);
-                }
+                    isAttaking = true;
+                }                
             }
         }
         else
         {
+            // If not going to player then return to origin position
             if (originSet && parent.transform.position != origin)
             {
-                anim.SetBool("walk", true);
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
+               MoveToOrigin();
             }
             else
             {
-                anim.SetBool("walk", false);
+                wolfState.SetWolfState(WolfCrocState.WolfState.Idle);
             }
         }
     }
@@ -82,7 +67,6 @@ public class WolfCrocBehavior : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        CancelInvoke();
         goToPlayer = false;
         warnSign.SetActive(false);
         dangerSign.SetActive(false);
@@ -96,19 +80,6 @@ public class WolfCrocBehavior : MonoBehaviour
         originSet = true;
     }
 
-    private void AttackPlayer()
-    {
-        if (attackArea.hitPlayer)
-        {
-            attackArea.AttackPlayer(parent.GetComponent<Enemy>());
-            Invoke("AttackPlayer", 2.0f);
-        }
-        else
-        {
-            isAttaking = false;
-        }
-    }
-
     private void SpotPlayer()
     {
         if (playerRef != null)
@@ -118,4 +89,48 @@ public class WolfCrocBehavior : MonoBehaviour
             goToPlayer = true;
         }
     }
+
+    private void MoveToPlayer()
+    {
+        if (playerRef.transform.position.x > transform.position.x)
+        {
+
+            wolfState.SetWolfState(WolfCrocState.WolfState.GoRight);
+        }
+        else
+        {
+            wolfState.SetWolfState(WolfCrocState.WolfState.GoLeft);
+        }
+
+        moveTarget.x = playerRef.transform.position.x;
+        moveTarget.z = playerRef.transform.position.z;
+        parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.15f);
+    }
+
+    private void AttackPlayer()
+    {
+        if (!attackArea.AttackPlayer())
+        {
+            isAttaking = false;
+        } else
+        {
+            Invoke("AttackPlayer", 2.0f);
+        }
+    }
+
+    private void MoveToOrigin()
+    {
+        if (origin.x > parent.transform.position.x)
+        {
+
+            wolfState.SetWolfState(WolfCrocState.WolfState.GoRight);
+        }
+        else
+        {
+            wolfState.SetWolfState(WolfCrocState.WolfState.GoLeft);
+        }
+
+        parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
+    }
+
 }
