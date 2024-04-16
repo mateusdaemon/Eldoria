@@ -9,6 +9,7 @@ public class SheepHerding : MonoBehaviour
     private bool runAway = false;
     private PlayerStats.Direction runAwayDir;
     private SheepState sheepState;
+    private SheepGoInside sheepGoInside;
 
     public AudioSource sheepBea;
     public SheepGraze grazeBehavior;
@@ -18,6 +19,7 @@ public class SheepHerding : MonoBehaviour
     {
         parent = transform.parent.gameObject;
         sheepState = parent.GetComponent<SheepState>();
+        sheepGoInside = parent.GetComponent<SheepGoInside>();
     }
 
     // Update is called once per frame
@@ -169,7 +171,10 @@ public class SheepHerding : MonoBehaviour
 
     private void ResetGrazeBehavior()
     {
-        grazeBehavior.Graze(true);
+        if (!sheepGoInside.GoInside())
+        {
+            grazeBehavior.Graze(true);
+        }
     }
 
     private void SetGrazeState()

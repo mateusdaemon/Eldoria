@@ -13,6 +13,7 @@ public class SheepGoInside : MonoBehaviour
     private Vector3 pos1, pos2, fitPos;
     private float xBoundArea, zBoundArea;
     private bool goPos1 = false, goPos2 = false, fitArea = false;
+    private bool goInside = false;
 
     // Start is called before the first frame update
     void Start()
@@ -71,8 +72,14 @@ public class SheepGoInside : MonoBehaviour
     {
         if (other.CompareTag("SheepTrigger"))
         {
+            goInside = true;
             grazingBehavior.Graze(false);
             goPos1 = true;
         }
+    }
+
+    public bool GoInside()
+    {
+        return goInside;
     }
 }
