@@ -22,11 +22,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Subida Detalhes Galinheiro
-    second: {fileID: 2100000, guid: 7886ef4d82d04514aacacc0fa52190e2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Subida Galinheiro
     second: {fileID: 2100000, guid: 322fc243a7c4e9e4387346fe11bcd63d, type: 2}
   - first:
