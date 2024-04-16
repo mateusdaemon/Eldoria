@@ -72,57 +72,70 @@ public class SheepHerding : MonoBehaviour
         Vector3 playerPos = playerRef.transform.position;
         Vector3 sheepPos = this.transform.position;
 
-        // Very difficult logic to get where sheep should go
-        if (playerPos.x >= sheepPos.x - 1 && playerPos.x <= sheepPos.x + 1)
+        // Determina para onde a ovelha deve correr com base na posição do jogador
+
+        // Se o jogador estiver próximo horizontalmente
+        if (Mathf.Abs(playerPos.x - sheepPos.x) <= 1.5f)
         {
+            // Se o jogador estiver à frente da ovelha
             if (playerPos.z > sheepPos.z)
             {
-                posZ -= dist;
+                posZ -= dist; // Move a ovelha para trás
                 runAwayDir = PlayerStats.Direction.Front;
             }
-            else
+            else // Se o jogador estiver atrás da ovelha
             {
-                posZ += dist;
+                posZ += dist; // Move a ovelha para frente
                 runAwayDir = PlayerStats.Direction.Back;
             }
         }
-        else if (playerPos.z >= sheepPos.z - 1 && playerPos.z <= sheepPos.z + 1)
+        // Se o jogador estiver próximo verticalmente
+        else if (Mathf.Abs(playerPos.z - sheepPos.z) <= 1.5f)
         {
+            // Se o jogador estiver à esquerda da ovelha
             if (playerPos.x > sheepPos.x)
             {
-                posX -= dist;
+                posX -= dist; // Move a ovelha para a esquerda
                 runAwayDir = PlayerStats.Direction.Left;
+            }
+            else // Se o jogador estiver à direita da ovelha
+            {
+                posX += dist; // Move a ovelha para a direita
+                runAwayDir = PlayerStats.Direction.Right;
+            }
+        }
+        else // Se o jogador não estiver próximo horizontal ou verticalmente
+        {
+            // Determina a direção com base na posição do jogador em relação à ovelha
+            if (playerPos.x > sheepPos.x)
+            {
+                if (playerPos.z > sheepPos.z)
+                {
+                    posX -= dist; // Move a ovelha para a esquerda
+                    posZ -= dist; // Move a ovelha para trás
+                    runAwayDir = PlayerStats.Direction.Front;
+                }
+                else
+                {
+                    posX -= dist; // Move a ovelha para a esquerda
+                    posZ += dist; // Move a ovelha para frente
+                    runAwayDir = PlayerStats.Direction.Back;
+                }
             }
             else
             {
-                posX += dist;
-                runAwayDir = PlayerStats.Direction.Right;
-            }
-        } 
-        else if (playerPos.x > sheepPos.x)
-        {
-            if (playerPos.z > sheepPos.z)
-            {
-                posX -= dist;
-                posZ -= dist;
-            }
-            else if (playerPos.z < sheepPos.z)
-            {
-                posX -= dist;
-                posZ += dist;
-            }
-        }
-        else if (playerPos.x < sheepPos.x)
-        {
-            if (playerPos.z > sheepPos.z)
-            {
-                posX += dist;
-                posZ -= dist;
-            }
-            else if (playerPos.z < sheepPos.z)
-            {
-                posX += dist;
-                posZ += dist;
+                if (playerPos.z > sheepPos.z)
+                {
+                    posX += dist; // Move a ovelha para a direita
+                    posZ -= dist; // Move a ovelha para trás
+                    runAwayDir = PlayerStats.Direction.Front;
+                }
+                else
+                {
+                    posX += dist; // Move a ovelha para a direita
+                    posZ += dist; // Move a ovelha para frente
+                    runAwayDir = PlayerStats.Direction.Back;
+                }
             }
         }
 
