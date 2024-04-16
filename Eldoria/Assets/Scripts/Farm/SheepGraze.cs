@@ -12,6 +12,7 @@ public class SheepGraze : MonoBehaviour
     private bool isMoving = false; // Flag para verificar se a ovelha está se movendo
     private bool shouldGraze = true;
     private SheepState sheepState;
+    private SheepState.ShipState lastState;
 
     private void Start()
     {
@@ -25,6 +26,11 @@ public class SheepGraze : MonoBehaviour
         // Se a ovelha estiver se movendo, mova-a em direção à posição alvo
         if (isMoving && shouldGraze)
         {
+            if (lastState != sheepState.GetSheepState())
+            {
+                SetSheepDirection(targetPosition);
+            }
+
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
             // Se a ovelha estiver perto o suficiente da posição alvo, pare de se mover
@@ -80,10 +86,12 @@ public class SheepGraze : MonoBehaviour
             if (deltaX > 0)
             {
                 sheepState.SetSheepState(SheepState.ShipState.GoRight);
+                lastState = SheepState.ShipState.GoRight;
             }
             else
             {
                 sheepState.SetSheepState(SheepState.ShipState.GoLeft);
+                lastState = SheepState.ShipState.GoLeft;
             }
         }
         else // Se a diferença em Z for maior ou igual à diferença em X
@@ -92,10 +100,12 @@ public class SheepGraze : MonoBehaviour
             if (deltaZ > 0)
             {
                 sheepState.SetSheepState(SheepState.ShipState.GoBack);
+                lastState = SheepState.ShipState.GoBack;
             }
             else
             {
                 sheepState.SetSheepState(SheepState.ShipState.GoFront);
+                lastState = SheepState.ShipState.GoFront;
             }
         }
     }

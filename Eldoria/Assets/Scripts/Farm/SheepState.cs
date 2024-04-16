@@ -73,5 +73,10 @@ public class SheepState : MonoBehaviour
         }
     }
 
+    public SheepState.ShipState GetSheepState()
+    {
+        return currState;
+    }
+
 
 }
