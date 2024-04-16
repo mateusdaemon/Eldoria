@@ -12,6 +12,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Estrutura Galinheiro Int
+    second: {fileID: 2100000, guid: 9f4218b311dbb69428ca9f75f8fe0a0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Feno Galinheiro
+    second: {fileID: 2100000, guid: 9a4a32a6737e05342bc17296fc92bfa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Galinheiro
     second: {fileID: 2100000, guid: 85cffc15de859a940baf63b9db5e3811, type: 2}
   - first:
