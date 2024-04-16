@@ -41,6 +41,8 @@ public class SheepHerding : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            CancelInvoke("ResetGrazeBehavior");
+            CancelInvoke("SetGrazeState");
             if (!sheepBea.isPlaying)
             {
                 sheepBea.Play();
@@ -57,7 +59,8 @@ public class SheepHerding : MonoBehaviour
         {
             playerRef = null;
             runAway = false;
-            grazeBehavior.Graze(true);
+            Invoke("SetGrazeState", 0.2f);
+            Invoke("ResetGrazeBehavior", 1.5f);
         }
     }
 
@@ -151,4 +154,13 @@ public class SheepHerding : MonoBehaviour
         }
     }
 
+    private void ResetGrazeBehavior()
+    {
+        grazeBehavior.Graze(true);
+    }
+
+    private void SetGrazeState()
+    {
+        sheepState.SetSheepState(SheepState.ShipState.Graze);
+    }
 }
