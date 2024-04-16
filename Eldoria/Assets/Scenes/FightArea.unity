@@ -1062,7 +1062,7 @@ Transform:
   m_GameObject: {fileID: 661254595}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.54, y: 3.28, z: 27.1}
+  m_LocalPosition: {x: 12.54, y: 7.93, z: 27.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1192,7 +1192,7 @@ Transform:
   m_GameObject: {fileID: 789599967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.97, y: 3.28, z: 27.1}
+  m_LocalPosition: {x: 36.97, y: 7.9299994, z: 27.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2461,7 +2461,7 @@ Transform:
   m_GameObject: {fileID: 1904216599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.4, y: 3.28, z: 41.4}
+  m_LocalPosition: {x: 25.4, y: 7.9299994, z: 41.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2479,11 +2479,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wolf_anim
-      objectReference: {fileID: 0}
-    - target: {fileID: 1268807499695542526, guid: 0284c9e3772ed6d4485a74a6296473bc,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3159234937779553791, guid: 0284c9e3772ed6d4485a74a6296473bc,
         type: 3}
@@ -2555,28 +2550,6 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 8069837553381643829, guid: 0284c9e3772ed6d4485a74a6296473bc,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8522888647050945945, guid: 0284c9e3772ed6d4485a74a6296473bc,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: e2af0245d0f09a4469306e23d563f78b,
-        type: 2}
-    - target: {fileID: 8522888647050945945, guid: 0284c9e3772ed6d4485a74a6296473bc,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: -1711708339568143958, guid: e2af0245d0f09a4469306e23d563f78b,
-        type: 2}
-    - target: {fileID: 8522888647050945945, guid: 0284c9e3772ed6d4485a74a6296473bc,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
