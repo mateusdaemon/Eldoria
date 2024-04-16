@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
             {
                 hudManager.BreakShield();
                 damageToLife = damage - PlayerStats.GetShieldPoints();
+                playerRef.GetComponentInChildren<ShieldManager>().DestroyShield();
             }
         } else { damageToLife = damage; }
 

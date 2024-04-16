@@ -9,10 +9,12 @@ public class ShieldManager : MonoBehaviour
     public SoundManager sm;
     public GameObject player;
     public ParticleSystem shieldFdb;
+    public GameObject shieldAura;
     public float shieldColdown;
 
     private bool canShield = true;
     private float amount = 0;
+    private bool shouldColdown = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,7 @@ public class ShieldManager : MonoBehaviour
             return;
         }
 
-        if (!canShield)
+        if (!canShield && shouldColdown)
         {
             amount += 1.0f / shieldColdown * Time.deltaTime;
             gm.hudManager.SetShieldAmount(amount);
@@ -41,8 +43,9 @@ public class ShieldManager : MonoBehaviour
                 sm.PlaySfx(sm.sfxShield);
                 gm.PlayerUseShield();
                 shieldFdb.Play();
-                Invoke("ActivateShieldSkill", shieldColdown);
+                shieldAura.SetActive(true);
                 canShield = false;
+                shouldColdown = false;
             } else
             {
                 sm.PlaySfx(sm.sfxShieldErro);
@@ -62,5 +65,12 @@ public class ShieldManager : MonoBehaviour
         gm.EnableShield();
         amount = 0;
         canShield = true;
+    }
+
+    public void DestroyShield()
+    {
+        shieldAura.SetActive(false);
+        Invoke("ActivateShieldSkill", shieldColdown);
+        shouldColdown = true;
     }
 }
