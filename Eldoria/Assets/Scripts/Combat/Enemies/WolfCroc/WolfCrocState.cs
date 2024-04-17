@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WolfCrocState : MonoBehaviour
 {
-    public enum WolfState { Idle, GoRight, GoLeft, Attack, None};
+    public enum WolfState { Idle, GoRight, GoLeft, Attack, Dodge, None};
     public Animator wolfAnimator;
     public SpriteRenderer wolfSprite;
     private WolfState lastState = WolfState.None;
@@ -43,6 +43,9 @@ public class WolfCrocState : MonoBehaviour
                 break;
             case WolfState.Attack:
                 wolfAnimator.SetBool("attack", true);
+                break;
+            case WolfState.Dodge:
+                wolfAnimator.SetTrigger("dodge");
                 break;
             default:
                 break;

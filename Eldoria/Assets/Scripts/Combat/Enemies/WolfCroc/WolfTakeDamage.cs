@@ -22,14 +22,14 @@ public class WolfTakeDamage : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Bullet")
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            Instantiate(other.GetComponent<Bullet>().effect, other.transform.position, new Quaternion());
-            Destroy(other.gameObject);
+            Instantiate(collision.gameObject.GetComponent<Bullet>().effect, collision.gameObject.transform.position, new Quaternion());
+            Destroy(collision.gameObject.gameObject);
 
-            blood.transform.position = other.ClosestPoint(transform.position);
+            blood.transform.position = collision.collider.ClosestPoint(transform.position);
             blood.Play();
 
             currEnemy.TakeDamage(PlayerStats.GetDamage());
