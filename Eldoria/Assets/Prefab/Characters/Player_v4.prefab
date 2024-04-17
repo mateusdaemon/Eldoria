@@ -1079,8 +1079,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
         type: 3}
+      propertyPath: VelocityModule.orbitalY.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.6
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
         type: 3}
