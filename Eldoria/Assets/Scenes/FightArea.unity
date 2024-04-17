@@ -652,11 +652,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 47948377308603181, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,11 +702,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 932877097507111717, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 1406278368849766571, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: gm
@@ -722,75 +712,10 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 2815807053152440126, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2815807053152440126, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2815807053152440126, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
-      value: 0.8767137
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476284292904148534, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: m_Name
       value: Player_v4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628291522919791307, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6035379393024978710, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
@@ -807,11 +732,6 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
-    - target: {fileID: 6943220556466695934, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: shieldAura
-      value: 
-      objectReference: {fileID: 1678417380}
     - target: {fileID: 7138833962882443784, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: gm
@@ -2173,12 +2093,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1678417380 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 47948377308603181, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-    type: 3}
-  m_PrefabInstance: {fileID: 300308215}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1799962623
 GameObject:
   m_ObjectHideFlags: 0
