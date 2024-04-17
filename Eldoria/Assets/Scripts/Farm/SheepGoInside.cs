@@ -34,7 +34,7 @@ public class SheepGoInside : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector3.Distance(transform.position, pos1) >= 1.0f  && goPos1 == true)
+        if (goPos1 && Vector3.Distance(transform.position, pos1) >= 1.0f)
         {
             pos1.y = transform.position.y;
             sheepState.SetSheepState(SheepState.ShipState.GoBack);
@@ -45,7 +45,7 @@ public class SheepGoInside : MonoBehaviour
             goPos2 = true;
         }
 
-        if (Vector3.Distance(transform.position, pos2) >= 1.0f && goPos2 == true)
+        if (goPos2 && Vector3.Distance(transform.position, pos2) >= 1.0f)
         {
             pos2.y = transform.position.y;
             sheepState.SetSheepState(SheepState.ShipState.GoRight);
@@ -57,7 +57,7 @@ public class SheepGoInside : MonoBehaviour
             fitArea = true;
         }
 
-        if (Vector3.Distance(transform.position, fitPos) >= 1.0f && fitArea == true)
+        if (fitArea && Vector3.Distance(transform.position, fitPos) >= 1.0f)
         {
             fitPos.y = transform.position.y;
             transform.position = Vector3.MoveTowards(transform.position, fitPos, 0.1f);

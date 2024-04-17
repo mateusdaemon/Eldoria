@@ -366,6 +366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f8dc3167bc7b74ea0af06099691d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dodgeForce: 30
+  wolfState: {fileID: 7077523601790600249}
+  wolfBehavior: {fileID: 7070594950982472938}
 --- !u!135 &5253382768818715257
 SphereCollider:
   m_ObjectHideFlags: 0

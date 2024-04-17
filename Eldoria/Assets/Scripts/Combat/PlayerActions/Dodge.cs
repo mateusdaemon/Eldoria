@@ -47,6 +47,7 @@ public class Dodge : MonoBehaviour
             {
                 if (xDir == 0 && zDir == 0)
                 {
+                    // If there is no input, check which dir player is facing
                     SetDodgeDirection(ref xDir, ref zDir);
                 }
                 sm.PlaySfx(sm.sfxDodge);

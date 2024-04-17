@@ -26,7 +26,6 @@ public class WolfCrocState : MonoBehaviour
         if (lastState == state) return;
 
         wolfAnimator.SetBool("walk", false);
-        wolfAnimator.SetBool("walk", false);
         wolfAnimator.SetBool("attack", false);
 
         switch (state)
