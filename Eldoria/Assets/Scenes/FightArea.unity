@@ -821,11 +821,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
-        type: 3}
-      propertyPath: sfxWalk
-      value: 
-      objectReference: {fileID: 8300000, guid: 31c950651735f614c97960e3d9e77221, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

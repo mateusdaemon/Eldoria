@@ -107,9 +107,11 @@ public class GameManager : MonoBehaviour
                 hudManager.SetShieldBarAmount(PlayerStats.GetShieldPoints() / maxShieldPoints);
             } else
             {
+                PlayerStats.SetShieldPoints(0);
                 hudManager.BreakShield();
                 damageToLife = damage - PlayerStats.GetShieldPoints();
                 playerRef.GetComponentInChildren<ShieldManager>().DestroyShield();
+                sm.PlaySfx(sm.sfxShieldDestroy);
             }
         } else { damageToLife = damage; }
 
