@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class SoundManager : MonoBehaviour
 {
     [Header("--- Audio Source ---")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource birdsSource;
-    [SerializeField] AudioSource sfxSource;
+    public AudioSource musicSource;
+    public AudioSource birdsSource;
+    public AudioSource sfxSource;
+    public AudioSource walkSource;
 
     [Header("--- Music ---")]
     public AudioClip cityBackground;
@@ -46,6 +47,11 @@ public class SoundManager : MonoBehaviour
     public void PlaySfx(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayWalk(AudioClip clip)
+    {
+        walkSource.PlayOneShot(clip);
     }
 
     public void PlayFarm()

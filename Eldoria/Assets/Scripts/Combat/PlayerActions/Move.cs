@@ -32,9 +32,15 @@ public class Move : MonoBehaviour
         {
             float realVelocity = velocity;
             OrientPlayerSprite();
+            
             if (Input.GetKey(KeyCode.LeftShift)) 
             {
                 realVelocity *= 1.5f; 
+            }
+
+            if (!gm.sm.walkSource.isPlaying)
+            {
+                gm.sm.PlayWalk(gm.sm.sfxWalk);
             }
 
             rb.AddForce(new Vector3(xDir, 0, zDir) * realVelocity);
@@ -44,6 +50,8 @@ public class Move : MonoBehaviour
             if (animatedBack.activeSelf) { animatedBack.GetComponent<Animator>().SetBool("walk", false); }
             if (animatedRight.activeSelf) { animatedRight.GetComponent<Animator>().SetBool("walk", false); }
             if (animatedLeft.activeSelf) { animatedLeft.GetComponent<Animator>().SetBool("walk", false); }
+
+            gm.sm.walkSource.Stop();
         }
     }
 
