@@ -59,6 +59,7 @@ MonoBehaviour:
   sfxShooterErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
   sfxShield: {fileID: 8300000, guid: d7d5171e148febb4c8e7c586dfd4b33b, type: 3}
   sfxShieldErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
+  sfxShieldDestroy: {fileID: 8300000, guid: 5fa352e35d9ac464c956bfb614069fdc, type: 3}
   sfxBreakCurse: {fileID: 8300000, guid: 0bbf3e5db9ec34e40abbeaf4a302f691, type: 3}
   sfxErroBreakCurse: {fileID: 8300000, guid: 549b53bb0316cfd488080aaf8d0c1df5, type: 3}
   sfxErroManaHeal: {fileID: 8300000, guid: 10a1ed0d3651dee469a60601c1c4b709, type: 3}
