@@ -21,6 +21,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip sfxShooterErro;
     public AudioClip sfxShield;
     public AudioClip sfxShieldErro;
+    public AudioClip sfxShieldDestroy;
     public AudioClip sfxBreakCurse;
     public AudioClip sfxErroBreakCurse;
     public AudioClip sfxErroManaHeal;
