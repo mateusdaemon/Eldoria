@@ -270,6 +270,7 @@ MonoBehaviour:
   sm: {fileID: 0}
   lifeBarUI: {fileID: 4929836923450724137}
   blood: {fileID: 1884418188692892703}
+  wolfState: {fileID: 7077523601790600249}
 --- !u!114 &7077523601790600249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6379894298896581573
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f8dc3167bc7b74ea0af06099691d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodgeForce: 30
+  dodgeForce: 10
   wolfState: {fileID: 7077523601790600249}
   wolfBehavior: {fileID: 7070594950982472938}
 --- !u!135 &5253382768818715257
