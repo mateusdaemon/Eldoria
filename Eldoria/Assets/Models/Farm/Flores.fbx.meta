@@ -3,62 +3,7 @@ guid: 24a00832a7a98b749881e933652a79e7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corpo Flower
-    second: {fileID: 2100000, guid: b67802bec9eadbb4e8dc68c98f4a8078, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Corpo Pink Flower
-    second: {fileID: 2100000, guid: a3e7038734701fd4683fe161d9e204d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Flower Red
-    second: {fileID: 2100000, guid: 35f693a9dc984e149bf25d1ca7bc24ca, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaf Flower
-    second: {fileID: 2100000, guid: a71693fc92fb6b14e82f36dba0cbc679, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Leaf Flower.001
-    second: {fileID: 2100000, guid: 00c90769fcbe42c4fb3decb8483f5552, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.013
-    second: {fileID: 2100000, guid: 593661d150b365144bfd29e000e963aa, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Miolo Yellow Flower
-    second: {fileID: 2100000, guid: a939f3c74971c4245a6e84fe2c75a377, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Orange Flower
-    second: {fileID: 2100000, guid: c8800ae87e8b77d44b9deb5567279520, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pink Flower
-    second: {fileID: 2100000, guid: d24635609ea260f47b244d8450890fe1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ponta Flower
-    second: {fileID: 2100000, guid: d994240f24f6c3646bf466f4f2047313, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ponta Flower Pink
-    second: {fileID: 2100000, guid: 97015c2db1a7af24e9f64de17a8e6deb, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
