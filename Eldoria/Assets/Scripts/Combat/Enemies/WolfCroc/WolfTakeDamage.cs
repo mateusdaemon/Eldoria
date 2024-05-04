@@ -6,16 +6,14 @@ using static WolfCrocState;
 
 public class WolfTakeDamage : MonoBehaviour
 {
-    public SoundManager sm;
-    public GameObject lifeBarUI;
     public ParticleSystem blood;
-    public WolfCrocState wolfState;
 
     private Enemy currEnemy;
-    private bool canDodge = true;
+    private GameManager gm;
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         currEnemy = GetComponent<Enemy>();
     }
 
@@ -41,6 +39,6 @@ public class WolfTakeDamage : MonoBehaviour
 
     private void OnDestroy()
     {
-        sm.PlaySfx(sm.sfxWolfDie);
+        gm.sm.PlaySfx(gm.sm.sfxWolfDie);
     }
 }

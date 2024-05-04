@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [Header("Manager")]
-    public GameManager gm;
-
     [Header("Attributes")]
     public float life;
     public float damage;
@@ -17,12 +14,14 @@ public class Enemy : MonoBehaviour
     public Image lifeBar;
 
     private float currentLife = 0;
+    private GameManager gm;
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentLife = life;
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame

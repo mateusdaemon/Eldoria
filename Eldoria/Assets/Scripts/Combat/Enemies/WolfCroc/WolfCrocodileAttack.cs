@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class WolfCrocodileAttack : MonoBehaviour
 {
-    [Header("---Manager---")]
-    public GameManager gm;
-    public SoundManager sm;
-
-    [Header("---WolfCrocodile---")]
-    public bool hitPlayer;
-
-    private Enemy enemy;
+    private bool hitPlayer;
     private WolfCrocState wolfState;
+    private GameManager gm;
 
     private void Start()
     {
-        enemy = gameObject.GetComponentInParent<Enemy>();
+        gm = FindObjectOfType<GameManager>();
         wolfState = GetComponentInParent<WolfCrocState>();
     }
 
@@ -39,7 +33,7 @@ public class WolfCrocodileAttack : MonoBehaviour
     public bool AttackPlayer()
     {
         wolfState.SetWolfState(WolfCrocState.WolfState.Attack);
-        sm.PlaySfx(sm.wolfBarkSound);
+        gm.sm.PlaySfx(gm.sm.wolfBarkSound);
         Invoke("DisableAttack", 0.5f);
 
         return hitPlayer;
