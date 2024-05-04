@@ -31,29 +31,16 @@ public class WolfTakeDamage : MonoBehaviour
         {
             Instantiate(collision.gameObject.GetComponent<Bullet>().effect, collision.gameObject.transform.position, new Quaternion());
             Destroy(collision.gameObject.gameObject);
+           
+            blood.transform.position = collision.collider.ClosestPoint(transform.position);
+            blood.Play();
 
-            if (canDodge)
-            {
-                wolfState.SetWolfState(WolfCrocState.WolfState.Dodge);
-                canDodge = false;
-                Invoke("ResetDodge", 3.0f);
-            } else
-            {
-                blood.transform.position = collision.collider.ClosestPoint(transform.position);
-                blood.Play();
-
-                currEnemy.TakeDamage(PlayerStats.GetDamage());
-            }
+            currEnemy.TakeDamage(PlayerStats.GetDamage());
         }
     }
 
     private void OnDestroy()
     {
         sm.PlaySfx(sm.sfxWolfDie);
-    }
-
-    private void ResetDodge()
-    {
-        canDodge = true;
     }
 }

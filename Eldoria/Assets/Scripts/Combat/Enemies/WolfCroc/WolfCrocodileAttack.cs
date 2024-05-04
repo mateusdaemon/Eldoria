@@ -38,13 +38,9 @@ public class WolfCrocodileAttack : MonoBehaviour
 
     public bool AttackPlayer()
     {
-        if (hitPlayer)
-        {
-            wolfState.SetWolfState(WolfCrocState.WolfState.Attack);
-            sm.PlaySfx(sm.wolfBarkSound);
-            Invoke("DisableAttack", 0.5f);
-            enemy.AttackPlayer();
-        }
+        wolfState.SetWolfState(WolfCrocState.WolfState.Attack);
+        sm.PlaySfx(sm.wolfBarkSound);
+        Invoke("DisableAttack", 0.5f);
 
         return hitPlayer;
     }

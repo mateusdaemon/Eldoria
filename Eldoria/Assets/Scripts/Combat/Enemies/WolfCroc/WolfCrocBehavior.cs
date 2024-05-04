@@ -13,10 +13,12 @@ public class WolfCrocBehavior : MonoBehaviour
     private bool isAttaking = false;
     private WolfCrocState wolfState;
     private Enemy enemy;
+    private bool threatened = false;
 
     public WolfCrocodileAttack attackArea;
     public GameObject warnSign;
     public GameObject dangerSign;
+    public float attackDistance = 3.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class WolfCrocBehavior : MonoBehaviour
         parent = this.transform.parent.gameObject;
         enemy = parent.GetComponent<Enemy>();
         wolfState = parent.GetComponent<WolfCrocState>();
+        playerRef = GameObject.FindWithTag("Player");
         Invoke("SetOrigin", 1);
     }
 
@@ -34,14 +37,15 @@ public class WolfCrocBehavior : MonoBehaviour
         {
             if (!isAttaking)
             {
-                if (!attackArea.hitPlayer)
+                if (Vector3.Distance(transform.position, playerRef.transform.position) <= attackDistance)
                 {
-                    MoveToPlayer();
+                    AttackPlayer();
+                    isAttaking = true;
+                    Invoke("ResetIsAttacking", 2.0f);
                 } else
                 {
-                    Invoke("AttackPlayer", 0);
-                    isAttaking = true;
-                }                
+                    MoveToPlayer();                    
+                }
             }
         }
         else
@@ -61,17 +65,17 @@ public class WolfCrocBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        threatened = true;
         warnSign.SetActive(true);
         Invoke("SpotPlayer", 1.0f);
-        playerRef = other.gameObject;
     }
 
     private void OnTriggerExit(Collider other)
     {
         goToPlayer = false;
+        threatened = false;
         warnSign.SetActive(false);
         dangerSign.SetActive(false);
-        playerRef = null;
     }
 
     private void SetOrigin()
@@ -83,7 +87,7 @@ public class WolfCrocBehavior : MonoBehaviour
 
     private void SpotPlayer()
     {
-        if (playerRef != null)
+        if (threatened)
         {
             warnSign.SetActive(false);
             dangerSign.SetActive(true);
@@ -110,12 +114,11 @@ public class WolfCrocBehavior : MonoBehaviour
 
     private void AttackPlayer()
     {
-        if (!attackArea.AttackPlayer())
+        bool hit = attackArea.AttackPlayer();
+
+        if (hit)
         {
-            isAttaking = false;
-        } else
-        {
-            Invoke("AttackPlayer", 2.0f);
+            enemy.AttackPlayer();
         }
     }
 
@@ -137,6 +140,11 @@ public class WolfCrocBehavior : MonoBehaviour
     public GameObject GetPlayerRef()
     {
         return playerRef;
+    }
+
+    private void ResetIsAttacking()
+    {
+        isAttaking = false;
     }
 
 }
