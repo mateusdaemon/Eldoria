@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Farm.unity
     guid: d5c72f0c6bff3814c97c43a3aa64b929
   - enabled: 0
-    path: Assets/Scenes/FightArea.unity
+    path: Assets/Scenes/Fight_wolf.unity
     guid: 02fd8604bf99413469349d5748a88c9b
   m_configObjects: {}
