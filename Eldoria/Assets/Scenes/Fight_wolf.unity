@@ -685,6 +685,12 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 756688173}
+    - target: {fileID: 8926473964598151887, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: neutralBullet
+      value: 
+      objectReference: {fileID: 6508019550403161977, guid: 24fc3c3f6a8e89d42bd08e92a6ea0b5a,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
