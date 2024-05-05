@@ -481,12 +481,12 @@ MonoBehaviour:
     type: 3}
   blueBullet: {fileID: 1336959569330157692, guid: db1f79e3fc5193f418768b8c7d4fb523,
     type: 3}
-  neutralBullet: {fileID: 1336959569330157692, guid: 26f4865a065e3944eb7b27df1e9409bd,
+  neutralBullet: {fileID: 6508019550403161977, guid: 24fc3c3f6a8e89d42bd08e92a6ea0b5a,
     type: 3}
   layerClick:
     serializedVersion: 2
     m_Bits: 8
-  shootColdown: 1
+  shootColdown: 0.7
 --- !u!1001 &272095753549183678
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class WolfCrocBehavior : MonoBehaviour
     private WolfCrocState wolfState;
     private Enemy enemy;
     private bool threatened = false;
-    private bool holding;
+    private bool holding = false;
     private PlayerState playerState;
 
     public WolfCrocodileAttack attackArea;
