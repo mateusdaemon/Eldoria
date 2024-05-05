@@ -49,7 +49,11 @@ public class Move : MonoBehaviour
                 gm.sm.PlayWalk(gm.sm.sfxWalk);
             }
 
-            rb.AddForce(new Vector3(xDir, 0, zDir) * realVelocity);
+            if (playerState.GetState() != State.Stuck)
+            {
+                rb.AddForce(new Vector3(xDir, 0, zDir) * realVelocity);
+            }
+
         } else
         {
             playerState.ChangeState(State.Idle);

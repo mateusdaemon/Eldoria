@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WolfCrocBehavior : MonoBehaviour
+public class WolfChiefBehavior : MonoBehaviour
 {
     private Vector3 origin;
     private bool goToPlayer = false;
@@ -14,7 +14,6 @@ public class WolfCrocBehavior : MonoBehaviour
     private WolfCrocState wolfState;
     private Enemy enemy;
     private bool threatened = false;
-    private bool holding;
     private PlayerState playerState;
 
     public WolfCrocodileAttack attackArea;
@@ -36,23 +35,19 @@ public class WolfCrocBehavior : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerState.GetState() != State.Stuck)
-        {
-            holding = false;
-        }
-
         if (goToPlayer)
         {
-            if (!isAttaking && !holding)
+            if (!isAttaking)
             {
                 if (Vector3.Distance(transform.position, playerRef.transform.position) <= attackDistance)
                 {
                     AttackPlayer();
                     isAttaking = true;
                     Invoke("ResetIsAttacking", 2.0f);
-                } else
+                }
+                else
                 {
-                    MoveToPlayer();                    
+                    MoveToPlayer();
                 }
             }
         }
@@ -61,7 +56,7 @@ public class WolfCrocBehavior : MonoBehaviour
             // If not going to player then return to origin position
             if (originSet && parent.transform.position != origin)
             {
-               MoveToOrigin();
+                MoveToOrigin();
             }
             else
             {
@@ -127,12 +122,6 @@ public class WolfCrocBehavior : MonoBehaviour
         if (hit)
         {
             enemy.AttackPlayer();
-
-            if (playerState.GetState() != State.Stuck)
-            {
-                holding = true;
-                playerState.ChangeState(State.Stuck);
-            }
         }
     }
 
@@ -159,13 +148,5 @@ public class WolfCrocBehavior : MonoBehaviour
     private void ResetIsAttacking()
     {
         isAttaking = false;
-    }
-
-    private void OnDestroy()
-    {
-        if (playerState.GetState() == State.Stuck)
-        {
-            playerState.ChangeState(State.None);
-        }
     }
 }
