@@ -80,7 +80,7 @@ public class SheepGraze : MonoBehaviour
         float deltaZ = targetPos.z - transform.position.z;
 
         // Define a direção com base nas diferenças
-        if (Mathf.Abs(deltaX) > Mathf.Abs(deltaZ)) // Se a diferença em X for maior que a diferença em Z
+        if (Mathf.Abs(deltaX) > Mathf.Abs(deltaZ) || Mathf.Abs(deltaZ) > Mathf.Abs(deltaX) + 1.5f) // Se a diferença em X for maior que a diferença em Z
         {
             // Define a direção como esquerda ou direita com base no sinal de deltaX
             if (deltaX > 0)
