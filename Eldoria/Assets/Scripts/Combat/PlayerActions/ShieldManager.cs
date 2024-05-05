@@ -5,13 +5,12 @@ using UnityEngine;
 public class ShieldManager : MonoBehaviour
 {
     [Header("---Manager---")]
-    public GameManager gm;
-    public SoundManager sm;
     public GameObject player;
     public ParticleSystem shieldFdb;
     public GameObject shieldAura;
     public float shieldColdown;
 
+    private GameManager gm;
     private bool canShield = true;
     private float amount = 0;
     private bool shouldColdown = false;
@@ -19,7 +18,7 @@ public class ShieldManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -40,7 +39,7 @@ public class ShieldManager : MonoBehaviour
         {
             if (canShield && PlayerStats.GetMana() >= gm.GetShieldCost())
             {
-                sm.PlaySfx(sm.sfxShield);
+                gm.sm.PlaySfx(gm.sm.sfxShield);
                 gm.PlayerUseShield();
                 shieldFdb.Play();
                 shieldAura.SetActive(true);
@@ -48,7 +47,7 @@ public class ShieldManager : MonoBehaviour
                 shouldColdown = false;
             } else
             {
-                sm.PlaySfx(sm.sfxShieldErro);
+                gm.sm.PlaySfx(gm.sm.sfxShieldErro);
                 gm.CantShieldFeedback();
                 Invoke("RestoreShieldFeedback", 0.15f);
             }

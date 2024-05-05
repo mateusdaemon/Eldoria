@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Dodge : MonoBehaviour
 {
     [Header("---Manager---")]
-    public SoundManager sm;
+    private GameManager gm;
 
     [Header("---Dodge---")]
     private Rigidbody rb;
@@ -14,13 +14,13 @@ public class Dodge : MonoBehaviour
     private bool canDodge = true;
     private float amount = 0;
 
-    public GameManager gm;
     public float dodgeForce;
     public float coldown;
 
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -50,7 +50,7 @@ public class Dodge : MonoBehaviour
                     // If there is no input, check which dir player is facing
                     SetDodgeDirection(ref xDir, ref zDir);
                 }
-                sm.PlaySfx(sm.sfxDodge);
+                gm.sm.PlaySfx(gm.sm.sfxDodge);
                 rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
                 canDodge = false;
                 gm.PlayerDodge();
@@ -58,7 +58,7 @@ public class Dodge : MonoBehaviour
             }
             else
             {
-                sm.PlaySfx(sm.sfxDodgeErro);
+                gm.sm.PlaySfx(gm.sm.sfxDodgeErro);
                 gm.CantDodgeFeedback();
                 Invoke("RestoreDodgeFeedback", 0.15f);
             }

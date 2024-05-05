@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ConsumePotions : MonoBehaviour
 {
     [Header("---Manager---")]
-    public GameManager gm;
-    public SoundManager sm;
+    private GameManager gm;
 
     [Header("---Potion---")]
     public float manaColdown;
@@ -30,7 +29,7 @@ public class ConsumePotions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -76,12 +75,12 @@ public class ConsumePotions : MonoBehaviour
                 lifePotFdb.Play();
 
                 gm.DrinkLifePot(lifeToAdd);
-                sm.PlaySfx(sm.sfxDrinkLife);
+                gm.sm.PlaySfx(gm.sm.sfxDrinkLife);
                 canUseLife = false;
                 Invoke("LifeColdown", lifeColdown);
             } else
             {
-                sm.PlaySfx(sm.sfxErroManaHeal);
+                gm.sm.PlaySfx(gm.sm.sfxErroManaHeal);
             }
         }
 
@@ -99,12 +98,12 @@ public class ConsumePotions : MonoBehaviour
                 manaPotFdb.Play();
 
                 gm.DrinkManaPot(manaToAdd);
-                sm.PlaySfx(sm.sfxDrinkMana);
+                gm.sm.PlaySfx(gm.sm.sfxDrinkMana);
                 canUseMana = false;
                 Invoke("ManaColdown", manaColdown);
             } else
             {
-                sm.PlaySfx(sm.sfxErroManaHeal);
+                gm.sm.PlaySfx(gm.sm.sfxErroManaHeal);
             }
         }
     }

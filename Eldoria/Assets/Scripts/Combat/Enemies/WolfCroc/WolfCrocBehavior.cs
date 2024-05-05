@@ -146,5 +146,4 @@ public class WolfCrocBehavior : MonoBehaviour
     {
         isAttaking = false;
     }
-
 }

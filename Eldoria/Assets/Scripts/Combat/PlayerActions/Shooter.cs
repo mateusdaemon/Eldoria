@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class Shooter : MonoBehaviour
 {
     [Header("---Manager---")]
-    public GameManager gm;
-    public SoundManager sm;
+    private GameManager gm;
 
     [Header("---Player---")]
     public SpellbookMng spellbook;
@@ -26,6 +25,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManager>();
         cam = Camera.main;
     }
 
@@ -80,13 +80,13 @@ public class Shooter : MonoBehaviour
                 }
 
                 gm.PlayerShoot();
-                sm.PlaySfx(sm.sfxShooter);
+                gm.sm.PlaySfx(gm.sm.sfxShooter);
                 currBullet.SetTarget(currTarget);
                 canShoot = false;
                 Invoke("EnableShoot", shootColdown);
             } else
             {
-                sm.PlaySfx(sm.sfxShooterErro);
+                gm.sm.PlaySfx(gm.sm.sfxShooterErro);
                 gm.CantShootFeedback();
                 Invoke("RestoreShootFeedback", 0.15f);
             }
