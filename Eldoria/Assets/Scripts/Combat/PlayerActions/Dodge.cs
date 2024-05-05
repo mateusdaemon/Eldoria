@@ -52,6 +52,7 @@ public class Dodge : MonoBehaviour
                     // If there is no input, check which dir player is facing
                     SetDodgeDirection(ref xDir, ref zDir);
                 }
+
                 gm.sm.PlaySfx(gm.sm.sfxDodge);
                 rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
                 playerState.ChangeState(State.Dodge);
