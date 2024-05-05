@@ -44,8 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d27419eaba73dc48963c7de5c868200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  sm: {fileID: 0}
   player: {fileID: 5054131556247001451}
   shieldFdb: {fileID: 8773868678218903111}
   shieldAura: {fileID: 47948377308603181}
@@ -335,12 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40435329ac8d49247aa8950d52f768b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
   velocity: 20
-  animatedFront: {fileID: 4999365187568305402}
-  animatedBack: {fileID: 150530882581981149}
-  animatedRight: {fileID: 2172421492800576811}
-  animatedLeft: {fileID: 4724107547392674040}
 --- !u!114 &7138833962882443784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,8 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79f82f9e3db64448ae4928e13e08290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  sm: {fileID: 0}
   manaColdown: 4
   lifeColdown: 15
   lifeIncrease: 10
@@ -391,8 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751a3e92d47911648b75047e400e3b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sm: {fileID: 0}
-  gm: {fileID: 0}
   dodgeForce: 10
   coldown: 2
 --- !u!114 &7148759014780889468
@@ -407,7 +396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a81b13aa14a54882bc80e06c15f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
   bloodFdb: {fileID: 5939420451367628629}
 --- !u!114 &975547450840467228
 MonoBehaviour:
@@ -421,6 +409,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1733d95324bdf7f41afbfe312236d81b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatedFront: {fileID: 4999365187568305402}
+  animatedBack: {fileID: 150530882581981149}
+  animatedRight: {fileID: 2172421492800576811}
+  animatedLeft: {fileID: 4724107547392674040}
 --- !u!1 &5073907797615219488
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,8 +474,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4d37da3f2efd042b29e26d2cf21bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
-  sm: {fileID: 0}
   spellbook: {fileID: 7964820225507872425}
   redBullet: {fileID: 1336959569330157692, guid: 9129c29d7dbefc84fb493fa87d55eae1,
     type: 3}
