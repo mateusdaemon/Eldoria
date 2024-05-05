@@ -14,6 +14,11 @@ public enum State {
 
 public class PlayerState : MonoBehaviour
 {
+    [Header("Animation Objects")]
+    public GameObject animatedFront;
+    public GameObject animatedBack;
+    public GameObject animatedRight;
+    public GameObject animatedLeft;
 
     private State currState;
 
@@ -31,6 +36,7 @@ public class PlayerState : MonoBehaviour
             case State.Idle:
                 break;
             case State.Walk:
+                //AnimateWalkWithDir();
                 break;
             case State.Run:
                 break;
@@ -83,5 +89,13 @@ public class PlayerState : MonoBehaviour
                 currState = State.Dialogue;
                 break;
         }
+    }
+
+    private void AnimateWalkWithDir()
+    {
+        if (animatedFront.activeSelf) { animatedFront.GetComponent<Animator>().SetBool("walk", false); }
+        if (animatedBack.activeSelf) { animatedBack.GetComponent<Animator>().SetBool("walk", false); }
+        if (animatedRight.activeSelf) { animatedRight.GetComponent<Animator>().SetBool("walk", false); }
+        if (animatedLeft.activeSelf) { animatedLeft.GetComponent<Animator>().SetBool("walk", false); }
     }
 }

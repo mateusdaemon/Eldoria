@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
     private GameManager gm;
     private Rigidbody rb;
+    private PlayerState playerState;
     private float xDir, zDir;
 
     public float velocity;
@@ -15,7 +16,8 @@ public class Move : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
-        rb = this.GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        playerState = GetComponent<PlayerState>();
     }
 
     // Update is called once per frame
