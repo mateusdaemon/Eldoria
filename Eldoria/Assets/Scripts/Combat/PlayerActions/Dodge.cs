@@ -13,6 +13,7 @@ public class Dodge : MonoBehaviour
     private float xDir, zDir;
     private bool canDodge = true;
     private float amount = 0;
+    private PlayerState playerState;
 
     public float dodgeForce;
     public float coldown;
@@ -22,6 +23,7 @@ public class Dodge : MonoBehaviour
     {
         gm = FindObjectOfType<GameManager>();
         rb = GetComponent<Rigidbody>();
+        playerState = GetComponent<PlayerState>();
     }
 
     // Update is called once per frame
@@ -52,8 +54,10 @@ public class Dodge : MonoBehaviour
                 }
                 gm.sm.PlaySfx(gm.sm.sfxDodge);
                 rb.AddForce(new Vector3(xDir, 0, zDir) * dodgeForce, ForceMode.Impulse);
+                playerState.ChangeState(State.Dodge);
                 canDodge = false;
                 gm.PlayerDodge();
+                Invoke("ChangeStateNone", 0.5f);
                 Invoke("EnableDodge", coldown);
             }
             else
@@ -98,5 +102,10 @@ public class Dodge : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void ChangeStateNone()
+    {
+        playerState.ChangeState(State.None);
     }
 }

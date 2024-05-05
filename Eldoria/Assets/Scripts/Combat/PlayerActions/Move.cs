@@ -10,7 +10,6 @@ public class Move : MonoBehaviour
     private float xDir, zDir;
 
     public float velocity;
-    public GameObject animatedFront, animatedBack, animatedRight, animatedLeft;
     
     // Start is called before the first frame update
     void Start()
@@ -38,7 +37,11 @@ public class Move : MonoBehaviour
             
             if (Input.GetKey(KeyCode.LeftShift)) 
             {
-                realVelocity *= 1.5f; 
+                realVelocity *= 1.5f;
+                playerState.ChangeState(State.Run);
+            } else
+            {
+                playerState.ChangeState(State.Walk);
             }
 
             if (!gm.sm.walkSource.isPlaying)
@@ -49,11 +52,7 @@ public class Move : MonoBehaviour
             rb.AddForce(new Vector3(xDir, 0, zDir) * realVelocity);
         } else
         {
-            if (animatedFront.activeSelf) { animatedFront.GetComponent<Animator>().SetBool("walk", false); }
-            if (animatedBack.activeSelf) { animatedBack.GetComponent<Animator>().SetBool("walk", false); }
-            if (animatedRight.activeSelf) { animatedRight.GetComponent<Animator>().SetBool("walk", false); }
-            if (animatedLeft.activeSelf) { animatedLeft.GetComponent<Animator>().SetBool("walk", false); }
-
+            playerState.ChangeState(State.Idle);
             gm.sm.walkSource.Stop();
         }
     }
@@ -63,45 +62,20 @@ public class Move : MonoBehaviour
     {
         PlayerStats.Direction dir = PlayerStats.Direction.Front;
 
-
         if (xDir < 0)
         {
-            // walk left
-            animatedLeft.SetActive(true);
-            animatedRight.SetActive(false);
-            animatedBack.SetActive(false);
-            animatedFront.SetActive(false);
-            animatedLeft.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Left;
         }
         else if (xDir > 0)
         {
-            // walk right
-            animatedLeft.SetActive(false);
-            animatedRight.SetActive(true);
-            animatedBack.SetActive(false);
-            animatedFront.SetActive(false);
-            animatedRight.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Right;
         }
         else if (zDir > xDir)
         {
-            // walk back
-            animatedRight.SetActive(false);
-            animatedLeft.SetActive(false);
-            animatedBack.SetActive(true);
-            animatedFront.SetActive(false);
-            animatedBack.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Back;
         }
         else if (zDir < xDir)
         {
-            // walk front
-            animatedRight.SetActive(false);
-            animatedLeft.SetActive(false);
-            animatedBack.SetActive(false);
-            animatedFront.SetActive(true);
-            animatedFront.GetComponent<Animator>().SetBool("walk", true);
             dir = PlayerStats.Direction.Front;
         }
 
