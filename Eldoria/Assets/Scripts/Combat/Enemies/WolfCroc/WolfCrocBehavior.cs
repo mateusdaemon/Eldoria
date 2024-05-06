@@ -151,11 +151,6 @@ public class WolfCrocBehavior : MonoBehaviour
         parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
     }
 
-    public GameObject GetPlayerRef()
-    {
-        return playerRef;
-    }
-
     private void ResetIsAttacking()
     {
         isAttaking = false;

@@ -112,7 +112,7 @@ public class WolfChiefBehavior : MonoBehaviour
 
         moveTarget.x = playerRef.transform.position.x;
         moveTarget.z = playerRef.transform.position.z;
-        parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
+        parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.15f);
     }
 
     private void AttackPlayer()
@@ -140,10 +140,6 @@ public class WolfChiefBehavior : MonoBehaviour
         parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
     }
 
-    public GameObject GetPlayerRef()
-    {
-        return playerRef;
-    }
 
     private void ResetIsAttacking()
     {
