@@ -40,7 +40,7 @@ public class BoarBehavior : MonoBehaviour
             Debug.Log("qq eu to vendo ai");
             moveTarget.x = playerRef.transform.position.x;
             moveTarget.z = playerRef.transform.position.z;
-            parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);            
+            parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.2f);
         }
 
         if (goToPlayer)

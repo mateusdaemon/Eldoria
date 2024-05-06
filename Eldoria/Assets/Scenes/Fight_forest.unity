@@ -2586,6 +2586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar
       objectReference: {fileID: 0}
+    - target: {fileID: 4976502876840208738, guid: 8b257237afa344044b7a3082f951a9dd,
+        type: 3}
+      propertyPath: attackDistance
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6285465266288134800, guid: 8b257237afa344044b7a3082f951a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x
