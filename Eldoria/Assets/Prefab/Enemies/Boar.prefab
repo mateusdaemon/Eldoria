@@ -177,7 +177,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 4, y: 4, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6285465266288134800}
@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 2122306782918776861}
   - component: {fileID: 5247446059683828323}
   - component: {fileID: 7076445140845816544}
+  - component: {fileID: 1650266646088805598}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Untagged
@@ -355,7 +356,21 @@ MonoBehaviour:
   life: 8
   damage: 2
   curse: 2
-  lifeBar: {fileID: 0}
+  lifeBar: {fileID: 5749419431709471253}
+--- !u!114 &1650266646088805598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2437610416211217784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb7b31a918df8749a53d0508c9147dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boarAnimator: {fileID: 4354495147594714714}
+  boarSprite: {fileID: 141367914307839877}
 --- !u!1 &3078625983262908959
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,8 +829,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395975445ee0cdc45b983cd1bc32c8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackArea: {fileID: 0}
   warnSign: {fileID: 675867037572191498}
   dangerSign: {fileID: 1303881362854989898}
+  attackDistance: 10
 --- !u!1 &7670270784306990393
 GameObject:
   m_ObjectHideFlags: 0

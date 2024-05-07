@@ -5,8 +5,8 @@ using UnityEngine;
 public class BoarState : MonoBehaviour
 {
     public enum State { Idle, GoRight, GoLeft, Attack, Raige, None};
-    public Animator wolfAnimator;
-    public SpriteRenderer wolfSprite;
+    public Animator boarAnimator;
+    public SpriteRenderer boarSprite;
     private State currState = State.None;
 
     // Start is called before the first frame update
@@ -21,20 +21,34 @@ public class BoarState : MonoBehaviour
         switch (currState)
         {
             case State.Idle:
+                boarAnimator.SetBool("idle", true);
+                boarAnimator.SetBool("walk", false);
+                boarAnimator.SetBool("attack", false);
+                boarAnimator.SetBool("raige", false);
                 break;
             case State.GoRight:
-                wolfSprite.flipX = false;
-                wolfAnimator.SetBool("walk", true);
+                boarSprite.flipX = false;
+                boarAnimator.SetBool("walk", true);
+                boarAnimator.SetBool("attack", false);
+                boarAnimator.SetBool("raige", false);
+                boarAnimator.SetBool("idle", false);
                 break;
             case State.GoLeft:
-                wolfSprite.flipX = true;
-                wolfAnimator.SetBool("walk", true);
+                boarSprite.flipX = true;
+                boarAnimator.SetBool("walk", true);
+                boarAnimator.SetBool("attack", false);
+                boarAnimator.SetBool("raige", false);
+                boarAnimator.SetBool("idle", false);
                 break;
             case State.Attack:
-                wolfAnimator.SetBool("attack", true);
+                boarAnimator.SetBool("attack", true);
+                boarAnimator.SetBool("raige", false);
+                boarAnimator.SetBool("walk", false);
+                boarAnimator.SetBool("idle", false);
                 break;
             case State.Raige:
-                wolfAnimator.SetBool("raige", true);
+                boarAnimator.SetBool("raige", true);
+                boarAnimator.SetBool("walk", false);
                 break;
             default:
                 break;
@@ -50,13 +64,13 @@ public class BoarState : MonoBehaviour
                 currState = State.Idle;
                 break;
             case State.GoRight:
-                if (currState != State.Attack && currState != State.Raige)
+                if (currState != State.Raige)
                 {
                     currState = State.GoRight;
                 }
                 break;
             case State.GoLeft:
-                if (currState != State.Attack && currState != State.Raige)
+                if (currState != State.Raige)
                 {
                     currState = State.GoLeft;
                 }

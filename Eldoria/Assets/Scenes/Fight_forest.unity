@@ -123,18 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &10808713 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5749419431709471253, guid: 8b257237afa344044b7a3082f951a9dd,
-    type: 3}
-  m_PrefabInstance: {fileID: 4596170477117488144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &74335401
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,74 +1608,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &1238887903
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 26.37431
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 30.957422
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5220869258729722191, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7463097158149420763, guid: 7aa83cf32c38a634eb7de48ee51954e4,
-        type: 3}
-      propertyPath: m_Name
-      value: Orchid
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7aa83cf32c38a634eb7de48ee51954e4, type: 3}
 --- !u!1 &1254992389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,11 +2574,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar
       objectReference: {fileID: 0}
-    - target: {fileID: 4976502876840208738, guid: 8b257237afa344044b7a3082f951a9dd,
-        type: 3}
-      propertyPath: attackDistance
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 6285465266288134800, guid: 8b257237afa344044b7a3082f951a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2709,11 +2624,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7076445140845816544, guid: 8b257237afa344044b7a3082f951a9dd,
-        type: 3}
-      propertyPath: lifeBar
-      value: 
-      objectReference: {fileID: 10808713}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3067,4 +2977,3 @@ SceneRoots:
   - {fileID: 789599970}
   - {fileID: 1904216602}
   - {fileID: 4596170477117488144}
-  - {fileID: 1238887903}

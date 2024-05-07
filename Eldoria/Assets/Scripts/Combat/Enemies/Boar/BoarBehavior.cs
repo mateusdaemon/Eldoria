@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class BoarBehavior : MonoBehaviour
 {
+    private BoarState boarState;
     private Vector3 origin;
-    private bool goToPlayer = false;
     private GameObject playerRef;
     private GameObject parent;
     private Vector3 moveTarget;
@@ -15,6 +15,7 @@ public class BoarBehavior : MonoBehaviour
     private Enemy enemy;
     private bool threatened = false;
     private bool inRaige = false;
+    private bool canRaige = true;
 
     public WolfCrocodileAttack attackArea;
     public GameObject warnSign;
@@ -26,6 +27,7 @@ public class BoarBehavior : MonoBehaviour
     {
         parent = this.transform.parent.gameObject;
         enemy = parent.GetComponent<Enemy>();
+        boarState = parent.GetComponent<BoarState>();
         playerRef = GameObject.FindWithTag("Player");
         Invoke("SetOrigin", 1);
     }
@@ -34,38 +36,64 @@ public class BoarBehavior : MonoBehaviour
     void FixedUpdate()
     {
         // se move lentamente até o player quando ameaçado
-        if (threatened && !inRaige)
+        if (threatened && !inRaige && !isAttaking)
         {
             moveTarget.x = playerRef.transform.position.x;
             moveTarget.z = playerRef.transform.position.z;
-            parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
-        }
 
-        if (goToPlayer)
-        {
-            if (!isAttaking)
+            if (Vector3.Distance(parent.transform.position, moveTarget) <= 8.0f && canRaige)
             {
-                if (Vector3.Distance(transform.position, playerRef.transform.position) <= attackDistance)
-                {
+                inRaige = true;
+                canRaige = false;
 
-                }
-                else
-                {
-                    
-                }
+            } else if (Vector3.Distance(parent.transform.position, moveTarget) > 3.0f)
+            {
+                Debug.Log("indo até o player...");
+                MoveToPlayer();
+            } else
+            {
+                Debug.Log("Ataqueee");
+                boarState.ChangeState(BoarState.State.Attack);
+                isAttaking = true;
+                Invoke("ResetIsAttacking", 1.5f);
+            }
+            
+        } else if (inRaige)
+        {
+            if (Vector3.Distance(parent.transform.position, moveTarget) > 3.0f)
+            {
+                boarState.ChangeState(BoarState.State.Raige);
+                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.2f);
+
+            } else
+            {
+                Debug.Log("Ataque raige");
+                boarState.ChangeState(BoarState.State.Attack);
+                inRaige = false;
+                canRaige = false;
+                isAttaking = true;
+                Invoke("ResetIsAttacking", 1.5f);
+                Invoke("ResetCanRaige", 2.0f);
             }
         }
         else if (!threatened)
         {
             // If not going to player then return to origin position
-            if (originSet && parent.transform.position != origin)
+            if (Vector3.Distance(parent.transform.position, origin) > 0.5f && originSet)
             {
+                Debug.Log("Go to origin");
                 MoveToOrigin();
             }
             else
             {
+                Debug.Log("Recuperando vida ...");
                 enemy.ResetLife();
+                boarState.ChangeState(BoarState.State.Idle);
             }
+        } else
+        {
+            Debug.Log("Vo fica deboa");
+            boarState.ChangeState(BoarState.State.Idle);
         }
     }
 
@@ -78,7 +106,6 @@ public class BoarBehavior : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        goToPlayer = false;
         threatened = false;
         warnSign.SetActive(false);
         dangerSign.SetActive(false);
@@ -97,48 +124,33 @@ public class BoarBehavior : MonoBehaviour
         {
             warnSign.SetActive(false);
             dangerSign.SetActive(true);
-            goToPlayer = true;
         }
     }
 
     private void MoveToPlayer()
     {
-        //if (playerRef.transform.position.x > transform.position.x)
-        //{
-
-            
-        //}
-        //else
-        //{
-            
-        //}
-
-        moveTarget.x = playerRef.transform.position.x;
-        moveTarget.z = playerRef.transform.position.z;
-        parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
-    }
-
-    private void AttackPlayer()
-    {
-        bool hit = attackArea.AttackPlayer();
-
-        if (hit)
+        if (playerRef.transform.position.x > transform.position.x)
         {
-            enemy.AttackPlayer();
+            boarState.ChangeState(BoarState.State.GoRight);
         }
+        else
+        {
+            boarState.ChangeState(BoarState.State.GoLeft);
+        }
+
+        parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
     }
 
     private void MoveToOrigin()
     {
-        //if (origin.x > parent.transform.position.x)
-        //{
-
-            
-        //}
-        //else
-        //{
-            
-        //}
+        if (origin.x > parent.transform.position.x)
+        {
+            boarState.ChangeState(BoarState.State.GoRight);
+        }
+        else
+        {
+            boarState.ChangeState(BoarState.State.GoLeft);
+        }
 
         parent.transform.position = Vector3.MoveTowards(parent.transform.position, origin, 0.15f);
     }
@@ -147,5 +159,10 @@ public class BoarBehavior : MonoBehaviour
     private void ResetIsAttacking()
     {
         isAttaking = false;
+    }
+
+    private void ResetCanRaige()
+    {
+        canRaige = true;
     }
 }
