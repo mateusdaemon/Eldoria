@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Muro Details
-    second: {fileID: 2100000, guid: 067e490ef36cc5845840a584c692caab, type: 2}
+    second: {fileID: 2100000, guid: 7818900405b0a00449536d0f6cebf4a1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Muro Stone
-    second: {fileID: 2100000, guid: 897ecc0878fa12a4ab60a989fa862abc, type: 2}
+    second: {fileID: 2100000, guid: f620ccad3bd265b4ba65f22a7fac71ef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
