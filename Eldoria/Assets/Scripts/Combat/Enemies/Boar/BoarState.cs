@@ -7,7 +7,7 @@ public class BoarState : MonoBehaviour
     public enum State { Idle, GoRight, GoLeft, Attack, Raige, None};
     public Animator wolfAnimator;
     public SpriteRenderer wolfSprite;
-    private State lastState = State.None;
+    private State currState = State.None;
 
     // Start is called before the first frame update
     void Start()
@@ -18,26 +18,16 @@ public class BoarState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void SetWolfState(State state)
-    {
-        if (lastState == state) return;
-
-        wolfAnimator.SetBool("walk", false);
-        wolfAnimator.SetBool("attack", false);
-
-        switch (state)
+        switch (currState)
         {
             case State.Idle:
                 break;
             case State.GoRight:
-                wolfSprite.flipX = true;
+                wolfSprite.flipX = false;
                 wolfAnimator.SetBool("walk", true);
                 break;
             case State.GoLeft:
-                wolfSprite.flipX = false;
+                wolfSprite.flipX = true;
                 wolfAnimator.SetBool("walk", true);
                 break;
             case State.Attack:
@@ -50,6 +40,35 @@ public class BoarState : MonoBehaviour
                 break;
         }
 
-        lastState = state;
+    }
+
+    public void ChangeState(BoarState.State state)
+    {
+        switch (state)
+        {
+            case State.Idle:
+                currState = State.Idle;
+                break;
+            case State.GoRight:
+                if (currState != State.Attack && currState != State.Raige)
+                {
+                    currState = State.GoRight;
+                }
+                break;
+            case State.GoLeft:
+                if (currState != State.Attack && currState != State.Raige)
+                {
+                    currState = State.GoLeft;
+                }
+                break;
+            case State.Attack:
+                currState = State.Attack;
+                break;
+            case State.Raige:
+                currState = State.Raige;
+                break;
+            default:
+                break;
+        }
     }
 }

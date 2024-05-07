@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static WolfCrocState;
 
 public class BoarBehavior : MonoBehaviour
 {
@@ -37,10 +36,9 @@ public class BoarBehavior : MonoBehaviour
         // se move lentamente até o player quando ameaçado
         if (threatened && !inRaige)
         {
-            Debug.Log("qq eu to vendo ai");
             moveTarget.x = playerRef.transform.position.x;
             moveTarget.z = playerRef.transform.position.z;
-            parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.2f);
+            parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.1f);
         }
 
         if (goToPlayer)
@@ -49,17 +47,15 @@ public class BoarBehavior : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, playerRef.transform.position) <= attackDistance)
                 {
-                    //AttackPlayer();
-                    //isAttaking = true;
-                    //Invoke("ResetIsAttacking", 2.0f);
+
                 }
                 else
                 {
-                    MoveToPlayer();
+                    
                 }
             }
         }
-        else
+        else if (!threatened)
         {
             // If not going to player then return to origin position
             if (originSet && parent.transform.position != origin)
