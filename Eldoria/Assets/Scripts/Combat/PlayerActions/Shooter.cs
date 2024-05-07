@@ -54,7 +54,7 @@ public class Shooter : MonoBehaviour
                 if (Physics.Raycast(mouseRay, out RaycastHit hit, float.MaxValue, layerClick))
                 {
                     currTarget = hit.point;
-                    currTarget.y = 1.0f; // all shots are in same height
+                    currTarget.y = 0.5f; // all shots are in same height
                 }
                 else
                 {

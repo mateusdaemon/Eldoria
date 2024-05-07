@@ -50,11 +50,9 @@ public class BoarBehavior : MonoBehaviour
 
             } else if (Vector3.Distance(parent.transform.position, moveTarget) > 2.5f)
             {
-                Debug.Log("indo até o player...");
                 MoveToPlayer();
             } else
             {
-                Debug.Log("Ataqueee");
                 boarState.ChangeState(BoarState.State.Attack);
                 if (attackArea.HitPlayer())
                 {
@@ -70,15 +68,14 @@ public class BoarBehavior : MonoBehaviour
             if (Vector3.Distance(parent.transform.position, moveTarget) > 2.5f)
             {
                 boarState.ChangeState(BoarState.State.Raige);
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.25f);
+                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.35f);
 
             } else
             {
-                Debug.Log("Ataque raige");
                 boarState.ChangeState(BoarState.State.Attack);
                 if (attackArea.HitPlayer())
                 {
-                    gameManager.AttackPlayer(enemy.damage);
+                    gameManager.AttackPlayer(5.0f);
                 }
                 inRaige = false;
                 canRaige = false;
@@ -92,18 +89,15 @@ public class BoarBehavior : MonoBehaviour
             // If not going to player then return to origin position
             if (Vector3.Distance(parent.transform.position, origin) > 0.5f && originSet)
             {
-                Debug.Log("Go to origin");
                 MoveToOrigin();
             }
             else
             {
-                Debug.Log("Recuperando vida ...");
                 enemy.ResetLife();
                 boarState.ChangeState(BoarState.State.Idle);
             }
         } else
         {
-            Debug.Log("Vo fica deboa");
             boarState.ChangeState(BoarState.State.Idle);
         }
     }

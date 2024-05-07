@@ -41,7 +41,6 @@ public class BoarState : MonoBehaviour
                 boarAnimator.SetBool("idle", false);
                 break;
             case State.Attack:
-                Debug.Log("ATTACK ANIM");
                 boarAnimator.SetBool("attack", true);
                 boarAnimator.SetBool("raige", false);
                 boarAnimator.SetBool("walk", false);
