@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BoarBehavior : MonoBehaviour
 {
+    private GameManager gameManager;
     private BoarState boarState;
     private Vector3 origin;
     private GameObject playerRef;
@@ -17,7 +18,7 @@ public class BoarBehavior : MonoBehaviour
     private bool inRaige = false;
     private bool canRaige = true;
 
-    public WolfCrocodileAttack attackArea;
+    public BoarAttackArea attackArea;
     public GameObject warnSign;
     public GameObject dangerSign;
     public float attackDistance = 3.0f;
@@ -25,6 +26,7 @@ public class BoarBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         parent = this.transform.parent.gameObject;
         enemy = parent.GetComponent<Enemy>();
         boarState = parent.GetComponent<BoarState>();
@@ -41,12 +43,12 @@ public class BoarBehavior : MonoBehaviour
             moveTarget.x = playerRef.transform.position.x;
             moveTarget.z = playerRef.transform.position.z;
 
-            if (Vector3.Distance(parent.transform.position, moveTarget) <= 8.0f && canRaige)
+            if (Vector3.Distance(parent.transform.position, moveTarget) <= 9.0f && canRaige)
             {
                 inRaige = true;
                 canRaige = false;
 
-            } else if (Vector3.Distance(parent.transform.position, moveTarget) > 3.0f)
+            } else if (Vector3.Distance(parent.transform.position, moveTarget) > 2.5f)
             {
                 Debug.Log("indo até o player...");
                 MoveToPlayer();
@@ -54,26 +56,35 @@ public class BoarBehavior : MonoBehaviour
             {
                 Debug.Log("Ataqueee");
                 boarState.ChangeState(BoarState.State.Attack);
+                if (attackArea.HitPlayer())
+                {
+                    gameManager.AttackPlayer(enemy.damage);
+                }
+
                 isAttaking = true;
                 Invoke("ResetIsAttacking", 1.5f);
             }
             
         } else if (inRaige)
         {
-            if (Vector3.Distance(parent.transform.position, moveTarget) > 3.0f)
+            if (Vector3.Distance(parent.transform.position, moveTarget) > 2.5f)
             {
                 boarState.ChangeState(BoarState.State.Raige);
-                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.2f);
+                parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.25f);
 
             } else
             {
                 Debug.Log("Ataque raige");
                 boarState.ChangeState(BoarState.State.Attack);
+                if (attackArea.HitPlayer())
+                {
+                    gameManager.AttackPlayer(enemy.damage);
+                }
                 inRaige = false;
                 canRaige = false;
                 isAttaking = true;
                 Invoke("ResetIsAttacking", 1.5f);
-                Invoke("ResetCanRaige", 2.0f);
+                Invoke("ResetCanRaige", 3.0f);
             }
         }
         else if (!threatened)
