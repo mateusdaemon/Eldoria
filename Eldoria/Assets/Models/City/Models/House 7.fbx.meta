@@ -52,11 +52,6 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stone_
-    second: {fileID: 2100000, guid: 6cae4cbb047cbf24cb1cdd7c39ce339d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Telhado House 7
     second: {fileID: 2100000, guid: bbb1df3d60bdac24aab807ce8fce60ed, type: 2}
   materials:
