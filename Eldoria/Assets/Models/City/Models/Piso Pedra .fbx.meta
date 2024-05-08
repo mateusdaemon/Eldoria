@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 1bdeeaebc57f76f43863e6bb177b3d1c
+guid: 30380b50ac0bc1740bdf975b1d999dfd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedra Chao
+    second: {fileID: 2100000, guid: 794abd8567633ae4aafeac61ffe12c2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pedra tv2.2
+    second: {fileID: 2100000, guid: af1a4e04fdf5d324e8b816ecf3456590, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
