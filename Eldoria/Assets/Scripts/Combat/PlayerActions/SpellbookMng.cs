@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SpellbookMng : MonoBehaviour
 {
-    public enum Spellbook {None, Red, Green, Blue};
+    public enum Spellbook {Neutral, Red, Green, Blue};
     public Spellbook currSpellbook;
+    public GameObject neutralActive;
     public GameObject redActive;
     public GameObject greenActive;
     public GameObject blueActive;
@@ -13,7 +14,7 @@ public class SpellbookMng : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currSpellbook = Spellbook.None;
+        currSpellbook = Spellbook.Neutral;
     }
 
     // Update is called once per frame
@@ -21,30 +22,32 @@ public class SpellbookMng : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            currSpellbook = Spellbook.None;
+            currSpellbook = Spellbook.Neutral;
             greenActive.SetActive(false);
-            redActive.SetActive(false);
-            blueActive.SetActive(false);
+            neutralActive.SetActive(true);
+            //redActive.SetActive(false);
+            //blueActive.SetActive(false);
         } else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currSpellbook = Spellbook.Green;
             greenActive.SetActive(true);
-            redActive.SetActive(false);
-            blueActive.SetActive(false);
+            neutralActive.SetActive(false);
+            //redActive.SetActive(false);
+            //blueActive.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            currSpellbook = Spellbook.Red;
-            redActive.SetActive(true);
-            greenActive.SetActive(false);
-            blueActive.SetActive(false);
+            //currSpellbook = Spellbook.Red;
+            //greenActive.SetActive(false);
+            //redActive.SetActive(true);
+            //blueActive.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            currSpellbook = Spellbook.Blue;
-            blueActive.SetActive(true);
-            redActive.SetActive(false);
-            greenActive.SetActive(false);
+            //currSpellbook = Spellbook.Blue;
+            //blueActive.SetActive(true);
+            //redActive.SetActive(false);
+            //greenActive.SetActive(false);
         }
     }
 }

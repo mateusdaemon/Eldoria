@@ -72,7 +72,7 @@ public class Shooter : MonoBehaviour
                     case SpellbookMng.Spellbook.Blue:
                         currBullet = Instantiate(blueBullet, this.transform.position, new Quaternion());
                         break;
-                    case SpellbookMng.Spellbook.None:
+                    case SpellbookMng.Spellbook.Neutral:
                         currBullet = Instantiate(neutralBullet, this.transform.position, neutralBullet.transform.rotation);
                         break;
                     default:
