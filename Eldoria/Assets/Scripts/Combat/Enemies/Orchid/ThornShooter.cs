@@ -14,7 +14,7 @@ public class ThornShooter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (currThorn != null && Vector3.Distance(thornTarget, currThorn.transform.position) > 0.5f)
         {
