@@ -771,6 +771,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_v4
       objectReference: {fileID: 0}
+    - target: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: gm
@@ -3045,7 +3050,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
@@ -3060,7 +3065,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.13826236
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
@@ -3105,7 +3110,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5594116082751205839, guid: 30380b50ac0bc1740bdf975b1d999dfd,
         type: 3}
