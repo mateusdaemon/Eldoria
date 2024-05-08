@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dangerSign: {fileID: 4137336860211566236}
   sprite: {fileID: 3627847325606201945}
+  shooter: {fileID: 7783231593692556917}
 --- !u!135 &7683024462701219491
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -152,6 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7121280829187578152}
+  - component: {fileID: 7783231593692556917}
   m_Layer: 0
   m_Name: ThornShooter
   m_TagString: Untagged
@@ -174,6 +176,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5220869258729722191}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7783231593692556917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2154046834544260928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda858059c0c77340abf56c962d8da79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thornPrefab: {fileID: 6769010514531873733, guid: ff6c427d843bf524d80936da21d641db,
+    type: 3}
 --- !u!1 &2561973722768267387
 GameObject:
   m_ObjectHideFlags: 0
