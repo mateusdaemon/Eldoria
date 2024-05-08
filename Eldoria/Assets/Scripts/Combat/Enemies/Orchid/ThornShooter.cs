@@ -29,7 +29,15 @@ public class ThornShooter : MonoBehaviour
     public void ShootThorn(Vector3 target)
     {
         currThorn = Instantiate(thornPrefab, transform.position, thornPrefab.transform.rotation);
-        currThorn.transform.rotation = Quaternion.LookRotation(target, Vector3.up);
         thornTarget = target;
+
+        // Calculate direction to the target
+        Vector3 direction = (thornTarget - currThorn.transform.position).normalized;
+
+        // Calculate rotation to look at the target
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+
+        // Apply rotation to the thorn
+        currThorn.transform.rotation = lookRotation;
     }
 }
