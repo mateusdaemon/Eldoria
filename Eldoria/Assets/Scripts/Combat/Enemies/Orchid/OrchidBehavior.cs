@@ -14,6 +14,7 @@ public class OrchidBehavior : MonoBehaviour
 
     public GameObject dangerSign;
     public SpriteRenderer sprite;
+    public ThornShooter shooter;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +39,9 @@ public class OrchidBehavior : MonoBehaviour
         if (threatened && canAttack)
         {
             orchidState.ChangeState(OrchidState.PlantState.Attack);
+            Invoke("ShootThorn", 0.3f);
             canAttack = false;
-            Invoke("ResetCanAttack", 2.0f);
+            Invoke("ResetCanAttack", 3.0f);
         } else
         {
             orchidState.ChangeState(OrchidState.PlantState.Idle);
@@ -61,5 +63,10 @@ public class OrchidBehavior : MonoBehaviour
     private void ResetCanAttack()
     {
         canAttack = true;
+    }
+
+    private void ShootThorn()
+    {
+        shooter.ShootThorn(playerRef.transform.position);
     }
 }
