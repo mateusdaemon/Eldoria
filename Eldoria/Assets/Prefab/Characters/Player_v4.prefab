@@ -466,12 +466,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5073907797615219488}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbc4729c186fde2418256cb874fff931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currSpellbook: 0
+  neutralActive: {fileID: 0}
   redActive: {fileID: 0}
   greenActive: {fileID: 0}
   blueActive: {fileID: 0}
