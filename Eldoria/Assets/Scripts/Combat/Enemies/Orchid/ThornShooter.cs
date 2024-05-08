@@ -18,7 +18,7 @@ public class ThornShooter : MonoBehaviour
     {
         if (currThorn != null && Vector3.Distance(thornTarget, currThorn.transform.position) > 0.5f)
         {
-            currThorn.transform.position = Vector3.MoveTowards(currThorn.transform.position, thornTarget, 0.3f);
+            currThorn.transform.position = Vector3.MoveTowards(currThorn.transform.position, thornTarget, 0.45f);
         } else
         {
             Destroy(currThorn);

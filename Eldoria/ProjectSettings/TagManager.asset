@@ -12,6 +12,7 @@ TagManager:
   - Audio
   - Sheep
   - DmgFdb
+  - Thorn
   layers:
   - Default
   - TransparentFX
