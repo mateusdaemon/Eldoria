@@ -40,4 +40,12 @@ public class ThornShooter : MonoBehaviour
         // Apply rotation to the thorn
         currThorn.transform.rotation = lookRotation;
     }
+
+    private void OnDestroy()
+    {
+        if (currThorn != null)
+        {
+            Destroy(currThorn);
+        }
+    }
 }
