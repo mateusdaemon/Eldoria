@@ -492,7 +492,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 33bb5ae76de104f4dbed712947f59517,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43774986
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33bb5ae76de104f4dbed712947f59517,
         type: 3}
@@ -1454,6 +1454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WorldMapCityTEST1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7d975964eb064bd4d96cca6ba76cfe06,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: 7d975964eb064bd4d96cca6ba76cfe06,
         type: 3}
