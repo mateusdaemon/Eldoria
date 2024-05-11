@@ -59,7 +59,6 @@ public class DialogueManager : MonoBehaviour
 
         treeIndex = 0;
         PlayerStats.SetDialoguing(true);
-                
     }
 
     public void PrintNextNode()
