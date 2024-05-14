@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1e87d6e99221d4ab267737ae2a989c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blood: {fileID: 5905387557329071871}
 --- !u!1 &2339636276751902220
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +541,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
+  m_Radius: 20
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4189375543132240270
 MonoBehaviour:
@@ -554,6 +555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1b11b38cb74ef479c01d08bf2daef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackArea: {fileID: 4295005027198942686}
+  warnSign: {fileID: 1340240536183183862}
+  dangerSign: {fileID: 2080181516290725800}
+  attackDistance: 3
 --- !u!1 &4566372280609353732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,6 +1549,12 @@ PrefabInstance:
 --- !u!4 &4135150460335536968 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2779300266056761729, guid: 68a6f518c67dd3e41be4d83738cb6222,
+    type: 3}
+  m_PrefabInstance: {fileID: 2301638144214301385}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5905387557329071871 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5621944804532130870, guid: 68a6f518c67dd3e41be4d83738cb6222,
     type: 3}
   m_PrefabInstance: {fileID: 2301638144214301385}
   m_PrefabAsset: {fileID: 0}
