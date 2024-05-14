@@ -157,4 +157,9 @@ public class GameManager : MonoBehaviour
     {
         hudManager.RestorDodgeColor();
     }
+
+    public void LoadScene(string scenemName)
+    {
+        SceneManager.LoadScene(scenemName);
+    }
 }

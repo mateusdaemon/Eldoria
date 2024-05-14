@@ -7,17 +7,14 @@ public class CatchBookGoal : MonoBehaviour
     public Quest questRelated;
     public Goal goal;
     public GameObject interactionUI;
-    public HudManager hudManager;
-    public GameObject bookModel;
-    public ParticleSystem catchFeedback;
-    public GameObject bookAura;
 
     private bool canInteract = false;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -25,18 +22,14 @@ public class CatchBookGoal : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
-            catchFeedback.Play();
-            hudManager.ActivateNeutralBook();
-            hudManager.ActivateCombatObjects();
             PlayerStats.EnableSkill(true);
-            Destroy(bookAura);
+            gameManager.LoadScene("FarmTransition");
 
             goal.AddAmount();
             if (goal.CheckComplete())
             {
                 goal.CompleteGoal();
                 questRelated.CheckForComplete();
-                bookModel.SetActive(false);
                 Destroy(gameObject);
             }
         }        
