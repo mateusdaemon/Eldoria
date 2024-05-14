@@ -9,7 +9,6 @@ public class CatchBookGoal : MonoBehaviour
     public GameObject interactionUI;
     public HudManager hudManager;
     public GameObject bookModel;
-    public GameObject wolfPackGoal;
     public ParticleSystem catchFeedback;
     public GameObject bookAura;
 
@@ -38,7 +37,6 @@ public class CatchBookGoal : MonoBehaviour
                 goal.CompleteGoal();
                 questRelated.CheckForComplete();
                 bookModel.SetActive(false);
-                wolfPackGoal.SetActive(true);
                 Destroy(gameObject);
             }
         }        
