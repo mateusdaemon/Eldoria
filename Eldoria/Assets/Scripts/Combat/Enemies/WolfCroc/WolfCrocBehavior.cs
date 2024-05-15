@@ -59,7 +59,7 @@ public class WolfCrocBehavior : MonoBehaviour
         else
         {
             // If not going to player then return to origin position
-            if (originSet && parent.transform.position != origin)
+            if (originSet && Vector3.Distance(transform.position, origin) >= 1.0f)
             {
                MoveToOrigin();
             }
