@@ -55565,6 +55565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wolf_anim
       objectReference: {fileID: 0}
+    - target: {fileID: 870158907444366651, guid: 0284c9e3772ed6d4485a74a6296473bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4739917546181964376, guid: 0284c9e3772ed6d4485a74a6296473bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -76567,6 +76572,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wolf_anim (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 870158907444366651, guid: 0284c9e3772ed6d4485a74a6296473bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4739917546181964376, guid: 0284c9e3772ed6d4485a74a6296473bc,
         type: 3}
