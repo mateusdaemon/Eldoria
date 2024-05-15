@@ -7,6 +7,7 @@ public class ShieldManager : MonoBehaviour
     [Header("---Manager---")]
     public GameObject player;
     public ParticleSystem shieldFdb;
+    public ParticleSystem shieldBreak;
     public GameObject shieldAura;
     public float shieldColdown;
 
@@ -69,6 +70,7 @@ public class ShieldManager : MonoBehaviour
     public void DestroyShield()
     {
         shieldAura.SetActive(false);
+        shieldBreak.Play();
         Invoke("ActivateShieldSkill", shieldColdown);
         shouldColdown = true;
     }

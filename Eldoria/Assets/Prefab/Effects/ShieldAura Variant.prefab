@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7561087790204901298
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: VelocityModule.orbitalY.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 768465540258460818, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[2].value
+      value: 0.8767137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2127912253966083482, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248144288093182081, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_Name
+      value: ShieldAura Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248144288093182081, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113063919613400250, guid: bda254805f9c18d49bbfdfb88e3e8955,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bda254805f9c18d49bbfdfb88e3e8955, type: 3}
