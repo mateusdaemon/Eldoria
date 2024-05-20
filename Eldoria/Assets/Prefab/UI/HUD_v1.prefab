@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1536191439817446696
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1480,7 +1480,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.799988, y: -11.700073}
+  m_AnchoredPosition: {x: 6.7999268, y: -11.700073}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &344932018585253593
@@ -2046,7 +2046,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &963723850533867786
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4700,7 +4700,7 @@ MonoBehaviour:
   potionsObject: {fileID: 126486695117958819}
   questTitle: {fileID: 4007660692744710189}
   questText: {fileID: 8915970351820766578}
-  books: {fileID: 0}
+  books: {fileID: 4630978360952579112}
   neutralSelect: {fileID: 769107290916878916}
   shootBG: {fileID: 1876749158091430507}
   shoot: {fileID: 7426470414483845331}
@@ -4713,6 +4713,7 @@ MonoBehaviour:
   dodgeBright: {fileID: 1260473168653526522}
   skillsObject: {fileID: 1783142081099712557}
   keysObject: {fileID: 7486853598979640269}
+  damageFeedback: {fileID: 3149058124559490513}
 --- !u!1 &7878107920139152974
 GameObject:
   m_ObjectHideFlags: 0

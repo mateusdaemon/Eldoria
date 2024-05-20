@@ -44,6 +44,9 @@ public class HudManager : MonoBehaviour
     [Header("Keys")]
     public GameObject keysObject;
 
+    [Header("Screen Feedbacks")]
+    public GameObject damageFeedback;
+
     public void SetLifeAmout(float amount)
     {
         lifeBar.fillAmount = amount;
@@ -233,5 +236,37 @@ public class HudManager : MonoBehaviour
         skillsObject.SetActive(true);
         keysObject.SetActive(true);
         books.SetActive(true);
+    }
+
+    public void EnableHurtFeedback()
+    {
+        if (!damageFeedback.activeSelf)
+        {
+            damageFeedback.SetActive(true);
+            damageFeedback.GetComponent<Animator>().SetBool("false", true);
+            damageFeedback.GetComponent<Animator>().SetBool("dying", false);
+        }
+    }
+
+    public void DisableHurtFeedback()
+    {
+        if (damageFeedback.activeSelf)
+        {
+            damageFeedback.GetComponent<Animator>().SetBool("false", false);
+            damageFeedback.GetComponent<Animator>().SetBool("dying", false);
+            damageFeedback.SetActive(false);
+        }
+    }
+
+    public void DyingFeedback()
+    {
+        damageFeedback.GetComponent<Animator>().SetBool("hurt", false);
+        damageFeedback.GetComponent<Animator>().SetBool("dying", true);
+    }
+
+    public void HurtFeedback()
+    {
+        damageFeedback.GetComponent<Animator>().SetBool("hurt", true);
+        damageFeedback.GetComponent<Animator>().SetBool("dying", false);
     }
 }

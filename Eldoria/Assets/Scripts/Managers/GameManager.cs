@@ -76,6 +76,11 @@ public class GameManager : MonoBehaviour
         hudManager.UseLifePot();
         PlayerStats.AddLife(life);
         hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
+
+        if (life >= 5 && hudManager.damageFeedback.activeSelf)
+        {
+            hudManager.DisableHurtFeedback();
+        }
     }
 
     public void DrinkManaPot(float mana)
@@ -124,8 +129,23 @@ public class GameManager : MonoBehaviour
             sm.PlaySfx(sm.sfxTakingShieldDamage);
         }
 
+        float playerLife = PlayerStats.GetLife();
+
         PlayerStats.DropLife(damageToLife);
-        hudManager.SetLifeAmout(PlayerStats.GetLife() / PlayerStats.GetMaxLife());
+        hudManager.SetLifeAmout(playerLife / PlayerStats.GetMaxLife());
+
+        if (playerLife < 5)
+        {
+            hudManager.EnableHurtFeedback();
+            if (playerLife < 3)
+            {
+                hudManager.DyingFeedback();
+            }
+            else
+            {
+                hudManager.HurtFeedback();
+            }
+        }
     }
 
     public void CantShootFeedback()
