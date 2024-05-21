@@ -8,6 +8,8 @@ public class SoundManager : MonoBehaviour
     [Header("--- Audio Source ---")]
     public AudioSource musicSource;
     public AudioSource birdsSource;
+    public AudioSource cricketSource;
+    public AudioSource frogSource;
     public AudioSource sfxSource;
     public AudioSource walkSource;
 
@@ -41,6 +43,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip sheepSound;
     public AudioClip birdSound;
     public AudioClip airSound;
+    public AudioClip cricketSound;
+    public AudioClip frogSound;
 
     [Header("--- Effects ---")]
     public AudioClip wolfBarkSound;
@@ -62,6 +66,16 @@ public class SoundManager : MonoBehaviour
         birdsSource.clip = birdSound;
         musicSource.Play();
         birdsSource.Play();
+    }
+
+    public void PlayFarmNight()
+    {
+        musicSource.clip = farmNightBackground;
+        cricketSource.clip = cricketSound;
+        frogSource.clip = frogSound;
+        musicSource.Play();
+        cricketSource.Play();
+        frogSource.Play();
     }
 
     private void Start()
