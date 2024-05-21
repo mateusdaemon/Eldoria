@@ -55,6 +55,7 @@ MonoBehaviour:
   cityBackground: {fileID: 8300000, guid: f97f79ccc83c1c94bbc4a549a05e111d, type: 3}
   farmBackground: {fileID: 8300000, guid: cb2f2e6faa47fa84b8a8d5156b4ad852, type: 3}
   fightBackground: {fileID: 8300000, guid: 09620c84c13cb9b44b4497b64328052c, type: 3}
+  farmNightBackground: {fileID: 8300000, guid: 18dd1ac3748bcd749969300fe214f618, type: 3}
   sfxShooter: {fileID: 8300000, guid: ca5c6815c206fbf478cd1bacecade401, type: 3}
   sfxShooterErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
   sfxShield: {fileID: 8300000, guid: d7d5171e148febb4c8e7c586dfd4b33b, type: 3}

@@ -57414,6 +57414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
+        type: 3}
+      propertyPath: farmNightBackground
+      value: 
+      objectReference: {fileID: 8300000, guid: 18dd1ac3748bcd749969300fe214f618, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

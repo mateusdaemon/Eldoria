@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip cityBackground;
     public AudioClip farmBackground;
     public AudioClip fightBackground;
+    public AudioClip farmNightBackground;
 
     [Header("--- PlayerSFX ---")]
     public AudioClip sfxShooter;
