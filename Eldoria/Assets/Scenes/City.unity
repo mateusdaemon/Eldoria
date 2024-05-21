@@ -432,6 +432,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2040254050740271484, guid: dc1700509fd72cf4c81868c85bdd9515,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1751352523}
     - targetCorrespondingSourceObject: {fileID: -3137722172632951806, guid: dc1700509fd72cf4c81868c85bdd9515,
         type: 3}
       insertIndex: -1
@@ -1109,7 +1113,7 @@ Transform:
   m_GameObject: {fileID: 148417705}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7070934, z: -0, w: 0.7071202}
-  m_LocalPosition: {x: 8.011191, y: 14.5039015, z: -150.49257}
+  m_LocalPosition: {x: 9.011205, y: 14.5039015, z: -150.49257}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7917,7 +7921,7 @@ Transform:
   m_GameObject: {fileID: 1160336712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7070934, z: -0, w: 0.7071202}
-  m_LocalPosition: {x: 2.0112047, y: 14.5039015, z: -170.22522}
+  m_LocalPosition: {x: 3.0111933, y: 14.5039015, z: -170.22522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11444,6 +11448,34 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1503414964}
   m_SourcePrefab: {fileID: 100100000, guid: 37fda552350f537449b196f2da9d1b56, type: 3}
+--- !u!1 &1751352519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2040254050740271484, guid: dc1700509fd72cf4c81868c85bdd9515,
+    type: 3}
+  m_PrefabInstance: {fileID: 8114715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1751352523
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751352519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7771613508976059695, guid: dc1700509fd72cf4c81868c85bdd9515, type: 3}
 --- !u!1 &1769825879
 GameObject:
   m_ObjectHideFlags: 0
