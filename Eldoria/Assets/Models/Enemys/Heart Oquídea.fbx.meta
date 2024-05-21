@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e589396410aedcc4c9bccd93c8923442
+guid: 553d7232b3517c7439df88acb2360fdb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Base Heart Stone
+    second: {fileID: 2100000, guid: 197e6fdbfe6df064c968819e6fcb6ab9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Heart Stone
     second: {fileID: 2100000, guid: 4a34ffd17c76f2b4e84af7fa619aeded, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Raiz
+    second: {fileID: 2100000, guid: 0a2a04b8c9017ec4b8937d65c29bc221, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
