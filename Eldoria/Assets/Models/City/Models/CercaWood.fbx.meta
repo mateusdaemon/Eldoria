@@ -3,7 +3,12 @@ guid: 08f3bb0b1249840468a93ab5f0d3a2d0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cerca Wood
+    second: {fileID: 2100000, guid: c59991fe2e3bbf741baf815aa520d223, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
