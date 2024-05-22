@@ -61,6 +61,7 @@ public class Quest : MonoBehaviour
 
     public void StartQuest()
     {
+        qm.SetQuestInProgress(true);
         hudManager.SetQuestTitle(questTitle);
         hudManager.SetQuestText(goals[0].description);
     }

@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private float shieldManaCost = 2;
     private float maxShieldPoints = 7;
 
+    private Quest startSceneQuest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,11 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Farm")
         {
             PlayerStats.EnableSkill(false);
+        } else if (SceneManager.GetActiveScene().name == "FarmNight")
+        {
+            startSceneQuest = FindObjectOfType<QuestList>().quests[0];
+            startSceneQuest.StartQuest();
+            PlayerStats.EnableSkill(true);
         }
     }
 
