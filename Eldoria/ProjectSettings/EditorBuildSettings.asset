@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/InitTransition.unity
+    guid: d0fb9c72638343a4a816a69fb0553fbb
+  - enabled: 1
     path: Assets/Scenes/Farm.unity
     guid: d5c72f0c6bff3814c97c43a3aa64b929
   - enabled: 1
