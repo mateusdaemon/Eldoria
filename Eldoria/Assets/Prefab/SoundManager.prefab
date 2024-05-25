@@ -44,9 +44,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.504
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   frogSound: {fileID: 8300000, guid: 4553cf1bf7981ee4f88391b23cc6b7a1, type: 3}
   wolfBarkSound: {fileID: 8300000, guid: 62c018aa076734444b2131bbf46de956, type: 3}
   sfxWolfDie: {fileID: 8300000, guid: 95dd93c3c5533f145b60e717ba2e71df, type: 3}
+  wolfhowl: {fileID: 8300000, guid: c02a546d6a93a194e81796018ba35343, type: 3}
 --- !u!1 &2541792504547520436
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,9 +258,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

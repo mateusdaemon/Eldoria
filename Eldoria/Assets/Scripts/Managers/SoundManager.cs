@@ -49,6 +49,7 @@ public class SoundManager : MonoBehaviour
     [Header("--- Effects ---")]
     public AudioClip wolfBarkSound;
     public AudioClip sfxWolfDie;
+    public AudioClip wolfhowl;
 
     public void PlaySfx(AudioClip clip)
     {
@@ -92,6 +93,7 @@ public class SoundManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().name == "FarmNight")
         {
             PlayFarmNight();
+            sfxSource.PlayOneShot(wolfhowl);
         }
     }
 }
