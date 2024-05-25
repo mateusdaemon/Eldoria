@@ -71,18 +71,27 @@ public class SoundManager : MonoBehaviour
     public void PlayFarmNight()
     {
         musicSource.clip = farmNightBackground;
-        cricketSource.clip = cricketSound;
         frogSource.clip = frogSound;
         musicSource.Play();
-        cricketSource.Play();
         frogSource.Play();
+        Invoke("PlayCricketSound", 3);
+    }
+
+    public void PlayCricketSound()
+    {
+        cricketSource.clip = cricketSound;
+        cricketSource.Play();
     }
 
     private void Start()
     {
-        if(SceneManager.GetActiveScene().name == "Farm")
+        if (SceneManager.GetActiveScene().name == "Farm")
         {
             PlayFarm();
+        }
+        else if (SceneManager.GetActiveScene().name == "FarmNight")
+        {
+            PlayFarmNight();
         }
     }
 }
