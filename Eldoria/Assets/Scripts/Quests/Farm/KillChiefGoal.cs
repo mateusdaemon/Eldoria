@@ -6,6 +6,7 @@ public class KillChiefGoal : MonoBehaviour
 {
     public Quest questRelated;
     public Goal goal;
+    public GameObject nextGoal;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class KillChiefGoal : MonoBehaviour
         {
             goal.CompleteGoal();
             questRelated.CheckForComplete();
-        }
+            nextGoal.SetActive(true);
+        }       
     }
 }

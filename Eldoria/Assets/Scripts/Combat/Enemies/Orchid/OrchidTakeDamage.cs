@@ -23,7 +23,6 @@ public class OrchidTakeDamage : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Entrou!");
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Instantiate(collision.gameObject.GetComponent<Bullet>().effect, collision.gameObject.transform.position, new Quaternion());
