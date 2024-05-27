@@ -113,12 +113,15 @@ public class GameManager : MonoBehaviour
 
         if (PlayerStats.GetShieldPoints() > 0)
         {
+            Debug.Log(PlayerStats.GetShieldPoints());
             if (PlayerStats.GetShieldPoints() > damage)
             {
+                Debug.Log("Im shielded");
                 PlayerStats.SetShieldPoints(PlayerStats.GetShieldPoints() - damage);
                 hudManager.SetShieldBarAmount(PlayerStats.GetShieldPoints() / maxShieldPoints);
             } else
             {
+                Debug.Log("Damage in life");
                 PlayerStats.SetShieldPoints(0);
                 hudManager.BreakShield();
                 damageToLife = damage - PlayerStats.GetShieldPoints();
@@ -138,6 +141,7 @@ public class GameManager : MonoBehaviour
 
         float playerLife = PlayerStats.GetLife();
 
+        Debug.Log(damageToLife);
         PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(playerLife / PlayerStats.GetMaxLife());
 
