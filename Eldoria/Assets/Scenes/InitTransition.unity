@@ -292,8 +292,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345.5, y: 22.9}
-  m_SizeDelta: {x: 333.02, y: 123.35}
+  m_AnchoredPosition: {x: -243.44, y: -126}
+  m_SizeDelta: {x: 486.88, y: 123.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271056976
 MonoBehaviour:
@@ -427,8 +427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: -137.18}
-  m_SizeDelta: {x: 447.02, y: 97.21}
+  m_AnchoredPosition: {x: 376.95, y: 11.33}
+  m_SizeDelta: {x: 364.59, y: 123.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &474367949
 MonoBehaviour:
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Eu tinha que fazer alguma coisa ... oque era mesmo?'
+  m_text: '- Eu tinha que fazer alguma coisa ... o que era mesmo?'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2af0245d0f09a4469306e23d563f78b, type: 2}
   m_sharedMaterial: {fileID: -1711708339568143958, guid: e2af0245d0f09a4469306e23d563f78b,
@@ -699,7 +699,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 187, y: -292}
+  m_AnchoredPosition: {x: -312, y: -216}
   m_SizeDelta: {x: 160, y: 39.268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084629231
