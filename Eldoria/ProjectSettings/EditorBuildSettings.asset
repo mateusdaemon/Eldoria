@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 9ce7a4252310c484f820866333abe1e0
+  - enabled: 1
+    path: Assets/Scenes/ThankYou.unity
+    guid: c67731b2b3db7e340b1a8497422b4782
   - enabled: 0
     path: Assets/Scenes/Fight_wolf.unity
     guid: 02fd8604bf99413469349d5748a88c9b
