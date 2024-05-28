@@ -141,7 +141,6 @@ public class GameManager : MonoBehaviour
 
         float playerLife = PlayerStats.GetLife();
 
-        Debug.Log(damageToLife);
         PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(playerLife / PlayerStats.GetMaxLife());
 
@@ -151,6 +150,11 @@ public class GameManager : MonoBehaviour
             if (playerLife < 3)
             {
                 hudManager.DyingFeedback();
+                if (playerLife <= 0)
+                {
+                    PlayerStats.SetLife(PlayerStats.GetMaxLife());
+                    LoadScene("GameOver");
+                }
             }
             else
             {
