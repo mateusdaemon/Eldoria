@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Descanse, e amanh\xE7a va at\xE9 a cidade e procure sua irm\xE3 na biblioteca,
+  m_text: "Descanse, e amanh\xE3 va at\xE9 a cidade e procure sua irm\xE3 na biblioteca,
     ela te contar\xE1 tudo ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2af0245d0f09a4469306e23d563f78b, type: 2}
@@ -1068,7 +1068,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 0a5b2a75315a1ac479c9a6d44cc6bd82, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3952feb8cc221d349b92cb238d56eccf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1088,8 +1088,8 @@ Transform:
   m_GameObject: {fileID: 1475627332}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.0631933, y: 4.0631933, z: 4.0631933}
+  m_LocalPosition: {x: 0, y: 1.01, z: 0}
+  m_LocalScale: {x: 0.9197191, y: 0.9197191, z: 0.9197191}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
