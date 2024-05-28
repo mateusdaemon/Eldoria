@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -242.4, y: 207.4}
+  m_AnchoredPosition: {x: -251, y: 189}
   m_SizeDelta: {x: 275.18, y: 46.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86384217
@@ -293,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116, y: 106}
+  m_AnchoredPosition: {x: -257, y: 50}
   m_SizeDelta: {x: 275.1862, y: 48.8861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271056976
@@ -429,7 +429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.01, y: 173.48}
+  m_AnchoredPosition: {x: -193, y: 118}
   m_SizeDelta: {x: 275.18, y: 60.07}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481857640
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Eu ja n\xE3o tenho muito a te ensinar, seu caminho agora n\xE3o depende
+  m_text: "Eu ja n\xE3o tenho muito a lhe ensinar, seu caminho agora n\xE3o depende
     de mim ... \xE9 hora de voc\xEA partir ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2af0245d0f09a4469306e23d563f78b, type: 2}
@@ -567,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 97.94, y: -16.5}
+  m_AnchoredPosition: {x: 316, y: -202}
   m_SizeDelta: {x: 195.88, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084629231
@@ -1068,7 +1068,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: d91f2906e82293049bb171593a29b0f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a5b2a75315a1ac479c9a6d44cc6bd82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1089,7 +1089,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.0494, y: 4.0494, z: 4.0494}
+  m_LocalScale: {x: 4.0631933, y: 4.0631933, z: 4.0631933}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1149,7 +1149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116, y: 50}
+  m_AnchoredPosition: {x: -192.99, y: -7.057}
   m_SizeDelta: {x: 275.19, y: 48.886}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613062271
