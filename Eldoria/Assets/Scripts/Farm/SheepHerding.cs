@@ -145,7 +145,7 @@ public class SheepHerding : MonoBehaviour
 
         OrientSheepAnim();
 
-        parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.1f);
+        parent.transform.position = Vector3.MoveTowards(transform.position, target, 0.05f);
     }
 
     private void OrientSheepAnim()
