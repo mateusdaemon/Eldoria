@@ -124,19 +124,19 @@ public class GameManager : MonoBehaviour
             Debug.Log(PlayerStats.GetShieldPoints());
             if (PlayerStats.GetShieldPoints() > damage)
             {
-                Debug.Log("Im shielded");
                 PlayerStats.SetShieldPoints(PlayerStats.GetShieldPoints() - damage);
                 hudManager.SetShieldBarAmount(PlayerStats.GetShieldPoints() / maxShieldPoints);
             } else
             {
-                Debug.Log("Damage in life");
                 PlayerStats.SetShieldPoints(0);
                 hudManager.BreakShield();
                 damageToLife = damage - PlayerStats.GetShieldPoints();
                 playerRef.GetComponentInChildren<ShieldManager>().DestroyShield();
                 sm.PlaySfx(sm.sfxShieldDestroy);
             }
-        } else { damageToLife = damage; }
+        } else {
+            damageToLife = damage; 
+        }
 
         if (damageToLife > 0)
         {
@@ -147,9 +147,9 @@ public class GameManager : MonoBehaviour
             sm.PlaySfx(sm.sfxTakingShieldDamage);
         }
 
+        PlayerStats.DropLife(damageToLife);
         float playerLife = PlayerStats.GetLife();
 
-        PlayerStats.DropLife(damageToLife);
         hudManager.SetLifeAmout(playerLife / PlayerStats.GetMaxLife());
 
         if (playerLife < 5)
@@ -161,6 +161,7 @@ public class GameManager : MonoBehaviour
                 if (playerLife <= 0)
                 {
                     PlayerStats.SetLife(PlayerStats.GetMaxLife());
+                    PlayerStats.SetMana(PlayerStats.GetMaxMana());
                     LoadScene("GameOver");
                 }
             }
