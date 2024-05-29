@@ -1588,6 +1588,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5536160409854809855, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: gm
@@ -1596,7 +1601,7 @@ PrefabInstance:
     - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: velocity
-      value: 17
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6731447923608780202, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}

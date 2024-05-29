@@ -162,7 +162,14 @@ public class GameManager : MonoBehaviour
                 {
                     PlayerStats.SetLife(PlayerStats.GetMaxLife());
                     PlayerStats.SetMana(PlayerStats.GetMaxMana());
-                    LoadScene("GameOver");
+                    if (SceneManager.GetActiveScene().name == "FarmNight")
+                    {
+                        LoadScene("GameOver");
+                    } else if (SceneManager.GetActiveScene().name == "Arena")
+                    {
+                        LoadScene("ArenaGameOver");
+                    }
+                    
                 }
             }
             else
