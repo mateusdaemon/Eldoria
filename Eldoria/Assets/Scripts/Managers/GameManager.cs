@@ -34,6 +34,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            hudManager.PauseGame();
+        }
+    }
+
     public void SetShootCost(float cost)
     {
         shootManaCost = cost;

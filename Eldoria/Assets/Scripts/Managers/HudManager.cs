@@ -47,6 +47,9 @@ public class HudManager : MonoBehaviour
     [Header("Screen Feedbacks")]
     public GameObject damageFeedback;
 
+    [Header("Pause Menu")]
+    public GameObject pauseMenu;
+
     public void SetLifeAmout(float amount)
     {
         lifeBar.fillAmount = amount;
@@ -268,5 +271,10 @@ public class HudManager : MonoBehaviour
     {
         damageFeedback.GetComponent<Animator>().SetBool("hurt", true);
         damageFeedback.GetComponent<Animator>().SetBool("dying", false);
+    }
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
     }
 }

@@ -27,7 +27,10 @@ public class KillChiefGoal : MonoBehaviour
         {
             goal.CompleteGoal();
             questRelated.CheckForComplete();
-            nextGoal.SetActive(true);
+            if (nextGoal != null)
+            {
+                nextGoal.SetActive(true);
+            }
         }       
     }
 }

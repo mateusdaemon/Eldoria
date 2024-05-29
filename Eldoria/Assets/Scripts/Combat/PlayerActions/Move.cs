@@ -50,7 +50,6 @@ public class Move : MonoBehaviour
                 }
             } else
             {
-                Debug.Log("Walk state");
                 playerState.ChangeState(State.Walk);
                 gm.sm.runSource.Stop();
             }
