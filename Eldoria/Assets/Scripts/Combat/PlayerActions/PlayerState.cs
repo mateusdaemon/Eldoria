@@ -63,6 +63,9 @@ public class PlayerState : MonoBehaviour
                 break;
             case State.Dodge:
                 currObject.GetComponent<Animator>().SetBool("dodge", true);
+                currObject.GetComponent<Animator>().SetBool("run", false);
+                currObject.GetComponent<Animator>().SetBool("walk", false);
+                currObject.GetComponent<Animator>().SetBool("idle", false);
                 break;
             case State.Attack:
                 break;
@@ -73,6 +76,12 @@ public class PlayerState : MonoBehaviour
                 currObject.GetComponent<Animator>().SetBool("dodge", false);
                 break;
             case State.Dialogue:
+                currObject.GetComponent<Animator>().SetBool("idle", true);
+                currObject.GetComponent<Animator>().SetBool("walk", false);
+                currObject.GetComponent<Animator>().SetBool("run", false);
+                currObject.GetComponent<Animator>().SetBool("dodge", false);
+                break;
+            case State.None:
                 currObject.GetComponent<Animator>().SetBool("idle", true);
                 currObject.GetComponent<Animator>().SetBool("walk", false);
                 currObject.GetComponent<Animator>().SetBool("run", false);

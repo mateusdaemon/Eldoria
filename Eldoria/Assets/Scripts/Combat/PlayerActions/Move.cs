@@ -41,6 +41,7 @@ public class Move : MonoBehaviour
                 playerState.ChangeState(State.Run);
             } else
             {
+                Debug.Log("Walk state");
                 playerState.ChangeState(State.Walk);
             }
 
