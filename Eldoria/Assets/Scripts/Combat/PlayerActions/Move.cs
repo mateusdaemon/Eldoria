@@ -24,6 +24,10 @@ public class Move : MonoBehaviour
     {
         if (!PlayerStats.CanMove() || PlayerStats.IsDialoguing())
         {
+            if (PlayerStats.IsDialoguing())
+            {
+                playerState.ChangeState(State.Dialogue);
+            }
             return;
         }
 
