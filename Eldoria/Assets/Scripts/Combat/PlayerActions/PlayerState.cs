@@ -101,13 +101,13 @@ public class PlayerState : MonoBehaviour
                 }
                 break;
             case State.Walk:
-                if (currState != State.Stuck && currState != State.Dialogue && currState != State.Dodge)
+                if (currState != State.Stuck && currState != State.Dodge)
                 {
                     currState = State.Walk;
                 }
                 break;
             case State.Run:
-                if (currState != State.Stuck && currState != State.Dialogue && currState != State.Dodge)
+                if (currState != State.Stuck && currState != State.Dodge)
                 {
                     currState = State.Run;
                 }

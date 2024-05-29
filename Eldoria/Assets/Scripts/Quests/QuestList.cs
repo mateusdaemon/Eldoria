@@ -9,7 +9,9 @@ public class QuestList : MonoBehaviour
     public GameObject dialogueObj;
     public Quest[] quests;
     public GameObject questInteract;
+    public Dialogue noQuestDial;
     private bool canInteract = false;
+    private bool questFound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class QuestList : MonoBehaviour
     {
         if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
+            questFound = false;
             foreach (Quest quest in quests)
             {
                 if (quest.enable && !quest.active)
@@ -34,7 +37,16 @@ public class QuestList : MonoBehaviour
                     qm.SetQuestInProgress(true);
                     canInteract = false;
                     questInteract.SetActive(false);
+                    questFound = true;
                 }
+            }
+
+            if (!questFound)
+            {
+                dm.SetDialTree(noQuestDial.GetDialTree(), noQuestDial.npcName, noQuestDial.npcPic);
+                dialogueObj.SetActive(true);
+                canInteract = false;
+                questInteract.SetActive(false);
             }
         }        
     }
