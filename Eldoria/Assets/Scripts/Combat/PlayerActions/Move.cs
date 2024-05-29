@@ -39,10 +39,16 @@ public class Move : MonoBehaviour
             {
                 realVelocity *= 1.5f;
                 playerState.ChangeState(State.Run);
+                gm.sm.walkSource.Stop();
+                if (!gm.sm.runSource.isPlaying)
+                {
+                    gm.sm.PlayRun(gm.sm.sfxRun);
+                }
             } else
             {
                 Debug.Log("Walk state");
                 playerState.ChangeState(State.Walk);
+                gm.sm.runSource.Stop();
             }
 
             if (!gm.sm.walkSource.isPlaying)

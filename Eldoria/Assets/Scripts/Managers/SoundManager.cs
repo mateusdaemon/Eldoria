@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource frogSource;
     public AudioSource sfxSource;
     public AudioSource walkSource;
+    public AudioSource runSource;
 
     [Header("--- Music ---")]
     public AudioClip cityBackground;
@@ -62,6 +63,10 @@ public class SoundManager : MonoBehaviour
         walkSource.PlayOneShot(clip);
     }
 
+    public void PlayRun(AudioClip clip)
+    {
+        runSource.PlayOneShot(clip);
+    }
     public void PlayFarm()
     {
         musicSource.clip = farmBackground;
