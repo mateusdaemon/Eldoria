@@ -35,7 +35,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip sfxTakingDamage;
     public AudioClip sfxTakingShieldDamage;
     public AudioClip sfxWalk;
-    
+    public AudioClip sfxRun;
+
 
     [Header("--- Ambient ---")]
     public AudioClip windMillSound;
