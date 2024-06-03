@@ -121,7 +121,6 @@ public class GameManager : MonoBehaviour
 
         if (PlayerStats.GetShieldPoints() > 0)
         {
-            Debug.Log(PlayerStats.GetShieldPoints());
             if (PlayerStats.GetShieldPoints() > damage)
             {
                 PlayerStats.SetShieldPoints(PlayerStats.GetShieldPoints() - damage);

@@ -1740,7 +1740,7 @@ Transform:
   m_GameObject: {fileID: 7463097158149420763}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.05, y: 0.57, z: 29.61}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1749,6 +1749,7 @@ Transform:
   - {fileID: 7591278386401118053}
   - {fileID: 7121280829187578152}
   - {fileID: 6728760659336613837}
+  - {fileID: 619073067919154523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &561059447161792852
@@ -2015,3 +2016,77 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1089267278792915632
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5220869258729722191}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8387941
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.54444885
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 65.974
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29b4365a9f1b11240b61931980abf5fc,
+        type: 3}
+      propertyPath: m_Name
+      value: "Heart Oqu\xEDdea raizes"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 29b4365a9f1b11240b61931980abf5fc, type: 3}
+--- !u!4 &619073067919154523 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29b4365a9f1b11240b61931980abf5fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1089267278792915632}
+  m_PrefabAsset: {fileID: 0}

@@ -558,7 +558,7 @@ MonoBehaviour:
   attackArea: {fileID: 4295005027198942686}
   warnSign: {fileID: 1340240536183183862}
   dangerSign: {fileID: 2080181516290725800}
-  attackDistance: 3
+  attackDistance: 5
 --- !u!1 &4566372280609353732
 GameObject:
   m_ObjectHideFlags: 0
