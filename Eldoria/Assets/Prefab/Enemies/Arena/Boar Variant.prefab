@@ -18,6 +18,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boar Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5247446059683828323, guid: 8b257237afa344044b7a3082f951a9dd,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 6285465266288134800, guid: 8b257237afa344044b7a3082f951a9dd,
         type: 3}
       propertyPath: m_LocalPosition.x

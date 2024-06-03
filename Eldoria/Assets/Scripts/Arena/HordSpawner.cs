@@ -72,7 +72,7 @@ public class HordSpawner : MonoBehaviour
         if (availableIndex.Count > 0)
         {
             // Chossing random enemies between the available ones
-            int enemyIndex = availableIndex[(int)Random.Range(0, availableIndex.Count - 1)];
+            int enemyIndex = availableIndex[(int)Random.Range(0, availableIndex.Count)];
 
             GameObject enemy = hordList[hordCounter].hordInfo[enemyIndex].hordEnemy;
 
