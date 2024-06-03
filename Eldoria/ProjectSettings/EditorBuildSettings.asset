@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: 4dba2cdade69ec141b32f7e08735a1ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/InitTransition.unity
     guid: d0fb9c72638343a4a816a69fb0553fbb
   - enabled: 1
     path: Assets/Scenes/Farm.unity
     guid: d5c72f0c6bff3814c97c43a3aa64b929
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FarmTransition.unity
     guid: 094869f7c0f2bf849bb76f373da6e9a4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FarmNight.unity
     guid: d0c186a5130f68d43b1a29f7ede0e30d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/FarmTransitionFinal.unity
     guid: 955cd18f0e32d98438a0bbffc51ffb85
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Arena.unity
     guid: b296b444bf5c6644e991caa6fd38d513
   - enabled: 0
@@ -32,13 +32,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/City.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ArenaGameOver.unity
     guid: 0de06568fc3d62c4183cc53bdf687010
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: 9ce7a4252310c484f820866333abe1e0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ThankYou.unity
     guid: c67731b2b3db7e340b1a8497422b4782
   - enabled: 0
