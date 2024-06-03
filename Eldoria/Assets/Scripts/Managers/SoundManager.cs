@@ -55,7 +55,10 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySfx(AudioClip clip)
     {
-        sfxSource.PlayOneShot(clip);
+        if (sfxSource != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
     }
 
     public void PlayWalk(AudioClip clip)
