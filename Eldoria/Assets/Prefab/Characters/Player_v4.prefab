@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751a3e92d47911648b75047e400e3b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dodgeForce: 16
+  dodgeForce: 20
   coldown: 2
 --- !u!114 &7148759014780889468
 MonoBehaviour:
