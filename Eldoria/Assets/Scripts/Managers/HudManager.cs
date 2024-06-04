@@ -50,6 +50,10 @@ public class HudManager : MonoBehaviour
     [Header("Pause Menu")]
     public GameObject pauseMenu;
 
+    [Header("Arena")]
+    public GameObject roundComplete;
+    public GameObject nextRound;
+
     public void SetLifeAmout(float amount)
     {
         lifeBar.fillAmount = amount;
@@ -276,5 +280,28 @@ public class HudManager : MonoBehaviour
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
+    }
+
+    public void RoundComplete()
+    {
+        roundComplete.SetActive(true);
+        Invoke("DisableRoundComplete", 2);
+        Invoke("EnableNextRound", 2.5f);
+    }
+
+    public void EnableNextRound()
+    {
+        nextRound.SetActive(true);
+        Invoke("DisableNextRound", 2);
+    }
+
+    public void DisableRoundComplete()
+    {
+        roundComplete.SetActive(false);
+    }
+
+    public void DisableNextRound()
+    {
+        nextRound.SetActive(false);
     }
 }
