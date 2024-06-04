@@ -16,6 +16,7 @@ public class HordSpawner : MonoBehaviour
     {
         hudManager = FindObjectOfType<HudManager>();
         hudManager.SetQuestText("Round " + (hordCounter + 1) + "/" + hordList.Length);
+        hudManager.EnableNextRound();
 
         for (int i = 0; i < hordList[0].hordInfo.Length; i++)
         {
