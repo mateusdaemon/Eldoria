@@ -16,6 +16,7 @@ public class HordSpawner : MonoBehaviour
     {
         hudManager = FindObjectOfType<HudManager>();
         hudManager.SetQuestText("Round " + (hordCounter + 1) + "/" + hordList.Length);
+        hudManager.EnableNextRound();
 
         for (int i = 0; i < hordList[0].hordInfo.Length; i++)
         {
@@ -29,7 +30,7 @@ public class HordSpawner : MonoBehaviour
     {
         if (enemyHordMax - enemyHordCounter <= 0 && FindObjectOfType<Enemy>() == null)
         {
-            Debug.Log("End hord !!");
+            hudManager.RoundComplete();
             hordCounter++;
             enemyHordCounter = 0;
             enemyHordMax = 0;
@@ -38,8 +39,6 @@ public class HordSpawner : MonoBehaviour
             {
                 enemyHordMax += hordList[hordCounter].hordInfo[i].quantity;
             }
-
-            Debug.Log(enemyHordMax);
 
             hudManager.SetQuestText("Round " + (hordCounter + 1) + "/" + hordList.Length);
             CancelInvoke("SpawnCurrentHord");
