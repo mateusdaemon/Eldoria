@@ -128,11 +128,11 @@ public class WolfCrocBehavior : MonoBehaviour
         {
             enemy.AttackPlayer();
 
-            if (playerState.GetState() != State.Stuck)
-            {
-                holding = true;
-                playerState.ChangeState(State.Stuck);
-            }
+            //if (playerState.GetState() != State.Stuck)
+            //{
+            //    holding = true;
+            //    playerState.ChangeState(State.Stuck);
+            //}
         }
     }
 

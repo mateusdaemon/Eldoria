@@ -72,10 +72,17 @@ public class HordSpawner : MonoBehaviour
         {
             // Chossing random enemies between the available ones
             int enemyIndex = availableIndex[(int)Random.Range(0, availableIndex.Count)];
-
             GameObject enemy = hordList[hordCounter].hordInfo[enemyIndex].hordEnemy;
 
-            Instantiate(enemy, transform.position, enemy.transform.rotation);
+            // Picking a spawn area
+            int areaIndex = (int)Random.Range(0, spawnAreas.Length);
+            float areaW = spawnAreas[areaIndex].bounds.size.x/2;
+            float areaH = spawnAreas[areaIndex].bounds.size.z/2;
+            float xPos = spawnAreas[areaIndex].transform.position.x + Random.Range(-areaW, areaW);
+            float zPos = spawnAreas[areaIndex].transform.position.z + Random.Range(-areaH, areaH);
+            Vector3 spawnPos = new Vector3(xPos, 2, zPos);
+
+            Instantiate(enemy, spawnPos, enemy.transform.rotation);
             enemyHordCounter++;
 
             hordList[hordCounter].hordInfo[enemyIndex].SpawnCurrent(); // This will reduce enemy count by 1

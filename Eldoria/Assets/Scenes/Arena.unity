@@ -123,6 +123,100 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37107995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 37107996}
+  - component: {fileID: 37107997}
+  m_Layer: 0
+  m_Name: ChiefWolf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &37107996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37107995}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878785352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37107997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37107995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 5142341306375518975, guid: 7b5fc02f59679fb41b01e93507fe2f42,
+    type: 3}
+  quantity: 2
+--- !u!1 &44268988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44268989}
+  - component: {fileID: 44268990}
+  m_Layer: 0
+  m_Name: WolfInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &44268989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44268988}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632655607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44268990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44268988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 2059982462098010742, guid: 4295e42105677274884add0ae9b22e7b,
+    type: 3}
+  quantity: 7
 --- !u!4 &44906733 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -176,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hordInfo:
   - {fileID: 1811375667}
-  spawnInterval: 4
+  spawnInterval: 2
 --- !u!1001 &49084969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,7 +665,7 @@ GameObject:
   - component: {fileID: 175136327}
   - component: {fileID: 175136326}
   - component: {fileID: 175136325}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +808,7 @@ MonoBehaviour:
   hordInfo:
   - {fileID: 979724816}
   - {fileID: 1935435691}
-  spawnInterval: 4
+  spawnInterval: 2
 --- !u!1001 &288429804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -857,7 +951,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7defd5f51388af49ac1f0c25518f1ba, type: 3}
---- !u!1 &329645084
+--- !u!1 &292873077
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,51 +959,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 329645085}
-  - component: {fileID: 329645086}
+  - component: {fileID: 292873078}
+  - component: {fileID: 292873079}
   m_Layer: 0
-  m_Name: AreaSpawn_3
+  m_Name: BoarInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &329645085
+--- !u!4 &292873078
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329645084}
+  m_GameObject: {fileID: 292873077}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.9, y: 0, z: 4.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 502406610}
+  m_Father: {fileID: 632655607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &329645086
-BoxCollider:
+--- !u!114 &292873079
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329645084}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 292873077}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 15, y: 2, z: 15}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 3565242463235930757, guid: 981ab8f0b951c064f9ec256d41633cb3,
+    type: 3}
+  quantity: 4
 --- !u!1 &340536496 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6002928672442071650, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -1132,7 +1220,7 @@ Transform:
   m_GameObject: {fileID: 397745573}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.5, y: 0, z: 10.6}
+  m_LocalPosition: {x: -57.1, y: 0, z: -0.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1157,7 +1245,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15, y: 2, z: 15}
+  m_Size: {x: 15, y: 2, z: 50}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &409402817
 PrefabInstance:
@@ -1721,11 +1809,12 @@ MonoBehaviour:
   - {fileID: 46634940}
   - {fileID: 1379255992}
   - {fileID: 263415747}
+  - {fileID: 632655608}
+  - {fileID: 1878785353}
   spawnAreas:
   - {fileID: 397745575}
-  - {fileID: 2033438939}
-  - {fileID: 329645086}
-  - {fileID: 558984304}
+  - {fileID: 708980205}
+  - {fileID: 1289509560}
 --- !u!4 &502406610
 Transform:
   m_ObjectHideFlags: 0
@@ -1742,10 +1831,11 @@ Transform:
   - {fileID: 46634939}
   - {fileID: 1379255991}
   - {fileID: 263415746}
+  - {fileID: 632655607}
+  - {fileID: 1878785352}
   - {fileID: 397745574}
-  - {fileID: 2033438938}
-  - {fileID: 329645085}
-  - {fileID: 558984303}
+  - {fileID: 708980204}
+  - {fileID: 1289509559}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519755470
@@ -1794,7 +1884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hordEnemy: {fileID: 5142341306375518975, guid: 7b5fc02f59679fb41b01e93507fe2f42,
     type: 3}
-  quantity: 2
+  quantity: 1
 --- !u!1001 &529857331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1943,59 +2033,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 552500969}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &558984302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 558984303}
-  - component: {fileID: 558984304}
-  m_Layer: 0
-  m_Name: AreaSpawn_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &558984303
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558984302}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.2, y: 0, z: -24.48}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 502406610}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &558984304
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 558984302}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 15, y: 2, z: 15}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &562941772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,6 +2277,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25404367, y: 8.189454, z: 21.720129}
   m_Center: {x: -0.3729691, y: 0.7543917, z: -9.071531}
+--- !u!1 &632655606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632655607}
+  - component: {fileID: 632655608}
+  m_Layer: 0
+  m_Name: Hord_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &632655607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632655606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 44268989}
+  - {fileID: 292873078}
+  - {fileID: 1166761327}
+  m_Father: {fileID: 502406610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632655608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632655606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6de4a5f416147248bcb049f7103bd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordInfo:
+  - {fileID: 44268990}
+  - {fileID: 292873079}
+  - {fileID: 1166761328}
+  spawnInterval: 2
 --- !u!1 &649488684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,6 +2715,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.25404364, y: 8.189454, z: 23.160217}
   m_Center: {x: -0.37289795, y: 0.7543917, z: -3.548952}
+--- !u!1 &708980203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708980204}
+  - component: {fileID: 708980205}
+  m_Layer: 0
+  m_Name: AreaSpawn_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &708980204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708980203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 66.1, y: 0, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502406610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &708980205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708980203}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 15, y: 2, z: 50}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &709493908 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -3422,7 +3564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hordEnemy: {fileID: 2059982462098010742, guid: 4295e42105677274884add0ae9b22e7b,
     type: 3}
-  quantity: 10
+  quantity: 7
 --- !u!1001 &980573354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4183,6 +4325,53 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9020511992837361558, guid: f7defd5f51388af49ac1f0c25518f1ba, type: 3}
+--- !u!1 &1166761326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166761327}
+  - component: {fileID: 1166761328}
+  m_Layer: 0
+  m_Name: ChiefWolf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166761327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166761326}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632655607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166761328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166761326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 5142341306375518975, guid: 7b5fc02f59679fb41b01e93507fe2f42,
+    type: 3}
+  quantity: 1
 --- !u!1001 &1209865217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4651,6 +4840,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2540437, y: 8.189454, z: 28.92085}
   m_Center: {x: -0.37288556, y: 0.7543917, z: -14.789299}
+--- !u!1 &1289509558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289509559}
+  - component: {fileID: 1289509560}
+  m_Layer: 0
+  m_Name: AreaSpawn_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1289509559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289509558}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4, y: 0, z: 63.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 502406610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1289509560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289509558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 50, y: 2, z: 14}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1297660036 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -4774,7 +5016,7 @@ MonoBehaviour:
   hordInfo:
   - {fileID: 2072389577}
   - {fileID: 519755472}
-  spawnInterval: 4
+  spawnInterval: 2
 --- !u!1 &1400621405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6002928672442071650, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -4889,7 +5131,7 @@ GameObject:
   - component: {fileID: 1569450904}
   - component: {fileID: 1569450903}
   - component: {fileID: 1569450902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone 3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6609,6 +6851,58 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1875932231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1878785351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878785352}
+  - component: {fileID: 1878785353}
+  m_Layer: 0
+  m_Name: Hord_5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1878785352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878785351}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2128496582}
+  - {fileID: 1898621026}
+  - {fileID: 37107996}
+  m_Father: {fileID: 502406610}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878785353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878785351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6de4a5f416147248bcb049f7103bd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordInfo:
+  - {fileID: 2128496583}
+  - {fileID: 1898621027}
+  - {fileID: 37107997}
+  spawnInterval: 2
 --- !u!1 &1894597696
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,6 +6995,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1898621025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898621026}
+  - component: {fileID: 1898621027}
+  m_Layer: 0
+  m_Name: BoarInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1898621026
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898621025}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878785352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1898621027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898621025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 3565242463235930757, guid: 981ab8f0b951c064f9ec256d41633cb3,
+    type: 3}
+  quantity: 5
 --- !u!1001 &1917006697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6827,7 +7168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hordEnemy: {fileID: 3565242463235930757, guid: 981ab8f0b951c064f9ec256d41633cb3,
     type: 3}
-  quantity: 5
+  quantity: 4
 --- !u!1001 &1954080151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7253,59 +7594,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7defd5f51388af49ac1f0c25518f1ba, type: 3}
---- !u!1 &2033438937
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2033438938}
-  - component: {fileID: 2033438939}
-  m_Layer: 0
-  m_Name: AreaSpawn_2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2033438938
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033438937}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 0, z: -9.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 502406610}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2033438939
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033438937}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 15, y: 2, z: 15}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2072389575
 GameObject:
   m_ObjectHideFlags: 0
@@ -7520,6 +7808,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 132080921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2128496581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2128496582}
+  - component: {fileID: 2128496583}
+  m_Layer: 0
+  m_Name: WolfInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2128496582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128496581}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1878785352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128496583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128496581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hordEnemy: {fileID: 2059982462098010742, guid: 4295e42105677274884add0ae9b22e7b,
+    type: 3}
+  quantity: 7
 --- !u!4 &2146653635 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7defd5f51388af49ac1f0c25518f1ba,
@@ -7673,7 +8008,7 @@ GameObject:
   - component: {fileID: 5577905131167848056}
   - component: {fileID: 2918140436292616656}
   - component: {fileID: 5577905131167848057}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7730,7 +8065,7 @@ GameObject:
   - component: {fileID: 7484092681243682815}
   - component: {fileID: 8314985208541881403}
   - component: {fileID: 8314985208541881404}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7749,7 +8084,7 @@ GameObject:
   - component: {fileID: 5043337069433143591}
   - component: {fileID: 8920635799025218670}
   - component: {fileID: 8920635799025218671}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7768,7 +8103,7 @@ GameObject:
   - component: {fileID: 1460540877839507572}
   - component: {fileID: 7526530233275132587}
   - component: {fileID: 7526530233275132588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stone 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -250,7 +250,7 @@ public class HudManager : MonoBehaviour
         if (!damageFeedback.activeSelf)
         {
             damageFeedback.SetActive(true);
-            damageFeedback.GetComponent<Animator>().SetBool("false", true);
+            damageFeedback.GetComponent<Animator>().SetBool("hurt", true);
             damageFeedback.GetComponent<Animator>().SetBool("dying", false);
         }
     }
@@ -259,7 +259,7 @@ public class HudManager : MonoBehaviour
     {
         if (damageFeedback.activeSelf)
         {
-            damageFeedback.GetComponent<Animator>().SetBool("false", false);
+            damageFeedback.GetComponent<Animator>().SetBool("hurt", false);
             damageFeedback.GetComponent<Animator>().SetBool("dying", false);
             damageFeedback.SetActive(false);
         }
