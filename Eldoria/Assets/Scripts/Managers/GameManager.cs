@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = maxFPS;
 
+        PlayerStats.EnableSkill(true);
+
         if (SceneManager.GetActiveScene().name == "Farm")
         {
             PlayerStats.EnableSkill(false);
@@ -30,7 +32,6 @@ public class GameManager : MonoBehaviour
         {
             startSceneQuest = FindObjectOfType<QuestList>().quests[0];
             startSceneQuest.StartQuest();
-            PlayerStats.EnableSkill(true);
         }
     }
 
