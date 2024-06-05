@@ -319,9 +319,9 @@ MonoBehaviour:
   fightBackground: {fileID: 8300000, guid: 09620c84c13cb9b44b4497b64328052c, type: 3}
   farmNightBackground: {fileID: 8300000, guid: 18dd1ac3748bcd749969300fe214f618, type: 3}
   sfxShooter: {fileID: 8300000, guid: ca5c6815c206fbf478cd1bacecade401, type: 3}
-  sfxShooterErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
+  sfxShooterErro: {fileID: 8300000, guid: d4fae782baca52746a085bb06799946f, type: 3}
   sfxShield: {fileID: 8300000, guid: d7d5171e148febb4c8e7c586dfd4b33b, type: 3}
-  sfxShieldErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
+  sfxShieldErro: {fileID: 8300000, guid: d4fae782baca52746a085bb06799946f, type: 3}
   sfxShieldDestroy: {fileID: 8300000, guid: 5fa352e35d9ac464c956bfb614069fdc, type: 3}
   sfxBreakCurse: {fileID: 8300000, guid: 0bbf3e5db9ec34e40abbeaf4a302f691, type: 3}
   sfxErroBreakCurse: {fileID: 8300000, guid: 549b53bb0316cfd488080aaf8d0c1df5, type: 3}
@@ -329,7 +329,7 @@ MonoBehaviour:
   sfxDrinkLife: {fileID: 8300000, guid: 5c4b825759ec9954f84e1fa77e791dc4, type: 3}
   sfxDrinkMana: {fileID: 8300000, guid: a42fe0fdd574fec45919aa8acc7e37f5, type: 3}
   sfxDodge: {fileID: 8300000, guid: 3a32f49ee3323f94f96e99a9a24e0d7c, type: 3}
-  sfxDodgeErro: {fileID: 8300000, guid: f20de0d488d950c42b090982d93f1408, type: 3}
+  sfxDodgeErro: {fileID: 8300000, guid: d4fae782baca52746a085bb06799946f, type: 3}
   sfxTakingDamage: {fileID: 8300000, guid: 233b645bc5485dd4eabd1b635c730ca7, type: 3}
   sfxTakingShieldDamage: {fileID: 8300000, guid: bf77a9814c3abf3488c0ec1ba46e9a66,
     type: 3}
