@@ -8,12 +8,14 @@ public class HordSpawner : MonoBehaviour
     public Collider[] spawnAreas;
 
     private HudManager hudManager;
+    private GameManager gameManager;
     private int hordCounter = 0;
     private int enemyHordCounter = 0;
     private int enemyHordMax;
 
     private void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         hudManager = FindObjectOfType<HudManager>();
         hudManager.SetQuestText("Round " + (hordCounter + 1) + "/" + hordList.Length);
         hudManager.EnableNextRound();
@@ -34,6 +36,11 @@ public class HordSpawner : MonoBehaviour
             hordCounter++;
             enemyHordCounter = 0;
             enemyHordMax = 0;
+
+            if (hordCounter == hordList.Length)
+            {
+                gameManager.LoadScene("ThankYou");
+            }
 
             for (int i = 0; i < hordList[hordCounter].hordInfo.Length; i++)
             {
