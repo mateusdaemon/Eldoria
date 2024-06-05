@@ -501,7 +501,7 @@ MonoBehaviour:
   layerClick:
     serializedVersion: 2
     m_Bits: 8
-  shootColdown: 0.7
+  shootColdown: 0.5
 --- !u!1 &7252350176090108210
 GameObject:
   m_ObjectHideFlags: 0

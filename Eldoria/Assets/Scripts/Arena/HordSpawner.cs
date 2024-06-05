@@ -6,6 +6,7 @@ public class HordSpawner : MonoBehaviour
 {
     public Hord[] hordList;
     public Collider[] spawnAreas;
+    public PlantSpawner plants;
 
     private HudManager hudManager;
     private GameManager gameManager;
@@ -40,6 +41,9 @@ public class HordSpawner : MonoBehaviour
             if (hordCounter == hordList.Length)
             {
                 gameManager.LoadScene("ThankYou");
+            } else if (hordCounter == 2 || hordCounter == 4)
+            {
+                Invoke("SpawnPlant", 3.5f);
             }
 
             for (int i = 0; i < hordList[hordCounter].hordInfo.Length; i++)
@@ -95,6 +99,22 @@ public class HordSpawner : MonoBehaviour
             hordList[hordCounter].hordInfo[enemyIndex].SpawnCurrent(); // This will reduce enemy count by 1
 
             Invoke("SpawnCurrentHord", hordList[hordCounter].spawnInterval);
+        }
+    }
+
+    public int HordIndex()
+    {
+        return hordCounter;
+    }
+
+    private void SpawnPlant()
+    {
+        if (hordCounter == 2)
+        {
+            plants.SpawnGroup(1);
+        } else
+        {
+            plants.SpawnGroup(2);
         }
     }
 }
