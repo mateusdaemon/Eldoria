@@ -52,6 +52,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip wolfBarkSound;
     public AudioClip sfxWolfDie;
     public AudioClip wolfhowl;
+    public AudioClip boarHit;
+    public AudioClip boarThreat;
 
     public void PlaySfx(AudioClip clip)
     {

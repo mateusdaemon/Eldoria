@@ -69,10 +69,14 @@ public class BoarBehavior : MonoBehaviour
             {
                 boarState.ChangeState(BoarState.State.Raige);
                 parent.transform.position = Vector3.MoveTowards(parent.transform.position, moveTarget, 0.35f);
-
+                if (!gameManager.sm.sfxSource.isPlaying)
+                {
+                    gameManager.sm.PlaySfx(gameManager.sm.boarThreat);
+                }
             } else
             {
                 boarState.ChangeState(BoarState.State.Attack);
+                gameManager.sm.PlaySfx(gameManager.sm.boarHit);
                 if (attackArea.HitPlayer())
                 {
                     gameManager.AttackPlayer(5.0f);
