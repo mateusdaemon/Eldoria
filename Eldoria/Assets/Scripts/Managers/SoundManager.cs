@@ -55,6 +55,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip boarHit;
     public AudioClip boarThreat;
     public AudioClip corn;
+    public AudioClip questComplete;
 
     public void PlaySfx(AudioClip clip)
     {
