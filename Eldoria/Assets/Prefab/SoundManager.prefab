@@ -347,6 +347,7 @@ MonoBehaviour:
   wolfhowl: {fileID: 8300000, guid: c02a546d6a93a194e81796018ba35343, type: 3}
   boarHit: {fileID: 8300000, guid: a6c7458dc19d5b04989d4780a34afd13, type: 3}
   boarThreat: {fileID: 8300000, guid: 54dcc1d09b63ba14283c178f378ada08, type: 3}
+  corn: {fileID: 8300000, guid: 42a1933df789a5149a300627c4b0524c, type: 3}
 --- !u!1 &2541792504547520436
 GameObject:
   m_ObjectHideFlags: 0
