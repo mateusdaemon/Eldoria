@@ -12,7 +12,8 @@ public class CollectCornGoal : MonoBehaviour
     public GameObject cornGroup;
     public ParticleSystem cornParticle;
     public GameObject wagonGoalObject;
-
+    
+    private GameManager gameManager;
     private bool canCollect = false;
     private Vector3 particleSplashPos;
 
@@ -21,6 +22,7 @@ public class CollectCornGoal : MonoBehaviour
     {
         particleSplashPos = transform.position;
         particleSplashPos.y = 3.0f;
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -60,6 +62,8 @@ public class CollectCornGoal : MonoBehaviour
     {
         ParticleSystem corn = Instantiate(cornParticle, particleSplashPos, cornParticle.transform.rotation);
         corn.Play();
+
+        gameManager.sm.PlaySfx(gameManager.sm.corn);
 
         goal.AddAmount();
 
