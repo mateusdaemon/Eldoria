@@ -24,6 +24,7 @@ public class HudManager : MonoBehaviour
     [Header("Quests")]
     public TextMeshProUGUI questTitle;
     public TextMeshProUGUI questText;
+    public GameObject completeQuest;
 
     [Header("Books")]
     public GameObject books;
@@ -303,5 +304,16 @@ public class HudManager : MonoBehaviour
     public void DisableNextRound()
     {
         nextRound.SetActive(false);
+    }
+
+    public void EnableCompleteQuest()
+    {
+        completeQuest.SetActive(true);
+        Invoke("DisableCompleteQuest", 2.5f);
+    }
+
+    public void DisableCompleteQuest()
+    {
+        completeQuest.SetActive(false);
     }
 }

@@ -7,6 +7,7 @@ public class Quest : MonoBehaviour
     [Header("Managers")]
     public QuestManager qm;
     public HudManager hudManager;
+    private GameManager gameManager;
 
     [Header("Quest info")]
     public string questTitle;
@@ -26,7 +27,7 @@ public class Quest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -50,6 +51,8 @@ public class Quest : MonoBehaviour
 
         if (questDone)
         {
+            hudManager.EnableCompleteQuest();
+            gameManager.sm.PlaySfx(gameManager.sm.questComplete);
             hudManager.SetTextNoQuest();
             hudManager.SetQuestTitle(noQuestTitle);
             qm.SetQuestInProgress(false);
