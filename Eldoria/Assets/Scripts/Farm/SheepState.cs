@@ -5,7 +5,7 @@ using UnityEngine;
 public class SheepState : MonoBehaviour
 {
     public GameObject animatedFront, animatedBack, animatedRight, animatedLeft;
-    public enum ShipState { Graze, Idle, GoBack, GoFront, GoLeft, GoRight }
+    public enum ShipState { Graze, Idle, GoBack, GoFront, GoLeft, GoRight, Sleep }
 
     private GameObject currentAnim;
     private ShipState currState = ShipState.Idle;
@@ -66,6 +66,12 @@ public class SheepState : MonoBehaviour
                 animatedRight.SetActive(true);
                 currentAnim = animatedRight;
                 currState = ShipState.GoRight;
+                break;
+            case ShipState.Sleep:
+                animatedRight.SetActive(true);
+                currentAnim = animatedRight;
+                currentAnim.GetComponent<Animator>().SetBool("sleep", true);
+                currState = ShipState.Sleep;
                 break;
             default:
                 break;
