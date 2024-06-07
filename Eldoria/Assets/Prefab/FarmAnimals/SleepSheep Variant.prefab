@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: grazeBehavior
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9057205323699120542, guid: 92319113d62b31941932aa9f78336b57,
+        type: 3}
+      propertyPath: m_Radius
+      value: 2.8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3630257289856736270, guid: 92319113d62b31941932aa9f78336b57, type: 3}
     - {fileID: 8080253632476423402, guid: 92319113d62b31941932aa9f78336b57, type: 3}

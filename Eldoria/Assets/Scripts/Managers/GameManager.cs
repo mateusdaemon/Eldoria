@@ -36,6 +36,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerStats.SetLife(PlayerStats.GetMaxLife());
             PlayerStats.SetMana(PlayerStats.GetMaxMana());
+        } else if (SceneManager.GetActiveScene().name == "CityPath")
+        {
+            startSceneQuest = FindObjectOfType<QuestList>().quests[0];
+            startSceneQuest.StartQuest();
         }
     }
 
