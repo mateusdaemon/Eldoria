@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Shooter : MonoBehaviour
@@ -46,7 +47,7 @@ public class Shooter : MonoBehaviour
         Vector3 currTarget;
         Bullet currBullet = null;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (PlayerStats.CanShoot() && canShoot && PlayerStats.GetMana() > 0)
             {
