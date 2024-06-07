@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
         {
             startSceneQuest = FindObjectOfType<QuestList>().quests[0];
             startSceneQuest.StartQuest();
+        } else if (SceneManager.GetActiveScene().name == "Arena")
+        {
+            PlayerStats.SetLife(PlayerStats.GetMaxLife());
+            PlayerStats.SetMana(PlayerStats.GetMaxMana());
         }
     }
 
