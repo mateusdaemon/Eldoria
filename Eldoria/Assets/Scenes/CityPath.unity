@@ -1567,6 +1567,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175136323}
   m_Mesh: {fileID: 8180717895794883372, guid: 92df7211b91fad6419d7849c6cfb7796, type: 3}
+--- !u!1 &188132524 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 546865793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &194808705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2998,17 +3004,7 @@ PrefabInstance:
     - target: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: gm
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6621849108357324995, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
-        type: 3}
-      propertyPath: velocity
-      value: 17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6731447923608780202, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
         type: 3}
@@ -3562,6 +3558,74 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2370479839819316729, guid: a50eb9078a293ff43a23638166c120e3, type: 3}
+--- !u!1001 &546865793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.039597
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.816166
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466031970189591277, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054131556247001451, guid: c30b914e66f5aee4bb16ce9ea3208bf6,
+        type: 3}
+      propertyPath: m_Name
+      value: Player_v4 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c30b914e66f5aee4bb16ce9ea3208bf6, type: 3}
 --- !u!1001 &561590730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4135,7 +4199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b96b6511adf6e469c5a6591299980a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToFollow: {fileID: 1592374478}
+  objectToFollow: {fileID: 188132524}
   standardZOffset: 12
   maxHeight: 15
   minHeight: 8
@@ -16324,3 +16388,4 @@ SceneRoots:
   - {fileID: 852612872}
   - {fileID: 194808705}
   - {fileID: 589971602}
+  - {fileID: 546865793}
