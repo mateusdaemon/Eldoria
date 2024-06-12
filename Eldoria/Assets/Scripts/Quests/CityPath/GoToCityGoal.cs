@@ -6,6 +6,8 @@ public class GoToCityGoal : MonoBehaviour
 {
     public Quest questRelated;
     public Goal goal;
+    public GameObject interact;
+    private bool canInteract = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +17,7 @@ public class GoToCityGoal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if (canInteract && Input.GetKeyDown(KeyCode.F))
         {
             if (!goal.Complete())
             {
@@ -32,6 +29,24 @@ public class GoToCityGoal : MonoBehaviour
                     questRelated.CheckForComplete();
                 }
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            interact.SetActive(true);
+            canInteract = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            interact.SetActive(false);
+            canInteract = false;
         }
     }
 }
