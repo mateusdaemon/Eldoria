@@ -278,9 +278,15 @@ public class HudManager : MonoBehaviour
         damageFeedback.GetComponent<Animator>().SetBool("dying", false);
     }
 
-    public void PauseGame()
+    public void PauseGame(bool pause)
     {
-        pauseMenu.SetActive(true);
+        if (pause)
+        {
+            pauseMenu.SetActive(true);
+        } else
+        {
+            pauseMenu.SetActive(false);
+        }
     }
 
     public void RoundComplete()

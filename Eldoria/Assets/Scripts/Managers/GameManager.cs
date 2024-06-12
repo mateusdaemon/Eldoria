@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     private float shieldManaCost = 2;
     private float maxShieldPoints = 7;
 
+    private bool gamePaused = false;
     private Quest startSceneQuest;
 
     // Start is called before the first frame update
@@ -47,7 +48,16 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            hudManager.PauseGame();
+            if (!gamePaused)
+            {
+                gamePaused = true;
+                hudManager.PauseGame(true);
+                Time.timeScale = 0;
+            } else
+            {
+                Time.timeScale = 1;
+                hudManager.PauseGame(false);
+            }
         }
     }
 
