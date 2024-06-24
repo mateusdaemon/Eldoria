@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 4219761172924673557}
   - component: {fileID: 141367914307839877}
   - component: {fileID: 4354495147594714714}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,8 +382,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.18, y: 2.25, z: 1.45}
-  m_Center: {x: 0, y: 0.38, z: -0.36}
+  m_Size: {x: 3.18, y: 3.53, z: 2.01}
+  m_Center: {x: 0, y: 0.96, z: -0.36}
 --- !u!54 &2122306782918776861
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
   attackArea: {fileID: 6165615334225560210}
   warnSign: {fileID: 675867037572191498}
   dangerSign: {fileID: 1303881362854989898}
-  attackDistance: 10
+  attackDistance: 12
 --- !u!1 &7670270784306990393
 GameObject:
   m_ObjectHideFlags: 0

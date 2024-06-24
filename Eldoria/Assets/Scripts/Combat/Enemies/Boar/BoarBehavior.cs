@@ -48,7 +48,7 @@ public class BoarBehavior : MonoBehaviour
                 inRaige = true;
                 canRaige = false;
 
-            } else if (Vector3.Distance(parent.transform.position, moveTarget) > 2.5f)
+            } else if (Vector3.Distance(parent.transform.position, moveTarget) > 3.5f)
             {
                 MoveToPlayer();
             } else

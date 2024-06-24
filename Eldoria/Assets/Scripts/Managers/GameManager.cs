@@ -186,8 +186,10 @@ public class GameManager : MonoBehaviour
                     } else if (SceneManager.GetActiveScene().name == "Arena")
                     {
                         LoadScene("ArenaGameOver");
-                    }
-                    
+                    } else if (SceneManager.GetActiveScene().name == "CityPath")
+                    {
+                        LoadScene("PathGameOver");
+                    }                    
                 }
             }
             else

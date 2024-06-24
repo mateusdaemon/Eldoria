@@ -27,6 +27,7 @@ public class GoToCityGoal : MonoBehaviour
                 {
                     goal.CompleteGoal();
                     questRelated.CheckForComplete();
+                    Destroy(gameObject);
                 }
             }
         }
