@@ -908,7 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82693011}
   - component: {fileID: 82693010}
-  - component: {fileID: 82693009}
+  - component: {fileID: 82693012}
   m_Layer: 0
   m_Name: GetBookGoal
   m_TagString: Untagged
@@ -916,21 +916,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &82693009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82693008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797d130fefaedbc4d877210c2eb3120e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questRelated: {fileID: 1643589550}
-  goal: {fileID: 133963886}
-  interact: {fileID: 1859396435}
 --- !u!135 &82693010
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -968,6 +953,21 @@ Transform:
   - {fileID: 1117507702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82693012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82693008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797d130fefaedbc4d877210c2eb3120e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questRelated: {fileID: 1643589550}
+  goal: {fileID: 133963886}
+  interact: {fileID: 1859396435}
 --- !u!1001 &105476926
 PrefabInstance:
   m_ObjectHideFlags: 0

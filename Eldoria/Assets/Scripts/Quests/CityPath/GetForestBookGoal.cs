@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoToCityGoal : MonoBehaviour
+public class GetForestBookGoal : MonoBehaviour
 {
     public Quest questRelated;
     public Goal goal;
     public GameObject interact;
     private bool canInteract = false;
-
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class GoToCityGoal : MonoBehaviour
 
                 if (goal.CheckComplete())
                 {
+                    gameManager.LoadScene("ForestBookTransition");
                     goal.CompleteGoal();
                     questRelated.CheckForComplete();
                     Destroy(gameObject);
