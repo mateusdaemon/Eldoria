@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour
         {
             startSceneQuest = FindObjectOfType<QuestList>().quests[0];
             startSceneQuest.StartQuest();
+        } else if (SceneManager.GetActiveScene().name == "BossFight")
+        {
+            startSceneQuest = FindObjectOfType<QuestList>().quests[0];
+            PlayerStats.SetDialoguing(true);
+            startSceneQuest.StartQuest();
         }
     }
 
