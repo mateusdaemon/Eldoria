@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             startSceneQuest = FindObjectOfType<QuestList>().quests[0];
             startSceneQuest.StartQuest();
+            PlayerStats.SetDialoguing(true);
         } else if (SceneManager.GetActiveScene().name == "Arena")
         {
             PlayerStats.SetLife(PlayerStats.GetMaxLife());
@@ -232,5 +233,10 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string scenemName)
     {
         SceneManager.LoadScene(scenemName);
+    }
+
+    public void ResetDialogue()
+    {
+        PlayerStats.SetDialoguing(false);
     }
 }
