@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WagonSackGoal : MonoBehaviour
 {
+    private GameManager gm;
     public Quest questRelated;
     public Goal goal;
     public HudManager hudManager;
@@ -15,7 +16,7 @@ public class WagonSackGoal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        gm = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -53,6 +54,7 @@ public class WagonSackGoal : MonoBehaviour
     {
         goal.AddAmount();
         sack.SetActive(true);
+        gm.sm.PlaySfx(gm.sm.bag);
 
         if (goal.CheckComplete())
         {

@@ -342,6 +342,7 @@ MonoBehaviour:
   airSound: {fileID: 8300000, guid: 14054444ce0e78d43a34eb1c94ea31e8, type: 3}
   cricketSound: {fileID: 8300000, guid: a3fde6e5e4abd074fb2613a4dd64cd9b, type: 3}
   frogSound: {fileID: 8300000, guid: 4553cf1bf7981ee4f88391b23cc6b7a1, type: 3}
+  bag: {fileID: 8300000, guid: a1874fad5e99af346b546f20006342a0, type: 3}
   wolfBarkSound: {fileID: 8300000, guid: 62c018aa076734444b2131bbf46de956, type: 3}
   sfxWolfDie: {fileID: 8300000, guid: 95dd93c3c5533f145b60e717ba2e71df, type: 3}
   wolfhowl: {fileID: 8300000, guid: c02a546d6a93a194e81796018ba35343, type: 3}
