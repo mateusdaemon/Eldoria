@@ -8131,6 +8131,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ee583f3c1c96424b963731e2e4ca508, type: 3}
+--- !u!114 &1041218400 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8770036344795808304, guid: 1ee583f3c1c96424b963731e2e4ca508,
+    type: 3}
+  m_PrefabInstance: {fileID: 1041218399}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8348e7c10de605b4290ee7fb5c406083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1047062880
 GameObject:
   m_ObjectHideFlags: 0
@@ -12198,6 +12210,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 12.539999
       objectReference: {fileID: 0}
+    - target: {fileID: 7783231593692556917, guid: 7aa83cf32c38a634eb7de48ee51954e4,
+        type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 1041218400}
     - target: {fileID: 7942681693390932494, guid: 7aa83cf32c38a634eb7de48ee51954e4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13684,6 +13701,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 66bb3ee21fa6cf8479f32ea4a12acdd6, type: 3}
+    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
+        type: 3}
+      propertyPath: plantAttack
+      value: 
+      objectReference: {fileID: 8300000, guid: a1da52c2bd90f7f4284bfd95983d3d9e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

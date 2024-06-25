@@ -349,6 +349,7 @@ MonoBehaviour:
   boarThreat: {fileID: 8300000, guid: 54dcc1d09b63ba14283c178f378ada08, type: 3}
   corn: {fileID: 8300000, guid: 42a1933df789a5149a300627c4b0524c, type: 3}
   questComplete: {fileID: 8300000, guid: 6099d0407fef6494ba18cbf751a50790, type: 3}
+  plantAttack: {fileID: 8300000, guid: a1da52c2bd90f7f4284bfd95983d3d9e, type: 3}
 --- !u!1 &2541792504547520436
 GameObject:
   m_ObjectHideFlags: 0
