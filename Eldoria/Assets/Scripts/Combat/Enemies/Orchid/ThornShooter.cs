@@ -7,12 +7,12 @@ public class ThornShooter : MonoBehaviour
     private GameObject currThorn;
     private Vector3 thornTarget;
 
-    public GameManager gm;
+    private GameManager gm;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gm = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,6 @@ public class ThornShooter : MonoBehaviour
         currThorn = Instantiate(thornPrefab, transform.position, thornPrefab.transform.rotation);
         thornTarget = target;
         gm.sm.PlaySfx(gm.sm.plantAttack);
-
 
         // Calculate direction to the target
         Vector3 direction = (thornTarget - currThorn.transform.position).normalized;

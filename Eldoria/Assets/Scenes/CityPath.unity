@@ -13696,16 +13696,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3539289680494098515, guid: f199109284e57fe4ba7f1ecfd2444d49,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 66bb3ee21fa6cf8479f32ea4a12acdd6, type: 3}
-    - target: {fileID: 6718179669111347395, guid: f199109284e57fe4ba7f1ecfd2444d49,
-        type: 3}
-      propertyPath: plantAttack
-      value: 
-      objectReference: {fileID: 8300000, guid: a1da52c2bd90f7f4284bfd95983d3d9e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
