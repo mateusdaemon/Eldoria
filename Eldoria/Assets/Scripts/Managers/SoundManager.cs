@@ -47,6 +47,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip airSound;
     public AudioClip cricketSound;
     public AudioClip frogSound;
+    public AudioClip bag;
 
     [Header("--- Effects ---")]
     public AudioClip wolfBarkSound;
