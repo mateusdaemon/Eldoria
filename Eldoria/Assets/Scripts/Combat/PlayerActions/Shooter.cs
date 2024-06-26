@@ -35,8 +35,11 @@ public class Shooter : MonoBehaviour
     {
         if (!PlayerStats.SkillEnable() || PlayerStats.IsDialoguing())
         {
+            Debug.Log("returning");
             return;
         }
+
+        Debug.Log(canShoot);
 
         if (!canShoot)
         {
@@ -46,7 +49,6 @@ public class Shooter : MonoBehaviour
 
         Vector3 currTarget;
         Bullet currBullet = null;
-
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (PlayerStats.CanShoot() && canShoot && PlayerStats.GetMana() > 0)

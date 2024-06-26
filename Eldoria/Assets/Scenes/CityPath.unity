@@ -962,7 +962,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 82693008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797d130fefaedbc4d877210c2eb3120e, type: 3}
+  m_Script: {fileID: 11500000, guid: eaa7f9c3899086e49b7cf5ca80607643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questRelated: {fileID: 1643589550}
@@ -1843,7 +1843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &197243408
 Animator:
   serializedVersion: 5
@@ -6532,7 +6532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &825869755
 Animator:
   serializedVersion: 5
@@ -16723,7 +16723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1881326344
 Animator:
   serializedVersion: 5
