@@ -195,7 +195,10 @@ public class GameManager : MonoBehaviour
                     } else if (SceneManager.GetActiveScene().name == "CityPath")
                     {
                         LoadScene("PathGameOver");
-                    }                    
+                    } else if (SceneManager.GetActiveScene().name == "BossFight")
+                    {
+                        LoadScene("ThankYou");
+                    }
                 }
             }
             else

@@ -1024,7 +1024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f895f1fd8ba529849be3421f4b25365f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hordEnemy: {fileID: 3565242463235930757, guid: 981ab8f0b951c064f9ec256d41633cb3,
+  hordEnemy: {fileID: 4446055714504287332, guid: 35e1fcbe0d31250489f101f68860ead8,
     type: 3}
   quantity: 1
 --- !u!1 &340536496 stripped
@@ -2651,9 +2651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hordInfo:
-  - {fileID: 0}
   - {fileID: 292873079}
-  - {fileID: 0}
   spawnInterval: 2
 --- !u!1 &649488684
 GameObject:
@@ -6098,7 +6096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 202e44a042337db4f9b2d147d22ec3d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "Sobreviva usando o Grim\xF3rio da Fazenda"
+  description: "Lute contra as for\xE7as da floresta"
   reqAmount: 1
 --- !u!1 &1569450900
 GameObject:
@@ -6555,7 +6553,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.8207547, g: 0.40010187, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
